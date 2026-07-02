@@ -34,6 +34,9 @@ next-env.d.ts
 .vscode/*
 .idea/
 
+# stored quote submissions (runtime data)
+/data
+
 # design source files (not part of the web build)
 /logos
 /logos-v2

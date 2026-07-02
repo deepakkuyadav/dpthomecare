@@ -126,7 +126,7 @@ export function Header() {
               <Phone className="h-4 w-4" />
               {site.phoneDisplay}
             </a>
-            <Link href="/contact" className="btn-primary">
+            <Link href="/get-a-quote" className="btn-primary">
               Get a Quote
             </Link>
           </div>
@@ -188,7 +188,7 @@ export function Header() {
               <a href={telLink()} className="btn-outline w-full">
                 <Phone className="h-4 w-4" /> {site.phoneDisplay}
               </a>
-              <Link href="/contact" className="btn-primary w-full">
+              <Link href="/get-a-quote" className="btn-primary w-full">
                 Get a Quote
               </Link>
             </div>
