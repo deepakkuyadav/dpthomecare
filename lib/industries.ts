@@ -36,7 +36,7 @@ export const industries: Industry[] = [
     description:
       "Grease-cutting kitchen and dishwash solutions that keep commercial kitchens food-safe and shining.",
     points: ["High-foam dish wash", "Heavy-duty degreasers", "Bulk economy packs"],
-    image: IMG.kitchenEquipment,
+    image: "/brand/industries-restaurants.jpg",
   },
   {
     slug: "schools",
