@@ -151,7 +151,7 @@ export const blogPosts: BlogPost[] = [
     author: "DPT Home Care Team",
     date: "2025-03-25",
     readTime: "6 min read",
-    image: IMG.cleaningProductsTable,
+    image: "/brand/blog-stain-removal.jpg",
     keywords: ["how to remove tough stains", "stain removal", "hard water stains", "grease stain remover"],
     content: [
       { type: "p", text: "Every home battles stubborn stains — grease on the stove, hard-water marks in the bathroom, ink on the sofa. The key to winning is knowing which product to use and giving it enough contact time. Here's your room-by-room stain-removal playbook." },
