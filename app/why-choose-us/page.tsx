@@ -23,13 +23,13 @@ import { IMG } from "@/lib/images";
 export const metadata = pageMetadata({
   title: "Why Choose Us — The DPT Home Care Advantage",
   description:
-    "Discover why homes, businesses and dealers trust DPT Home Care: 99.9% germ protection, concentrated formulas, strict quality control, long-lasting fragrance, safe ingredients and reliable bulk supply.",
+    "Discover why homes, businesses and dealers trust DPT Home Care: powerful cleaning performance, concentrated formulas, strict quality control, long-lasting fragrance, safe ingredients and reliable bulk supply.",
   path: "/why-choose-us",
   keywords: ["why choose DPT Home Care", "best cleaning products", "quality cleaning products supplier"],
 });
 
 const reasons = [
-  { icon: ShieldCheck, title: "Proven Germ Protection", text: "Our disinfectant formulas eliminate 99.9% of germs and bacteria, protecting the health of your family, staff and customers." },
+  { icon: ShieldCheck, title: "Trusted Protection", text: "Our disinfectant formulas clean thoroughly and keep surfaces hygienic, protecting the health of your family, staff and customers." },
   { icon: FlaskConical, title: "Concentrated & Economical", text: "Higher active concentration means you use less per wash — more cleaning power and better value from every bottle." },
   { icon: BadgeCheck, title: "Consistent Quality Control", text: "Every batch is tested for performance, pH, fragrance and safety, so you get the same trusted results each time." },
   { icon: Sparkles, title: "Long-Lasting Fragrance", text: "Premium fragrance oils leave spaces feeling fresh and welcoming for hours after cleaning." },

@@ -28,7 +28,7 @@ const values = [
 const standards = [
   "Careful selection and inspection of raw materials",
   "Controlled batch blending with accurate dosing",
-  "Testing for pH, viscosity, fragrance and germ-kill performance",
+  "Testing for pH, viscosity, fragrance and cleaning performance",
   "Hygienic, leak-proof filling and sealing",
   "Clear labelling with usage and safety instructions",
   "Safe storage and prompt, careful dispatch",

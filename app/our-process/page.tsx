@@ -22,7 +22,7 @@ const qualityChecks = [
   "Accurate formulation and dosing",
   "pH and viscosity verification",
   "Fragrance and appearance checks",
-  "Germ-kill performance testing",
+  "Cleaning performance testing",
   "Final packaging and seal inspection",
 ];
 

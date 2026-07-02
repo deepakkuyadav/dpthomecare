@@ -60,7 +60,7 @@ export const blogPosts: BlogPost[] = [
       ]},
       { type: "h2", text: "Look for these key qualities" },
       { type: "ol", items: [
-        "Disinfectant action that kills 99.9% of germs.",
+        "Strong disinfectant action against germs.",
         "A concentrated formula, so you use less per bucket and save money.",
         "A no-rinse, no-residue finish that dries without stickiness.",
         "A long-lasting fragrance that keeps rooms fresh for hours.",
@@ -69,7 +69,7 @@ export const blogPosts: BlogPost[] = [
       { type: "p", text: "A concentrated cleaner like DPT Floor Cleaner needs only one capful per bucket of water. That means a single bottle lasts far longer than diluted supermarket brands — better cleaning at a lower cost per wash." },
       { type: "quote", text: "The best floor cleaner isn't the cheapest bottle — it's the one that gives you the most clean, germ-free washes for your money." },
       { type: "h2", text: "Our recommendation" },
-      { type: "p", text: "DPT Floor Cleaner is safe on marble, granite, tiles and vitrified floors, kills 99.9% of germs, and comes in Floral, Citrus, Jasmine and Lavender fragrances. For institutions and large areas, our concentrated Phenyl offers powerful, economical disinfection." },
+      { type: "p", text: "DPT Floor Cleaner is safe on marble, granite, tiles and vitrified floors, disinfects as it cleans, and comes in Floral, Citrus, Jasmine and Lavender fragrances. For institutions and large areas, our concentrated Phenyl offers powerful, economical disinfection." },
     ],
   },
   {
@@ -263,7 +263,7 @@ export const blogPosts: BlogPost[] = [
       { type: "p", text: "Our hands touch hundreds of surfaces every day, picking up germs that then reach our eyes, nose and mouth — and our food. Washing with a good hand wash physically removes these germs before they can cause illness." },
       { type: "h2", text: "Key benefits of using a quality hand wash" },
       { type: "ul", items: [
-        "Removes 99.9% of germs, dirt and grease.",
+        "Removes germs, dirt and grease.",
         "Reduces the risk of common infections and stomach illness.",
         "Moisturising formulas keep skin soft, unlike harsh soaps.",
         "A pump dispenser is more hygienic than shared bar soap.",
@@ -301,7 +301,7 @@ export const blogPosts: BlogPost[] = [
       { type: "ul", items: [
         "Toilet cleaners are thicker, so they cling and stay in contact longer.",
         "Their acidic formula dissolves limescale, rust and yellow stains.",
-        "They are specifically designed to kill 99.9% of toilet germs.",
+        "They are specifically designed to kill toilet germs.",
         "They neutralise the bacteria that cause persistent odour.",
       ]},
       { type: "h2", text: "How to use a toilet cleaner correctly" },
@@ -312,7 +312,7 @@ export const blogPosts: BlogPost[] = [
         "Flush to rinse and reveal a sparkling, hygienic bowl.",
       ]},
       { type: "quote", text: "A visibly clean toilet and a hygienic toilet are two different things — only a proper cleaner delivers both." },
-      { type: "p", text: "DPT Toilet Cleaner is a thick, clinging formula that dissolves the toughest stains, kills 99.9% of germs and leaves a fresh pine fragrance. Use it two to three times a week for a consistently hygienic washroom." },
+      { type: "p", text: "DPT Toilet Cleaner is a thick, clinging formula that dissolves the toughest stains, kills germs and leaves a fresh pine fragrance. Use it two to three times a week for a consistently hygienic washroom." },
     ],
   },
   {
@@ -416,7 +416,7 @@ export const blogPosts: BlogPost[] = [
         "Car Shampoo for a weekend vehicle wash.",
       ]},
       { type: "h2", text: "How to choose quality over hype" },
-      { type: "p", text: "Look for concentrated formulas (more washes per bottle), genuine disinfectant action (99.9% germ kill), and trusted manufacturing. A slightly higher-quality product almost always works out cheaper per use because you need less of it." },
+      { type: "p", text: "Look for concentrated formulas (more washes per bottle), genuine disinfectant action, and trusted manufacturing. A slightly higher-quality product almost always works out cheaper per use because you need less of it." },
       { type: "quote", text: "You don't need a cupboard full of products — you need a handful of really good ones." },
       { type: "h2", text: "One brand, complete coverage" },
       { type: "p", text: "DPT Home Care manufactures all these essentials — 15 products covering floor, bathroom, kitchen, fabric, personal and air care. Buying a complete range from one trusted manufacturer means consistent quality, better value and simpler restocking. That's the Power of Hygiene, made simple." },

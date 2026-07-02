@@ -30,7 +30,7 @@ import { site, whatsappLink } from "@/lib/site";
 import { IMG } from "@/lib/images";
 
 const whyPoints = [
-  { icon: "ShieldCheck", title: "Kills 99.9% Germs", text: "Powerful disinfectant formulas that protect your family and keep spaces hygienic." },
+  { icon: "ShieldCheck", title: "Trusted Protection", text: "Powerful, effective formulas that keep your home and workspace clean, fresh and hygienic." },
   { icon: "FlaskConical", title: "Concentrated Formulas", text: "A little goes a long way — more washes per bottle and better value for money." },
   { icon: "BadgeCheck", title: "Strict Quality Control", text: "Every batch is tested for consistency, performance and safety before dispatch." },
   { icon: "Sparkles", title: "Long-Lasting Fragrance", text: "Premium fragrances that leave your home fresh and welcoming for hours." },
@@ -39,7 +39,7 @@ const whyPoints = [
 ];
 
 const trustStrip = [
-  "99.9% Germ Protection",
+  "Trusted Quality",
   "Concentrated & Economical",
   "Quality Tested Batches",
   "Bulk Supply Available",
@@ -112,11 +112,11 @@ export default function HomePage() {
                 <div className="absolute -left-4 bottom-8 rounded-2xl bg-white p-4 shadow-card sm:-left-8">
                   <div className="flex items-center gap-3">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-green/10">
-                      <ShieldCheck className="h-6 w-6 text-brand-green" />
+                      <BadgeCheck className="h-6 w-6 text-brand-green" />
                     </div>
                     <div>
-                      <p className="text-xl font-extrabold text-brand-navy">99.9%</p>
-                      <p className="text-xs text-ink-muted">Germ protection</p>
+                      <p className="text-xl font-extrabold text-brand-navy">{site.stats.products}+</p>
+                      <p className="text-xs text-ink-muted">Quality products</p>
                     </div>
                   </div>
                 </div>
@@ -289,7 +289,7 @@ export default function HomePage() {
               { value: site.stats.products, suffix: "+", label: "Quality Products" },
               { value: site.stats.clients, suffix: "+", label: "Happy Customers" },
               { value: site.stats.citiesServed, suffix: "+", label: "Cities Served" },
-              { value: 99, suffix: ".9%", label: "Germ Protection" },
+              { value: 100, suffix: "%", label: "Quality Checked" },
             ].map((stat) => (
               <Reveal key={stat.label}>
                 <div>

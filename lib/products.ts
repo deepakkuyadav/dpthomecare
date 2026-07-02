@@ -28,12 +28,12 @@ export const products: Product[] = [
     shortDescription:
       "A concentrated disinfectant floor cleaner that removes dirt, grime and germs while leaving behind a long-lasting fragrance.",
     description:
-      "DPT Floor Cleaner is a premium, concentrated formula engineered for daily floor care across homes, hotels, hospitals and offices. It lifts away tough dirt, oily footmarks and stubborn stains from marble, tiles, granite, ceramic and vitrified surfaces — all while killing 99.9% of germs. A little goes a long way: one capful in a bucket of water leaves your floors visibly clean, streak-free and fragrant for hours.",
+      "DPT Floor Cleaner is a premium, concentrated formula engineered for daily floor care across homes, hotels, hospitals and offices. It lifts away tough dirt, oily footmarks and stubborn stains from marble, tiles, granite, ceramic and vitrified surfaces while leaving them disinfected and fresh. A little goes a long way: one capful in a bucket of water leaves your floors visibly clean, streak-free and fragrant for hours.",
     image: IMG.tiledFloor,
     fragrance: "Available in Floral, Citrus, Jasmine and Lavender",
     featured: true,
     benefits: [
-      "Kills 99.9% of germs and bacteria",
+      "Disinfects and removes germs and bacteria",
       "Long-lasting fragrance for hours",
       "Safe on marble, tiles, granite and vitrified floors",
       "Highly concentrated — economical per wash",
@@ -49,7 +49,6 @@ export const products: Product[] = [
       { label: "Form", value: "Liquid concentrate" },
       { label: "Fragrance", value: "Floral / Citrus / Jasmine / Lavender" },
       { label: "Dilution", value: "1 capful in 1 litre of water" },
-      { label: "Germ kill", value: "99.9%" },
       { label: "Shelf life", value: "24 months" },
     ],
     usage: [
@@ -81,7 +80,7 @@ export const products: Product[] = [
     featured: true,
     benefits: [
       "Removes hard water stains and limescale",
-      "Kills 99.9% of germs that cause odour",
+      "Eliminates odour-causing germs and bacteria",
       "Thick gel clings for deeper cleaning",
       "Dissolves rust and yellow deposits",
       "Leaves a fresh, long-lasting fragrance",
@@ -95,7 +94,6 @@ export const products: Product[] = [
     specifications: [
       { label: "Form", value: "Thick liquid" },
       { label: "Fragrance", value: "Fresh Pine" },
-      { label: "Germ kill", value: "99.9%" },
       { label: "Application", value: "Ready to use" },
       { label: "Shelf life", value: "24 months" },
     ],
@@ -260,12 +258,12 @@ export const products: Product[] = [
     shortDescription:
       "A moisturising liquid hand wash that removes germs and dirt while keeping hands soft, smooth and beautifully fragranced.",
     description:
-      "DPT Hand Wash combines effective germ protection with skin-loving care. The rich, creamy lather cleans away dirt and 99.9% of germs, while added moisturisers and glycerine keep your hands soft, not dry. Perfect for homes, offices, hotels, restaurants and hospitals where frequent hand hygiene matters.",
+      "DPT Hand Wash combines effective germ protection with skin-loving care. The rich, creamy lather cleans away dirt and germs, while added moisturisers and glycerine keep your hands soft, not dry. Perfect for homes, offices, hotels, restaurants and hospitals where frequent hand hygiene matters.",
     image: IMG.handWash,
     fragrance: "Available in Rose, Lemon, Aloe Vera and Sea Breeze",
     featured: true,
     benefits: [
-      "Kills 99.9% of germs",
+      "Effective germ protection",
       "Moisturisers keep hands soft",
       "Rich, creamy lather",
       "Gentle, non-drying formula",
@@ -280,7 +278,6 @@ export const products: Product[] = [
     specifications: [
       { label: "Form", value: "Liquid" },
       { label: "Fragrance", value: "Rose / Lemon / Aloe Vera / Sea Breeze" },
-      { label: "Germ kill", value: "99.9%" },
       { label: "Application", value: "Ready to use" },
       { label: "Shelf life", value: "24 months" },
     ],
@@ -578,14 +575,14 @@ export const products: Product[] = [
     category: "Personal Care",
     tagline: "70% alcohol, 100% confidence",
     shortDescription:
-      "An alcohol-based hand sanitizer that kills 99.9% of germs in seconds without water, keeping hands protected on the go.",
+      "An alcohol-based hand sanitizer that kills germs in seconds without water, keeping hands protected on the go.",
     description:
-      "DPT Hand Sanitizer offers instant, water-free protection wherever you are. Its 70% alcohol formula kills 99.9% of germs and viruses in seconds, while added moisturisers prevent the dryness typical of sanitizers. Compact and quick-drying, it's ideal for homes, offices, hospitals, schools and travel.",
+      "DPT Hand Sanitizer offers instant, water-free protection wherever you are. Its 70% alcohol formula kills germs and viruses in seconds, while added moisturisers prevent the dryness typical of sanitizers. Compact and quick-drying, it's ideal for homes, offices, hospitals, schools and travel.",
     image: IMG.handWash3,
     fragrance: "Neutral / Mild fragrance",
     featured: false,
     benefits: [
-      "Kills 99.9% of germs in seconds",
+      "Kills germs in seconds",
       "70% alcohol — effective protection",
       "No water needed",
       "Moisturisers prevent dryness",
@@ -600,7 +597,6 @@ export const products: Product[] = [
     specifications: [
       { label: "Form", value: "Gel / liquid" },
       { label: "Alcohol", value: "70% v/v" },
-      { label: "Germ kill", value: "99.9%" },
       { label: "Application", value: "Ready to use" },
       { label: "Shelf life", value: "24 months" },
     ],

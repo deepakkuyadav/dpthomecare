@@ -22,7 +22,7 @@ export const processSteps: ProcessStep[] = [
   {
     title: "Quality Control",
     description:
-      "Each batch is tested for consistency, pH, fragrance, viscosity and germ-kill performance before it moves forward.",
+      "Each batch is tested for consistency, pH, fragrance, viscosity and cleaning performance before it moves forward.",
     icon: "ShieldCheck",
   },
   {
