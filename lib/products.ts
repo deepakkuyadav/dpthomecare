@@ -1,4 +1,3 @@
-import { IMG } from "./images";
 import type { Product, Category } from "./types";
 
 export const categories: Category[] = [
@@ -349,7 +348,7 @@ export const products: Product[] = [
       "A premium fabric conditioner that makes clothes irresistibly soft, reduces wrinkles and locks in a fresh fragrance for days.",
     description:
       "DPT Fabric Conditioner wraps each fibre in a protective layer of softness, making your clothes feel luxurious against the skin. It reduces wrinkles for easier ironing, protects fabric from wear, controls static and infuses garments with a long-lasting freshness that lingers wash after wash.",
-    image: IMG.laundryLoad,
+    image: "/products/fabric-conditioner.png",
     fragrance: "Available in Blossom, Morning Fresh and Baby Soft",
     featured: false,
     benefits: [
@@ -530,7 +529,7 @@ export const products: Product[] = [
       "A long-lasting air freshener that instantly neutralises odours and fills your space with a premium, welcoming fragrance.",
     description:
       "DPT Room Freshener does more than mask smells — it neutralises odour molecules and fills the air with a rich, long-lasting fragrance. A few sprays transform living rooms, bedrooms, washrooms, offices and cars into fresh, welcoming spaces. Available in a range of premium fragrances to match every mood.",
-    image: IMG.cozyHome,
+    image: "/products/room-freshener.png",
     fragrance: "Available in Lavender, Citrus Bloom, Rose and Ocean",
     featured: false,
     benefits: [
@@ -578,7 +577,7 @@ export const products: Product[] = [
       "An alcohol-based hand sanitizer that kills germs in seconds without water, keeping hands protected on the go.",
     description:
       "DPT Hand Sanitizer offers instant, water-free protection wherever you are. Its 70% alcohol formula kills germs and viruses in seconds, while added moisturisers prevent the dryness typical of sanitizers. Compact and quick-drying, it's ideal for homes, offices, hospitals, schools and travel.",
-    image: IMG.handWash3,
+    image: "/products/sanitizer.png",
     fragrance: "Neutral / Mild fragrance",
     featured: false,
     benefits: [
@@ -626,7 +625,7 @@ export const products: Product[] = [
       "A high-foam, pH-neutral car shampoo that lifts dirt gently, protects paint and delivers a streak-free, glossy finish.",
     description:
       "DPT Car Shampoo gives your vehicle a showroom-quality shine without harming the paint or wax coat. Its thick, high-foam formula gently lifts road grime, dust and bird droppings, while the pH-neutral base protects the clear coat. Rinses off cleanly for a spotless, streak-free, glossy finish every time.",
-    image: IMG.carWashFoam,
+    image: "/products/car-shampoo.png",
     fragrance: "Fresh Auto",
     featured: false,
     benefits: [
@@ -672,7 +671,7 @@ export const products: Product[] = [
       "A gentle, economical liquid soap ideal for hand washing and body cleansing across homes and high-traffic institutions.",
     description:
       "DPT Liquid Soap is a versatile, mild cleanser perfect for high-usage settings such as schools, offices, hospitals and public washrooms, as well as everyday home use. It produces a rich lather that cleanses effectively, rinses easily and leaves skin fresh and cared for — available in bulk for cost-effective hygiene at scale.",
-    image: IMG.handWash2,
+    image: "/products/liquid-soap.png",
     fragrance: "Available in Classic, Rose and Lemon",
     featured: false,
     benefits: [
