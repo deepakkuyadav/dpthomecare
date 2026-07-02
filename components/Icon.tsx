@@ -1,0 +1,57 @@
+import {
+  Sparkles,
+  ShowerHead,
+  UtensilsCrossed,
+  SprayCan,
+  Shirt,
+  HandHeart,
+  Wind,
+  Car,
+  Home,
+  BedDouble,
+  Stethoscope,
+  GraduationCap,
+  Building2,
+  Store,
+  Truck,
+  PackageSearch,
+  FlaskConical,
+  Factory,
+  ShieldCheck,
+  Package,
+  Leaf,
+  Award,
+  BadgeCheck,
+  type LucideIcon,
+} from "lucide-react";
+
+const map: Record<string, LucideIcon> = {
+  Sparkles,
+  ShowerHead,
+  UtensilsCrossed,
+  SprayCan,
+  Shirt,
+  HandHeart,
+  Wind,
+  Car,
+  Home,
+  BedDouble,
+  Stethoscope,
+  GraduationCap,
+  Building2,
+  Store,
+  Truck,
+  PackageSearch,
+  FlaskConical,
+  Factory,
+  ShieldCheck,
+  Package,
+  Leaf,
+  Award,
+  BadgeCheck,
+};
+
+export function Icon({ name, className }: { name: string; className?: string }) {
+  const Cmp = map[name] ?? Sparkles;
+  return <Cmp className={className} />;
+}
