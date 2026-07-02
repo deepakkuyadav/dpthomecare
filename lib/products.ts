@@ -29,7 +29,7 @@ export const products: Product[] = [
       "A concentrated disinfectant floor cleaner that removes dirt, grime and germs while leaving behind a long-lasting fragrance.",
     description:
       "DPT Floor Cleaner is a premium, concentrated formula engineered for daily floor care across homes, hotels, hospitals and offices. It lifts away tough dirt, oily footmarks and stubborn stains from marble, tiles, granite, ceramic and vitrified surfaces while leaving them disinfected and fresh. A little goes a long way: one capful in a bucket of water leaves your floors visibly clean, streak-free and fragrant for hours.",
-    image: IMG.tiledFloor,
+    image: "/products/floor-cleaner.png",
     fragrance: "Available in Floral, Citrus, Jasmine and Lavender",
     featured: true,
     benefits: [
@@ -75,7 +75,7 @@ export const products: Product[] = [
       "A powerful, thick-liquid toilet cleaner that clings to surfaces, dissolves hard water stains and eliminates germs and odour.",
     description:
       "DPT Toilet Cleaner is a heavy-duty acid formula that clings to the toilet bowl to dissolve limescale, hard-water stains, rust and yellow deposits. Its thick consistency ensures maximum contact time for a deep, hygienic clean that removes stains and destroys odour-causing bacteria — leaving your washroom sparkling and fresh.",
-    image: IMG.toiletBowl,
+    image: "/products/toilet-cleaner.png",
     fragrance: "Fresh Pine",
     featured: true,
     benefits: [
@@ -123,7 +123,7 @@ export const products: Product[] = [
       "A fast-acting glass and mirror cleaner that removes fingerprints, dust and smudges to deliver a brilliant, streak-free finish.",
     description:
       "DPT Glass Cleaner gives windows, mirrors, glass tables and display cases a crystal-clear, streak-free shine in seconds. Its quick-evaporating formula cuts through fingerprints, dust, grease and water spots without leaving smears — ideal for homes, showrooms, hotels and retail stores where a spotless look matters.",
-    image: IMG.glassSpray,
+    image: "/products/glass-cleaner.png",
     fragrance: "Fresh Mint",
     featured: true,
     benefits: [
@@ -168,7 +168,7 @@ export const products: Product[] = [
       "A concentrated, lemon-powered dishwash liquid that cuts through oil and grease, leaving utensils squeaky clean and shining.",
     description:
       "DPT Dish Wash Liquid is a high-performance, lemon-fortified formula that dissolves stubborn grease and dried-on food in seconds. Rich, long-lasting foam means fewer squeezes per wash, while the gentle, skin-friendly base protects your hands. It rinses off cleanly to leave your utensils, glassware and cookware spotless and shining.",
-    image: IMG.dishwash,
+    image: "/products/dish-wash-liquid.png",
     fragrance: "Lemon",
     featured: true,
     benefits: [
@@ -214,7 +214,7 @@ export const products: Product[] = [
       "A powerful liquid detergent for machine and hand wash that removes tough stains and keeps colours bright — with no powder residue.",
     description:
       "DPT Liquid Detergent dissolves instantly to penetrate deep into fabric fibres, lifting away tough stains, sweat, dirt and odour. Unlike powders, it leaves no white residue on clothes or in your machine, and its colour-guard formula keeps whites bright and colours vivid, wash after wash. Suitable for both top-load and front-load machines as well as hand wash.",
-    image: IMG.laundry,
+    image: "/products/liquid-detergent.png",
     fragrance: "Spring Fresh",
     featured: false,
     benefits: [
@@ -259,7 +259,7 @@ export const products: Product[] = [
       "A moisturising liquid hand wash that removes germs and dirt while keeping hands soft, smooth and beautifully fragranced.",
     description:
       "DPT Hand Wash combines effective germ protection with skin-loving care. The rich, creamy lather cleans away dirt and germs, while added moisturisers and glycerine keep your hands soft, not dry. Perfect for homes, offices, hotels, restaurants and hospitals where frequent hand hygiene matters.",
-    image: IMG.handWash,
+    image: "/products/hand-wash.png",
     fragrance: "Available in Rose, Lemon, Aloe Vera and Sea Breeze",
     featured: true,
     benefits: [
@@ -304,7 +304,7 @@ export const products: Product[] = [
       "A concentrated white/black phenyl disinfectant that cleans, deodorises and disinfects floors, drains and large surface areas.",
     description:
       "DPT Phenyl is a powerful concentrated disinfectant for floors, corridors, drains and washrooms. Available in classic white (emulsion) and black variants, it destroys germs, controls odour and leaves a fresh, sanitised environment. Ideal for institutions, hospitals, schools, factories and large housing complexes where economical, high-strength disinfection is essential.",
-    image: IMG.moppingGray,
+    image: "/products/phenyl.png",
     fragrance: "Classic Phenyl / Floral",
     featured: false,
     benefits: [
@@ -394,7 +394,7 @@ export const products: Product[] = [
       "A tough surface cleaner that removes soap scum, hard-water marks and stains from tiles, taps, sinks and bathroom fittings.",
     description:
       "DPT Bathroom Cleaner tackles the toughest bathroom grime — soap scum, hard-water spots, mineral deposits and dirt — on tiles, wash basins, taps, showers and fittings. Its powerful yet surface-safe formula restores the original shine of your bathroom while leaving a hygienic, fresh finish.",
-    image: IMG.bathroomTiles,
+    image: "/products/bathroom-cleaner.png",
     fragrance: "Ocean Fresh",
     featured: false,
     benefits: [
@@ -439,7 +439,7 @@ export const products: Product[] = [
       "A degreasing kitchen cleaner that removes oil, grease and food stains from platforms, chimneys, tiles and gas stoves.",
     description:
       "DPT Kitchen Cleaner is a heavy-duty degreaser designed for the toughest kitchen messes. It dissolves baked-on oil, grease splatter and food residue from countertops, tiles, chimneys, gas stoves and sinks — quickly and without hard scrubbing — leaving your kitchen hygienic, shining and food-safe.",
-    image: IMG.kitchenSurface,
+    image: "/products/kitchen-cleaner.png",
     fragrance: "Citrus Zest",
     featured: false,
     benefits: [
@@ -485,7 +485,7 @@ export const products: Product[] = [
       "A versatile all-surface cleaner that cleans, disinfects and shines floors, walls, doors, furniture and more.",
     description:
       "DPT Multi Purpose Cleaner is your all-in-one hygiene solution. From floors and walls to doors, furniture, plastic, glass and painted surfaces, it cleans, disinfects and deodorises in a single step. Its balanced formula is tough on dirt yet gentle on surfaces — the smart, economical choice for busy homes and businesses.",
-    image: IMG.cleaningProductsTable,
+    image: "/products/multi-purpose-cleaner.png",
     fragrance: "Fresh Lily",
     featured: true,
     benefits: [
