@@ -42,3 +42,9 @@ next-env.d.ts
 /logos-v2
 ppt.png
 ppt1.png
+
+# scratch & source design images (finals live in public/)
+/.scratch
+/scratch-montage.png
+/1.png
+/2.png
