@@ -8,7 +8,7 @@ export function px(id: number, w = 1260): string {
 export const IMG = {
   // Hero & brand
   heroMopping: px(4440541, 1600),
-  cleaningProducts: px(5218019, 1400),
+  cleaningProducts: "/brand/cleaning-products.jpg", // DPT-branded (logo added)
   cleaningProductsTable: px(5217900, 1400),
   sparkleKitchen: px(3634739, 1400),
   modernHome: px(6238679, 1400),
