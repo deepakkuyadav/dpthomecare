@@ -20,6 +20,7 @@ import { Icon } from "@/components/Icon";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { CTABand } from "@/components/CTABand";
+import { CategoryRail } from "@/components/CategoryRail";
 import { featuredProducts, categories } from "@/lib/products";
 import { processSteps } from "@/lib/process";
 import { industries } from "@/lib/industries";
@@ -144,6 +145,9 @@ export default function HomePage() {
           ))}
         </div>
       </div>
+
+      {/* ================= CATEGORY RAIL ================= */}
+      <CategoryRail />
 
       {/* ================= FEATURED PRODUCTS ================= */}
       <section className="section">
