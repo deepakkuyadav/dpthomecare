@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { Breadcrumbs } from "./Breadcrumbs";
 
 export function PageHero({
@@ -8,11 +9,11 @@ export function PageHero({
   image,
   breadcrumbs,
 }: {
-  title: string;
-  subtitle?: string;
-  eyebrow?: string;
+  title: ReactNode;
+  subtitle?: ReactNode;
+  eyebrow?: ReactNode;
   image?: string;
-  breadcrumbs: { name: string; path: string }[];
+  breadcrumbs: { name: string; nameHi?: string; path: string }[];
 }) {
   return (
     <section className="relative overflow-hidden bg-brand-gradient-soft pt-32 pb-16 md:pt-40 md:pb-24">

@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { Search, SlidersHorizontal } from "lucide-react";
 import type { Product, Category } from "@/lib/types";
 import { ProductCard } from "./ProductCard";
+import { T, useLang } from "@/lib/lang";
 
 export function ProductsExplorer({
   products,
@@ -14,6 +15,7 @@ export function ProductsExplorer({
   categories: Category[];
   initialCategory?: string;
 }) {
+  const { lang } = useLang();
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(initialCategory);
 
@@ -31,7 +33,11 @@ export function ProductsExplorer({
     });
   }, [products, query, active]);
 
-  const cats = ["All", ...categories.map((c) => c.name)];
+  // Filter values stay English (matched against p.category and ?category=); only labels are localized.
+  const cats: { name: string; nameHi: string }[] = [
+    { name: "All", nameHi: "सभी" },
+    ...categories.map((c) => ({ name: c.name, nameHi: c.nameHi ?? c.name })),
+  ];
 
   return (
     <div>
@@ -42,15 +48,18 @@ export function ProductsExplorer({
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search products…"
-            aria-label="Search products"
+            placeholder={lang === "hi" ? "प्रोडक्ट खोजें…" : "Search products…"}
+            aria-label={lang === "hi" ? "प्रोडक्ट खोजें" : "Search products"}
             className="w-full rounded-full border border-slate-200 bg-white py-3 pl-12 pr-4 text-sm shadow-sm focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/20"
           />
         </div>
         <div className="flex items-center gap-2 text-sm text-ink-muted">
           <SlidersHorizontal className="h-4 w-4" />
           <span>
-            {filtered.length} {filtered.length === 1 ? "product" : "products"}
+            <T
+              en={`${filtered.length} ${filtered.length === 1 ? "product" : "products"}`}
+              hi={`${filtered.length} ${filtered.length === 1 ? "प्रोडक्ट" : "प्रोडक्ट्स"}`}
+            />
           </span>
         </div>
       </div>
@@ -58,15 +67,15 @@ export function ProductsExplorer({
       <div className="no-scrollbar mt-6 flex gap-2 overflow-x-auto pb-2">
         {cats.map((c) => (
           <button
-            key={c}
-            onClick={() => setActive(c)}
+            key={c.name}
+            onClick={() => setActive(c.name)}
             className={`shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
-              active === c
+              active === c.name
                 ? "bg-brand-gradient text-white shadow-sm"
                 : "bg-slate-100 text-ink-soft hover:bg-slate-200"
             }`}
           >
-            {c}
+            <T en={c.name} hi={c.nameHi} />
           </button>
         ))}
       </div>
@@ -79,8 +88,12 @@ export function ProductsExplorer({
         </div>
       ) : (
         <div className="mt-12 rounded-3xl border border-dashed border-slate-200 py-16 text-center">
-          <p className="text-lg font-semibold text-brand-navy">No products found</p>
-          <p className="mt-1 text-ink-muted">Try a different search term or category.</p>
+          <p className="text-lg font-semibold text-brand-navy">
+            <T en="No products found" hi="कोई प्रोडक्ट नहीं मिला" />
+          </p>
+          <p className="mt-1 text-ink-muted">
+            <T en="Try a different search term or category." hi="कोई दूसरा सर्च शब्द या कैटेगरी आज़माकर देखें।" />
+          </p>
         </div>
       )}
     </div>

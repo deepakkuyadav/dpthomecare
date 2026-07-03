@@ -4,7 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { T } from "@/lib/lang";
 import type { GalleryItem } from "@/lib/gallery";
+
+type GalleryItemI18n = GalleryItem & { titleHi?: string; categoryHi?: string };
 
 export function GalleryGrid({
   items,
@@ -14,9 +17,15 @@ export function GalleryGrid({
   categories: string[];
 }) {
   const [active, setActive] = useState("All");
-  const [lightbox, setLightbox] = useState<GalleryItem | null>(null);
+  const [lightbox, setLightbox] = useState<GalleryItemI18n | null>(null);
 
-  const filtered = active === "All" ? items : items.filter((i) => i.category === active);
+  const filtered = (items as GalleryItemI18n[]).filter((i) => active === "All" || i.category === active);
+
+  // Hindi display labels for the filter chips (filter values themselves stay English)
+  const categoryHiMap = new Map<string, string>([["All", "सभी"]]);
+  for (const it of items as GalleryItemI18n[]) {
+    if (it.categoryHi) categoryHiMap.set(it.category, it.categoryHi);
+  }
 
   return (
     <div>
@@ -29,7 +38,7 @@ export function GalleryGrid({
               active === c ? "bg-brand-gradient text-white shadow-sm" : "bg-slate-100 text-ink-soft hover:bg-slate-200"
             }`}
           >
-            {c}
+            <T en={c} hi={categoryHiMap.get(c) ?? c} />
           </button>
         ))}
       </div>
@@ -56,8 +65,12 @@ export function GalleryGrid({
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               <div className="absolute inset-x-0 bottom-0 translate-y-2 p-5 text-left opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-                <span className="text-xs font-semibold uppercase tracking-wide text-brand-green-light">{item.category}</span>
-                <p className="font-semibold text-white">{item.title}</p>
+                <span className="text-xs font-semibold uppercase tracking-wide text-brand-green-light">
+                  <T en={item.category} hi={item.categoryHi ?? item.category} />
+                </span>
+                <p className="font-semibold text-white">
+                  <T en={item.title} hi={item.titleHi ?? item.title} />
+                </p>
               </div>
             </motion.button>
           ))}
@@ -94,8 +107,12 @@ export function GalleryGrid({
                 className="h-auto w-full object-contain"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-navy/90 to-transparent p-6">
-                <span className="text-xs font-semibold uppercase tracking-wide text-brand-green-light">{lightbox.category}</span>
-                <p className="text-lg font-semibold text-white">{lightbox.title}</p>
+                <span className="text-xs font-semibold uppercase tracking-wide text-brand-green-light">
+                  <T en={lightbox.category} hi={lightbox.categoryHi ?? lightbox.category} />
+                </span>
+                <p className="text-lg font-semibold text-white">
+                  <T en={lightbox.title} hi={lightbox.titleHi ?? lightbox.title} />
+                </p>
               </div>
             </motion.div>
           </motion.div>

@@ -3,25 +3,28 @@
 import { useState } from "react";
 import { Send, CheckCircle2 } from "lucide-react";
 import { site } from "@/lib/site";
+import { T, useLang } from "@/lib/lang";
 
+// `value` is what gets sent in the WhatsApp message and must stay English; `hi` is only the displayed label.
 const businessTypes = [
-  "Distributor",
-  "Wholesaler",
-  "Retailer",
-  "Cleaning Agency",
-  "Institutional Buyer",
-  "New to this business",
+  { value: "Distributor", hi: "डिस्ट्रीब्यूटर" },
+  { value: "Wholesaler", hi: "होलसेलर" },
+  { value: "Retailer", hi: "रिटेलर" },
+  { value: "Cleaning Agency", hi: "क्लीनिंग एजेंसी" },
+  { value: "Institutional Buyer", hi: "संस्थागत खरीदार" },
+  { value: "New to this business", hi: "इस व्यवसाय में नया/नई" },
 ];
 
 const investmentRanges = [
-  "Below ₹50,000",
-  "₹50,000 – ₹1,00,000",
-  "₹1,00,000 – ₹3,00,000",
-  "₹3,00,000 – ₹5,00,000",
-  "Above ₹5,00,000",
+  { value: "Below ₹50,000", hi: "₹50,000 से कम" },
+  { value: "₹50,000 – ₹1,00,000", hi: "₹50,000 – ₹1,00,000" },
+  { value: "₹1,00,000 – ₹3,00,000", hi: "₹1,00,000 – ₹3,00,000" },
+  { value: "₹3,00,000 – ₹5,00,000", hi: "₹3,00,000 – ₹5,00,000" },
+  { value: "Above ₹5,00,000", hi: "₹5,00,000 से अधिक" },
 ];
 
 export function DistributorForm() {
+  const { lang } = useLang();
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -29,8 +32,8 @@ export function DistributorForm() {
     email: "",
     city: "",
     state: "Uttar Pradesh",
-    businessType: businessTypes[0],
-    investment: investmentRanges[1],
+    businessType: businessTypes[0].value,
+    investment: investmentRanges[1].value,
     message: "",
   });
 
@@ -60,13 +63,17 @@ export function DistributorForm() {
     return (
       <div className="rounded-3xl border border-brand-green/30 bg-brand-green/5 p-8 text-center">
         <CheckCircle2 className="mx-auto h-14 w-14 text-brand-green" />
-        <h3 className="mt-4 text-xl font-bold text-brand-navy">Application received!</h3>
+        <h3 className="mt-4 text-xl font-bold text-brand-navy">
+          <T en="Application received!" hi="आवेदन मिल गया!" />
+        </h3>
         <p className="mt-2 text-ink-soft">
-          Your distributor enquiry is ready in WhatsApp — send it and our partnership team will contact you
-          within 1–2 business days.
+          <T
+            en="Your distributor enquiry is ready in WhatsApp — send it and our partnership team will contact you within 1–2 business days."
+            hi="आपकी डिस्ट्रीब्यूटर पूछताछ WhatsApp में तैयार है — उसे भेज दें, हमारी पार्टनरशिप टीम 1–2 कार्यदिवसों में आपसे संपर्क करेगी।"
+          />
         </p>
         <button onClick={() => setSent(false)} className="btn-outline mt-6">
-          Submit another
+          <T en="Submit another" hi="एक और भेजें" />
         </button>
       </div>
     );
@@ -74,51 +81,60 @@ export function DistributorForm() {
 
   return (
     <form onSubmit={submit} className="rounded-3xl border border-slate-100 bg-white p-6 shadow-card sm:p-8">
-      <h3 className="text-2xl font-bold text-brand-navy">Become a Partner</h3>
+      <h3 className="text-2xl font-bold text-brand-navy">
+        <T en="Become a Partner" hi="पार्टनर बनें" />
+      </h3>
       <p className="mt-1 text-sm text-ink-muted">
-        Tell us about yourself and your business. Fields marked * are required.
+        <T
+          en="Tell us about yourself and your business. Fields marked * are required."
+          hi="अपने और अपने व्यवसाय के बारे में बताएं। * वाले फ़ील्ड ज़रूरी हैं।"
+        />
       </p>
       <div className="mt-6 grid gap-4">
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="Full Name" required>
-            <input required value={form.name} onChange={update("name")} className={inputClass} placeholder="Your name" />
+          <Field label={lang === "hi" ? "पूरा नाम" : "Full Name"} required>
+            <input required value={form.name} onChange={update("name")} className={inputClass} placeholder={lang === "hi" ? "आपका नाम" : "Your name"} />
           </Field>
-          <Field label="Phone Number" required>
-            <input required type="tel" value={form.phone} onChange={update("phone")} className={inputClass} placeholder="10-digit mobile number" />
+          <Field label={lang === "hi" ? "फ़ोन नंबर" : "Phone Number"} required>
+            <input required type="tel" value={form.phone} onChange={update("phone")} className={inputClass} placeholder={lang === "hi" ? "10 अंकों का मोबाइल नंबर" : "10-digit mobile number"} />
           </Field>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="Email (optional)">
+          <Field label={lang === "hi" ? "ईमेल (वैकल्पिक)" : "Email (optional)"}>
             <input type="email" value={form.email} onChange={update("email")} className={inputClass} placeholder="you@email.com" />
           </Field>
-          <Field label="City / Town" required>
-            <input required value={form.city} onChange={update("city")} className={inputClass} placeholder="Your city" />
+          <Field label={lang === "hi" ? "शहर / कस्बा" : "City / Town"} required>
+            <input required value={form.city} onChange={update("city")} className={inputClass} placeholder={lang === "hi" ? "आपका शहर" : "Your city"} />
           </Field>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="State" required>
+          <Field label={lang === "hi" ? "राज्य" : "State"} required>
             <input required value={form.state} onChange={update("state")} className={inputClass} />
           </Field>
-          <Field label="Business Type" required>
+          <Field label={lang === "hi" ? "व्यवसाय का प्रकार" : "Business Type"} required>
             <select value={form.businessType} onChange={update("businessType")} className={inputClass}>
               {businessTypes.map((b) => (
-                <option key={b}>{b}</option>
+                <option key={b.value} value={b.value}>
+                  {lang === "hi" ? b.hi : b.value}
+                </option>
               ))}
             </select>
           </Field>
         </div>
-        <Field label="Investment Capacity" required>
+        <Field label={lang === "hi" ? "निवेश क्षमता" : "Investment Capacity"} required>
           <select value={form.investment} onChange={update("investment")} className={inputClass}>
             {investmentRanges.map((r) => (
-              <option key={r}>{r}</option>
+              <option key={r.value} value={r.value}>
+                {lang === "hi" ? r.hi : r.value}
+              </option>
             ))}
           </select>
         </Field>
-        <Field label="Message (optional)">
-          <textarea value={form.message} onChange={update("message")} rows={3} className={inputClass} placeholder="Tell us about your business experience or the area you cover…" />
+        <Field label={lang === "hi" ? "संदेश (वैकल्पिक)" : "Message (optional)"}>
+          <textarea value={form.message} onChange={update("message")} rows={3} className={inputClass} placeholder={lang === "hi" ? "अपने व्यवसाय के अनुभव या अपने क्षेत्र के बारे में बताएं…" : "Tell us about your business experience or the area you cover…"} />
         </Field>
         <button type="submit" className="btn-green w-full sm:w-auto">
-          <Send className="h-4 w-4" /> Submit Application
+          <Send className="h-4 w-4" /> <T en="Submit Application" hi="आवेदन भेजें" />
         </button>
       </div>
     </form>

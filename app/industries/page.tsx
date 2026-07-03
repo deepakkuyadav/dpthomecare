@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
 import { industries } from "@/lib/industries";
 import { IMG } from "@/lib/images";
+import { T } from "@/lib/lang";
 
 export const metadata = pageMetadata({
   title: "Industries We Serve — Homes, Hotels, Hospitals & More",
@@ -23,19 +24,29 @@ export default function IndustriesPage() {
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Industries We Serve", path: "/industries" }])} />
       <PageHero
-        eyebrow="Industries We Serve"
-        title="Hygiene Solutions for Every Sector"
-        subtitle="From family homes to large institutions, our products are trusted across a wide range of industries — each with its own hygiene priorities."
+        eyebrow={<T en="Industries We Serve" hi="हम किन सेक्टरों की सेवा करते हैं" />}
+        title={<T en="Hygiene Solutions for Every Sector" hi="हर सेक्टर के लिए हाइजीन समाधान" />}
+        subtitle={
+          <T
+            en="From family homes to large institutions, our products are trusted across a wide range of industries — each with its own hygiene priorities."
+            hi="पारिवारिक घरों से लेकर बड़े संस्थानों तक, हमारे प्रोडक्ट्स कई इंडस्ट्री में भरोसे के साथ इस्तेमाल होते हैं — हर एक की अपनी हाइजीन प्राथमिकताएं हैं।"
+          />
+        }
         image={IMG.hospital}
-        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Industries We Serve", path: "/industries" }]}
+        breadcrumbs={[{ name: "Home", nameHi: "होम", path: "/" }, { name: "Industries We Serve", nameHi: "हम किन सेक्टरों की सेवा करते हैं", path: "/industries" }]}
       />
 
       <section className="section">
         <div className="container-wide">
           <SectionHeading
-            eyebrow="Who We Serve"
-            title="Tailored for Your Environment"
-            subtitle="Different spaces need different hygiene solutions. Here's how DPT Home Care supports each sector."
+            eyebrow={<T en="Who We Serve" hi="हम किनकी सेवा करते हैं" />}
+            title={<T en="Tailored for Your Environment" hi="आपके माहौल के हिसाब से" />}
+            subtitle={
+              <T
+                en="Different spaces need different hygiene solutions. Here's how DPT Home Care supports each sector."
+                hi="अलग-अलग जगहों को अलग-अलग हाइजीन समाधान चाहिए। जानिए DPT Home Care हर सेक्टर की मदद कैसे करता है।"
+              />
+            }
           />
           <div className="mt-12 space-y-8">
             {industries.map((ind, i) => (
@@ -48,12 +59,12 @@ export default function IndustriesPage() {
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-blue/10 text-brand-blue">
                       <Icon name={ind.icon} className="h-6 w-6" />
                     </div>
-                    <h3 className="mt-4 text-2xl font-bold text-brand-navy">{ind.name}</h3>
-                    <p className="mt-2 text-ink-soft leading-relaxed">{ind.description}</p>
+                    <h3 className="mt-4 text-2xl font-bold text-brand-navy"><T en={ind.name} hi={ind.nameHi} /></h3>
+                    <p className="mt-2 text-ink-soft leading-relaxed"><T en={ind.description} hi={ind.descriptionHi} /></p>
                     <ul className="mt-4 space-y-2">
-                      {ind.points.map((p) => (
+                      {ind.points.map((p, j) => (
                         <li key={p} className="flex items-start gap-2.5 text-sm text-ink-soft">
-                          <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" /> {p}
+                          <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" /> <T en={p} hi={ind.pointsHi?.[j] ?? p} />
                         </li>
                       ))}
                     </ul>
@@ -66,11 +77,16 @@ export default function IndustriesPage() {
       </section>
 
       <CTABand
-        eyebrow="Bulk & Institutional Supply"
-        title="Need Reliable Supply for Your Business?"
-        text="We provide dependable bulk supply and competitive pricing tailored to institutions, retailers and agencies. Let's discuss your requirements."
+        eyebrow={<T en="Bulk & Institutional Supply" hi="बल्क और संस्थागत सप्लाई" />}
+        title={<T en="Need Reliable Supply for Your Business?" hi="अपने बिज़नेस के लिए भरोसेमंद सप्लाई चाहिए?" />}
+        text={
+          <T
+            en="We provide dependable bulk supply and competitive pricing tailored to institutions, retailers and agencies. Let's discuss your requirements."
+            hi="हम संस्थानों, रिटेलरों और एजेंसियों के लिए भरोसेमंद बल्क सप्लाई और प्रतिस्पर्धी कीमतें देते हैं। आइए, आपकी ज़रूरतों पर बात करें।"
+          />
+        }
         image={IMG.warehouse}
-        primary={{ label: "Get a Quote", href: "/contact" }}
+        primary={{ label: <T en="Get a Quote" hi="कोटेशन पाएं" />, href: "/contact" }}
       />
     </>
   );

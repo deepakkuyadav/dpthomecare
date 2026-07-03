@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { T } from "@/lib/lang";
 import type { Testimonial } from "@/lib/types";
 
 export function TestimonialsCarousel({ items }: { items: Testimonial[] }) {
@@ -38,7 +39,9 @@ export function TestimonialsCarousel({ items }: { items: Testimonial[] }) {
                   />
                 ))}
               </div>
-              <p className="mt-4 flex-1 text-[15px] leading-relaxed text-ink-soft">“{t.quote}”</p>
+              <p className="mt-4 flex-1 text-[15px] leading-relaxed text-ink-soft">
+                “<T en={t.quote} hi={t.quoteHi ?? t.quote} />”
+              </p>
               <div className="mt-6 flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-gradient text-sm font-bold text-white">
                   {t.name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
@@ -46,7 +49,7 @@ export function TestimonialsCarousel({ items }: { items: Testimonial[] }) {
                 <div>
                   <p className="font-semibold text-brand-navy">{t.name}</p>
                   <p className="text-xs text-ink-muted">
-                    {t.role} · {t.location}
+                    <T en={t.role} hi={t.roleHi ?? t.role} /> · <T en={t.location} hi={t.locationHi ?? t.location} />
                   </p>
                 </div>
               </div>

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Bot, Send, X, Phone, MessageCircle, Sparkles } from "lucide-react";
 import { site, whatsappLink, telLink } from "@/lib/site";
+import { T, useLang } from "@/lib/lang";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -12,11 +13,14 @@ const GREETING: Msg = {
     "Hi! 👋 I'm the DPT Assistant. Ask me about our cleaning products, bulk supply, distributorship, or anything hygiene-related.",
 };
 
+const GREETING_HI =
+  "नमस्ते! 👋 मैं DPT असिस्टेंट हूँ। हमारे सफाई उत्पादों, थोक सप्लाई, डिस्ट्रीब्यूटरशिप या हाइजीन से जुड़ा कोई भी सवाल मुझसे पूछें।";
+
 const QUICK = [
-  "Which products do you make?",
-  "I want to become a distributor",
-  "Do you supply in bulk?",
-  "Best cleaner for my kitchen?",
+  { en: "Which products do you make?", hi: "आप कौन-कौन से उत्पाद बनाते हैं?" },
+  { en: "I want to become a distributor", hi: "मुझे डिस्ट्रीब्यूटर बनना है" },
+  { en: "Do you supply in bulk?", hi: "क्या आप थोक में सप्लाई करते हैं?" },
+  { en: "Best cleaner for my kitchen?", hi: "मेरी रसोई के लिए सबसे अच्छा क्लीनर?" },
 ];
 
 export function ChatWidget() {
@@ -25,6 +29,7 @@ export function ChatWidget() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const { lang } = useLang();
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -49,14 +54,22 @@ export function ChatWidget() {
       const data = await res.json();
       setMessages((m) => [
         ...m,
-        { role: "assistant", content: data.reply || "Sorry, please try again." },
+        {
+          role: "assistant",
+          content:
+            data.reply ||
+            (lang === "hi" ? "क्षमा करें, कृपया फिर से प्रयास करें।" : "Sorry, please try again."),
+        },
       ]);
     } catch {
       setMessages((m) => [
         ...m,
         {
           role: "assistant",
-          content: `Sorry, I'm having trouble. Please WhatsApp us at ${site.phoneDisplay}.`,
+          content:
+            lang === "hi"
+              ? `क्षमा करें, अभी कुछ समस्या आ रही है। कृपया हमें ${site.phoneDisplay} पर WhatsApp करें।`
+              : `Sorry, I'm having trouble. Please WhatsApp us at ${site.phoneDisplay}.`,
         },
       ]);
     } finally {
@@ -76,13 +89,13 @@ export function ChatWidget() {
                 <Bot className="h-5 w-5" />
               </span>
               <div className="leading-tight">
-                <p className="text-sm font-semibold">DPT Assistant</p>
+                <p className="text-sm font-semibold"><T en="DPT Assistant" hi="DPT असिस्टेंट" /></p>
                 <p className="flex items-center gap-1 text-[11px] text-white/80">
-                  <span className="h-1.5 w-1.5 rounded-full bg-green-300" /> Online now
+                  <span className="h-1.5 w-1.5 rounded-full bg-green-300" /> <T en="Online now" hi="अभी ऑनलाइन" />
                 </p>
               </div>
             </div>
-            <button onClick={() => setOpen(false)} aria-label="Close chat" className="rounded-full p-1.5 hover:bg-white/15">
+            <button onClick={() => setOpen(false)} aria-label={lang === "hi" ? "चैट बंद करें" : "Close chat"} className="rounded-full p-1.5 hover:bg-white/15">
               <X className="h-5 w-5" />
             </button>
           </div>
@@ -103,7 +116,7 @@ export function ChatWidget() {
                       : "rounded-bl-md border border-slate-100 bg-white text-ink-soft"
                   }`}
                 >
-                  {m.content}
+                  {m === GREETING && lang === "hi" ? GREETING_HI : m.content}
                 </div>
               </div>
             ))}
@@ -125,11 +138,11 @@ export function ChatWidget() {
               <div className="flex flex-wrap gap-2 pt-1">
                 {QUICK.map((q) => (
                   <button
-                    key={q}
-                    onClick={() => send(q)}
+                    key={q.en}
+                    onClick={() => send(lang === "hi" ? q.hi : q.en)}
                     className="rounded-full border border-brand-blue/25 bg-white px-3 py-1.5 text-xs font-medium text-brand-blue transition-colors hover:bg-brand-blue hover:text-white"
                   >
-                    {q}
+                    {lang === "hi" ? q.hi : q.en}
                   </button>
                 ))}
               </div>
@@ -147,20 +160,22 @@ export function ChatWidget() {
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Type your message…"
-              aria-label="Chat message"
+              placeholder={lang === "hi" ? "अपना संदेश लिखें…" : "Type your message…"}
+              aria-label={lang === "hi" ? "चैट संदेश" : "Chat message"}
               className="min-w-0 flex-1 rounded-full border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-brand-blue focus:bg-white focus:outline-none"
             />
             <button
               type="submit"
               disabled={loading || !input.trim()}
-              aria-label="Send message"
+              aria-label={lang === "hi" ? "संदेश भेजें" : "Send message"}
               className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-gradient text-white transition-transform hover:scale-105 disabled:opacity-50"
             >
               <Send className="h-4 w-4" />
             </button>
           </form>
-          <p className="bg-white pb-2 text-center text-[10px] text-ink-muted">Powered by AI · Responses may vary</p>
+          <p className="bg-white pb-2 text-center text-[10px] text-ink-muted">
+            <T en="Powered by AI · Responses may vary" hi="AI द्वारा संचालित · उत्तर भिन्न हो सकते हैं" />
+          </p>
         </div>
       )}
 
@@ -168,7 +183,7 @@ export function ChatWidget() {
       <div className="fixed bottom-5 right-4 z-40 flex flex-col items-end gap-3 sm:right-5">
         <a
           href={telLink()}
-          aria-label={`Call ${site.phoneDisplay}`}
+          aria-label={lang === "hi" ? `${site.phoneDisplay} पर कॉल करें` : `Call ${site.phoneDisplay}`}
           className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue text-white shadow-lg shadow-brand-blue/40 transition-transform hover:scale-110"
         >
           <Phone className="h-5 w-5" />
@@ -177,14 +192,18 @@ export function ChatWidget() {
           href={whatsappLink()}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Chat on WhatsApp"
+          aria-label={lang === "hi" ? "WhatsApp पर चैट करें" : "Chat on WhatsApp"}
           className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-green-500/40 transition-transform hover:scale-110"
         >
           <MessageCircle className="h-6 w-6" />
         </a>
         <button
           onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "Close AI assistant" : "Open AI assistant"}
+          aria-label={
+            open
+              ? lang === "hi" ? "AI असिस्टेंट बंद करें" : "Close AI assistant"
+              : lang === "hi" ? "AI असिस्टेंट खोलें" : "Open AI assistant"
+          }
           className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-brand-gradient text-white shadow-xl shadow-brand-blue/40 transition-transform hover:scale-110"
         >
           {!open && <span className="absolute inset-0 animate-ping rounded-full bg-brand-blue opacity-30" />}

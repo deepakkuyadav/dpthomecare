@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
 import { galleryItems, galleryCategories } from "@/lib/gallery";
 import { IMG } from "@/lib/images";
+import { T } from "@/lib/lang";
 
 export const metadata = pageMetadata({
   title: "Gallery — Our Products, Facility & Hygiene in Action",
@@ -19,11 +20,16 @@ export default function GalleryPage() {
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Gallery", path: "/gallery" }])} />
       <PageHero
-        eyebrow="Gallery"
-        title="Hygiene in Action"
-        subtitle="A closer look at our products, our facility and the spotless results we help create every day."
+        eyebrow={<T en="Gallery" hi="गैलरी" />}
+        title={<T en="Hygiene in Action" hi="एक्शन में हाइजीन" />}
+        subtitle={
+          <T
+            en="A closer look at our products, our facility and the spotless results we help create every day."
+            hi="हमारे उत्पादों, हमारी फैसिलिटी और हर दिन बनने वाली चमकदार सफाई पर एक करीबी नज़र।"
+          />
+        }
         image={IMG.cleaningProducts}
-        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Gallery", path: "/gallery" }]}
+        breadcrumbs={[{ name: "Home", nameHi: "होम", path: "/" }, { name: "Gallery", nameHi: "गैलरी", path: "/gallery" }]}
       />
 
       <section className="section">
@@ -33,10 +39,15 @@ export default function GalleryPage() {
       </section>
 
       <CTABand
-        title="Like What You See?"
-        text="Explore our full product range or get in touch for bulk supply and distributorship."
+        title={<T en="Like What You See?" hi="पसंद आया?" />}
+        text={
+          <T
+            en="Explore our full product range or get in touch for bulk supply and distributorship."
+            hi="हमारी पूरी प्रोडक्ट रेंज देखें या बल्क सप्लाई और डिस्ट्रीब्यूटरशिप के लिए संपर्क करें।"
+          />
+        }
         image={IMG.cleaningProductsTable}
-        primary={{ label: "View Products", href: "/products" }}
+        primary={{ label: <T en="View Products" hi="उत्पाद देखें" />, href: "/products" }}
       />
     </>
   );

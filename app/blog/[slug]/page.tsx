@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { getPost, getRelatedPosts, blogPosts } from "@/lib/blog";
 import { pageMetadata, breadcrumbSchema, articleSchema } from "@/lib/seo";
 import { whatsappLink } from "@/lib/site";
+import { T } from "@/lib/lang";
 import type { BlogBlock } from "@/lib/types";
 
 export function generateStaticParams() {
@@ -35,23 +36,35 @@ function formatDate(iso: string) {
 function Block({ block }: { block: BlogBlock }) {
   switch (block.type) {
     case "h2":
-      return <h2 className="mt-10 mb-4 text-2xl font-bold text-brand-navy md:text-3xl">{block.text}</h2>;
+      return (
+        <h2 className="mt-10 mb-4 text-2xl font-bold text-brand-navy md:text-3xl">
+          <T en={block.text} hi={block.textHi ?? block.text} />
+        </h2>
+      );
     case "h3":
-      return <h3 className="mt-8 mb-3 text-xl font-bold text-brand-navy">{block.text}</h3>;
+      return (
+        <h3 className="mt-8 mb-3 text-xl font-bold text-brand-navy">
+          <T en={block.text} hi={block.textHi ?? block.text} />
+        </h3>
+      );
     case "p":
-      return <p className="mb-5 text-[17px] leading-8 text-ink-soft">{block.text}</p>;
+      return (
+        <p className="mb-5 text-[17px] leading-8 text-ink-soft">
+          <T en={block.text} hi={block.textHi ?? block.text} />
+        </p>
+      );
     case "quote":
       return (
         <blockquote className="my-8 rounded-2xl border-l-4 border-brand-green bg-brand-green/[0.05] p-6 text-lg font-medium italic text-brand-navy">
-          {block.text}
+          <T en={block.text} hi={block.textHi ?? block.text} />
         </blockquote>
       );
     case "ul":
       return (
         <ul className="mb-6 space-y-2.5">
-          {block.items.map((it) => (
+          {block.items.map((it, i) => (
             <li key={it} className="flex items-start gap-3 text-[17px] leading-7 text-ink-soft">
-              <Check className="mt-1 h-5 w-5 shrink-0 text-brand-green" /> {it}
+              <Check className="mt-1 h-5 w-5 shrink-0 text-brand-green" /> <T en={it} hi={block.itemsHi?.[i] ?? it} />
             </li>
           ))}
         </ul>
@@ -64,7 +77,9 @@ function Block({ block }: { block: BlogBlock }) {
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-blue/10 text-sm font-bold text-brand-blue">
                 {i + 1}
               </span>
-              <span className="pt-0.5">{it}</span>
+              <span className="pt-0.5">
+                <T en={it} hi={block.itemsHi?.[i] ?? it} />
+              </span>
             </li>
           ))}
         </ol>
@@ -81,9 +96,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const related = getRelatedPosts(slug, 3);
   const crumbs = [
-    { name: "Home", path: "/" },
-    { name: "Blog", path: "/blog" },
-    { name: post.title, path: `/blog/${post.slug}` },
+    { name: "Home", nameHi: "होम", path: "/" },
+    { name: "Blog", nameHi: "ब्लॉग", path: "/blog" },
+    { name: post.title, nameHi: post.titleHi, path: `/blog/${post.slug}` },
   ];
 
   return (
@@ -96,15 +111,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="container-wide relative max-w-4xl">
           <Breadcrumbs items={crumbs} />
           <span className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white">
-            {post.category}
+            <T en={post.category} hi={post.categoryHi ?? post.category} />
           </span>
           <h1 className="mt-4 font-heading text-3xl font-extrabold leading-tight text-white md:text-4xl lg:text-5xl text-balance">
-            {post.title}
+            <T en={post.title} hi={post.titleHi ?? post.title} />
           </h1>
           <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-white/80">
             <span className="flex items-center gap-1.5"><User className="h-4 w-4" /> {post.author}</span>
             <span className="flex items-center gap-1.5"><CalendarDays className="h-4 w-4" /> {formatDate(post.date)}</span>
-            <span className="flex items-center gap-1.5"><Clock className="h-4 w-4" /> {post.readTime}</span>
+            <span className="flex items-center gap-1.5"><Clock className="h-4 w-4" /> <T en={post.readTime} hi={post.readTimeHi ?? post.readTime} /></span>
           </div>
         </div>
       </section>
@@ -119,7 +134,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </Reveal>
 
           <div className="mt-10">
-            <p className="mb-8 text-xl font-medium leading-relaxed text-brand-navy">{post.excerpt}</p>
+            <p className="mb-8 text-xl font-medium leading-relaxed text-brand-navy">
+              <T en={post.excerpt} hi={post.excerptHi ?? post.excerpt} />
+            </p>
             {post.content.map((block, i) => (
               <Block key={i} block={block} />
             ))}
@@ -137,20 +154,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {/* Inline CTA */}
           <div className="mt-10 flex flex-col items-center justify-between gap-4 rounded-3xl bg-brand-gradient p-7 text-center text-white sm:flex-row sm:text-left">
             <div>
-              <h3 className="text-xl font-bold">Need quality cleaning products?</h3>
-              <p className="mt-1 text-white/80">Explore our complete range or send a quick enquiry.</p>
+              <h3 className="text-xl font-bold">
+                <T en="Need quality cleaning products?" hi="क्वालिटी सफाई उत्पाद चाहिए?" />
+              </h3>
+              <p className="mt-1 text-white/80">
+                <T en="Explore our complete range or send a quick enquiry." hi="हमारी पूरी रेंज देखें या तुरंत पूछताछ भेजें।" />
+              </p>
             </div>
             <div className="flex shrink-0 flex-wrap justify-center gap-3">
-              <Link href="/products" className="btn-white">Shop Products</Link>
+              <Link href="/products" className="btn-white">
+                <T en="Shop Products" hi="उत्पाद खरीदें" />
+              </Link>
               <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn inline-flex border-2 border-white/40 text-white hover:bg-white/10">
-                <MessageCircle className="h-4 w-4" /> Enquire
+                <MessageCircle className="h-4 w-4" /> <T en="Enquire" hi="पूछताछ करें" />
               </a>
             </div>
           </div>
 
           <div className="mt-8">
             <Link href="/blog" className="inline-flex items-center gap-1.5 font-semibold text-brand-blue">
-              <ArrowLeft className="h-4 w-4" /> Back to all articles
+              <ArrowLeft className="h-4 w-4" /> <T en="Back to all articles" hi="सभी लेखों पर वापस जाएँ" />
             </Link>
           </div>
         </div>
@@ -159,7 +182,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       {/* Related */}
       <section className="section bg-slate-50">
         <div className="container-wide">
-          <h2 className="text-2xl font-bold text-brand-navy">Related Articles</h2>
+          <h2 className="text-2xl font-bold text-brand-navy">
+            <T en="Related Articles" hi="संबंधित लेख" />
+          </h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {related.map((p) => (
               <article key={p.slug} className="group card-surface overflow-hidden hover:-translate-y-1 hover:shadow-card-hover">
@@ -167,12 +192,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <Image src={p.image} alt={p.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                 </Link>
                 <div className="p-6">
-                  <span className="text-xs font-semibold uppercase tracking-wide text-brand-blue">{p.category}</span>
+                  <span className="text-xs font-semibold uppercase tracking-wide text-brand-blue">
+                    <T en={p.category} hi={p.categoryHi ?? p.category} />
+                  </span>
                   <h3 className="mt-2 font-heading text-lg font-bold text-brand-navy">
-                    <Link href={`/blog/${p.slug}`} className="transition-colors hover:text-brand-blue">{p.title}</Link>
+                    <Link href={`/blog/${p.slug}`} className="transition-colors hover:text-brand-blue">
+                      <T en={p.title} hi={p.titleHi ?? p.title} />
+                    </Link>
                   </h3>
                   <Link href={`/blog/${p.slug}`} className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-blue">
-                    Read more <ArrowRight className="h-4 w-4" />
+                    <T en="Read more" hi="आगे पढ़ें" /> <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
               </article>

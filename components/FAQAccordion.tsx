@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
+import { T } from "@/lib/lang";
 import type { QA } from "@/lib/types";
 
 export function FAQAccordion({ items, defaultOpen = -1 }: { items: QA[]; defaultOpen?: number }) {
@@ -24,7 +25,9 @@ export function FAQAccordion({ items, defaultOpen = -1 }: { items: QA[]; default
               className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
               aria-expanded={isOpen}
             >
-              <span className="font-semibold text-brand-navy">{item.question}</span>
+              <span className="font-semibold text-brand-navy">
+                <T en={item.question} hi={item.questionHi ?? item.question} />
+              </span>
               <Plus
                 className={`h-5 w-5 shrink-0 text-brand-blue transition-transform duration-300 ${
                   isOpen ? "rotate-45" : ""
@@ -39,7 +42,9 @@ export function FAQAccordion({ items, defaultOpen = -1 }: { items: QA[]; default
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
-                  <p className="px-5 pb-5 text-[15px] leading-relaxed text-ink-soft">{item.answer}</p>
+                  <p className="px-5 pb-5 text-[15px] leading-relaxed text-ink-soft">
+                    <T en={item.answer} hi={item.answerHi ?? item.answer} />
+                  </p>
                 </motion.div>
               )}
             </AnimatePresence>

@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
 import { site, telLink, whatsappLink } from "@/lib/site";
 import { IMG } from "@/lib/images";
+import { T } from "@/lib/lang";
 
 export const metadata = pageMetadata({
   title: "Contact Us — Get in Touch with DPT Home Care",
@@ -15,28 +16,48 @@ export const metadata = pageMetadata({
   keywords: ["contact DPT Home Care", "cleaning products Jaunpur contact", "bulk cleaning supply enquiry"],
 });
 
-const cards = [
+const cards: {
+  icon: typeof MapPin;
+  title: string;
+  titleHi: string;
+  lines: { en: string; hi?: string }[];
+  href?: string;
+}[] = [
   {
     icon: MapPin,
     title: "Visit Us",
-    lines: [site.address.line1, `${site.address.city}, ${site.address.state}`, site.address.pincode],
+    titleHi: "हमसे मिलें",
+    lines: [
+      { en: site.address.line1 },
+      { en: `${site.address.city}, ${site.address.state}` },
+      { en: site.address.pincode },
+    ],
   },
   {
     icon: Phone,
     title: "Call Us",
-    lines: [site.phoneDisplay, "Mon–Sat, 9 AM – 7 PM"],
+    titleHi: "कॉल करें",
+    lines: [
+      { en: site.phoneDisplay },
+      { en: "Mon–Sat, 9 AM – 7 PM", hi: "सोम–शनि, सुबह 9 – शाम 7 बजे" },
+    ],
     href: telLink(),
   },
   {
     icon: Mail,
     title: "Email Us",
-    lines: [site.email],
+    titleHi: "ईमेल करें",
+    lines: [{ en: site.email }],
     href: `mailto:${site.email}`,
   },
   {
     icon: Clock,
     title: "Working Hours",
-    lines: ["Mon–Sat: 9 AM – 7 PM", "Sunday: 10 AM – 2 PM"],
+    titleHi: "कार्य समय",
+    lines: [
+      { en: "Mon–Sat: 9 AM – 7 PM", hi: "सोम–शनि: सुबह 9 – शाम 7 बजे" },
+      { en: "Sunday: 10 AM – 2 PM", hi: "रविवार: सुबह 10 – दोपहर 2 बजे" },
+    ],
   },
 ];
 
@@ -49,11 +70,19 @@ export default function ContactPage() {
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Contact Us", path: "/contact" }])} />
       <PageHero
-        eyebrow="Contact Us"
-        title="Let's Talk Hygiene"
-        subtitle="Have a question about our products, need a bulk quote, or interested in a distributorship? We'd love to hear from you."
+        eyebrow={<T en="Contact Us" hi="संपर्क करें" />}
+        title={<T en="Let's Talk Hygiene" hi="आइए स्वच्छता की बात करें" />}
+        subtitle={
+          <T
+            en="Have a question about our products, need a bulk quote, or interested in a distributorship? We'd love to hear from you."
+            hi="हमारे उत्पादों के बारे में कोई सवाल है, बल्क कोटेशन चाहिए, या डिस्ट्रीब्यूटरशिप में रुचि है? हमें आपसे बात करके खुशी होगी।"
+          />
+        }
         image={IMG.cleaningProductsTable}
-        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Contact Us", path: "/contact" }]}
+        breadcrumbs={[
+          { name: "Home", nameHi: "होम", path: "/" },
+          { name: "Contact Us", nameHi: "संपर्क करें", path: "/contact" },
+        ]}
       />
 
       {/* Info cards */}
@@ -66,9 +95,13 @@ export default function ContactPage() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-gradient text-white">
                     <c.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="mt-4 font-bold text-brand-navy">{c.title}</h3>
+                  <h3 className="mt-4 font-bold text-brand-navy">
+                    <T en={c.title} hi={c.titleHi} />
+                  </h3>
                   {c.lines.map((l) => (
-                    <p key={l} className="mt-1 text-sm text-ink-muted">{l}</p>
+                    <p key={l.en} className="mt-1 text-sm text-ink-muted">
+                      <T en={l.en} hi={l.hi ?? l.en} />
+                    </p>
                   ))}
                 </div>
               );
@@ -90,8 +123,13 @@ export default function ContactPage() {
           <div className="mt-12 grid gap-8 lg:grid-cols-2">
             <Reveal direction="right">
               <EnquiryForm
-                heading="Send Us a Message"
-                subheading="Fill in the form and your enquiry opens in WhatsApp for an instant reply."
+                heading={<T en="Send Us a Message" hi="हमें संदेश भेजें" />}
+                subheading={
+                  <T
+                    en="Fill in the form and your enquiry opens in WhatsApp for an instant reply."
+                    hi="फ़ॉर्म भरें — आपकी पूछताछ तुरंत जवाब के लिए WhatsApp में खुल जाएगी।"
+                  />
+                }
               />
             </Reveal>
             <Reveal direction="left">
@@ -106,16 +144,21 @@ export default function ContactPage() {
                   />
                 </div>
                 <div className="rounded-3xl bg-brand-gradient p-7 text-white">
-                  <h3 className="text-xl font-bold">Prefer to chat instantly?</h3>
+                  <h3 className="text-xl font-bold">
+                    <T en="Prefer to chat instantly?" hi="तुरंत चैट करना चाहते हैं?" />
+                  </h3>
                   <p className="mt-2 text-white/85">
-                    Message us on WhatsApp or give us a call — we're quick to respond during working hours.
+                    <T
+                      en="Message us on WhatsApp or give us a call — we're quick to respond during working hours."
+                      hi="WhatsApp पर मैसेज करें या हमें कॉल करें — कार्य समय में हम जल्दी जवाब देते हैं।"
+                    />
                   </p>
                   <div className="mt-5 flex flex-wrap gap-3">
                     <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-white">
                       <MessageCircle className="h-4 w-4" /> WhatsApp
                     </a>
                     <a href={telLink()} className="btn inline-flex border-2 border-white/40 text-white hover:bg-white/10">
-                      <Phone className="h-4 w-4" /> Call Now
+                      <Phone className="h-4 w-4" /> <T en="Call Now" hi="अभी कॉल करें" />
                     </a>
                   </div>
                 </div>
