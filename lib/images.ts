@@ -62,7 +62,7 @@ export const IMG = {
 
   // Manufacturing / warehouse
   warehouse: "/brand/warehouse.jpg", // DPT-branded warehouse
-  warehouseAisle: px(4487383, 1400),
+  warehouseAisle: "/brand/warehouse-aisle.jpg", // DPT-branded warehouse aisle
   warehousePallet: px(4483943, 1400),
 } as const;
 
