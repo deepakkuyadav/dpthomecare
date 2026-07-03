@@ -12,7 +12,7 @@ export const IMG = {
   cleaningProductsTable: "/brand/products-lineup.jpg", // DPT-branded product lineup
   sparkleKitchen: px(3634739, 1400),
   modernHome: px(6238679, 1400),
-  cozyHome: px(5570222, 1400),
+  cozyHome: "/brand/home-essentials.jpg", // DPT-branded daily essentials tray
   homeInterior: px(5179534, 1400),
   homePlants: px(5825380, 1400),
 
@@ -61,9 +61,9 @@ export const IMG = {
   hospitalWaiting: px(8459996, 1200),
 
   // Manufacturing / warehouse
-  warehouse: "/brand/warehouse.jpg", // DPT-branded warehouse
-  warehouseAisle: "/brand/warehouse-aisle.jpg", // DPT-branded warehouse aisle
-  warehousePallet: "/brand/warehouse-pallet.jpg", // DPT-branded packed stock
+  warehouse: "/brand/warehouse-v2.jpg", // DPT-branded warehouse (v2)
+  warehouseAisle: "/brand/warehouse-aisle-v2.jpg", // DPT-branded warehouse aisle (v2)
+  warehousePallet: "/brand/warehouse-pallet-v2.jpg", // DPT-branded packed stock (v2)
 } as const;
 
 export type ImageKey = keyof typeof IMG;
