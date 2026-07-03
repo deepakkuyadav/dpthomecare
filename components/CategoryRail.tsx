@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/Reveal";
+import { T } from "@/lib/lang";
 
 const BLUE = "#0B4EA2";
 const GREEN = "#2EAF39";
@@ -23,9 +24,9 @@ function IconBox({ children }: { children: ReactNode }) {
 
 const productHref = (category: string) => `/products?category=${encodeURIComponent(category)}`;
 
-const categories: { label: string; href: string; icon: ReactNode }[] = [
+const categories: { label: string; hi: string; href: string; icon: ReactNode }[] = [
   {
-    label: "Home Cleaning",
+    label: "Home Cleaning", hi: "घर की सफाई",
     href: "/products",
     icon: (
       <IconBox>
@@ -36,7 +37,7 @@ const categories: { label: string; href: string; icon: ReactNode }[] = [
     ),
   },
   {
-    label: "Kitchen Cleaning",
+    label: "Kitchen Cleaning", hi: "किचन की सफाई",
     href: productHref("Kitchen & Dishwash"),
     icon: (
       <IconBox>
@@ -47,7 +48,7 @@ const categories: { label: string; href: string; icon: ReactNode }[] = [
     ),
   },
   {
-    label: "Bathroom Cleaning",
+    label: "Bathroom Cleaning", hi: "बाथरूम की सफाई",
     href: productHref("Bathroom & Toilet"),
     icon: (
       <IconBox>
@@ -60,7 +61,7 @@ const categories: { label: string; href: string; icon: ReactNode }[] = [
     ),
   },
   {
-    label: "Floor Cleaning",
+    label: "Floor Cleaning", hi: "फर्श की सफाई",
     href: productHref("Floor Care"),
     icon: (
       <IconBox>
@@ -71,7 +72,7 @@ const categories: { label: string; href: string; icon: ReactNode }[] = [
     ),
   },
   {
-    label: "Hand Wash",
+    label: "Hand Wash", hi: "हैंड वॉश",
     href: productHref("Personal Care"),
     icon: (
       <IconBox>
@@ -84,7 +85,7 @@ const categories: { label: string; href: string; icon: ReactNode }[] = [
     ),
   },
   {
-    label: "Glass & Surface",
+    label: "Glass & Surface", hi: "ग्लास व सरफेस",
     href: productHref("Glass & Surface"),
     icon: (
       <IconBox>
@@ -95,7 +96,7 @@ const categories: { label: string; href: string; icon: ReactNode }[] = [
     ),
   },
   {
-    label: "Fabric Care",
+    label: "Fabric Care", hi: "फैब्रिक केयर",
     href: productHref("Fabric Care"),
     icon: (
       <IconBox>
@@ -108,7 +109,7 @@ const categories: { label: string; href: string; icon: ReactNode }[] = [
     ),
   },
   {
-    label: "Air Freshening",
+    label: "Air Freshening", hi: "एयर फ्रेशनर",
     href: productHref("Air Care"),
     icon: (
       <IconBox>
@@ -118,7 +119,7 @@ const categories: { label: string; href: string; icon: ReactNode }[] = [
     ),
   },
   {
-    label: "Auto Care",
+    label: "Auto Care", hi: "ऑटो केयर",
     href: productHref("Auto Care"),
     icon: (
       <IconBox>
@@ -132,7 +133,7 @@ const categories: { label: string; href: string; icon: ReactNode }[] = [
     ),
   },
   {
-    label: "Hotel Cleaning",
+    label: "Hotel Cleaning", hi: "होटल की सफाई",
     href: "/industries#hotels",
     icon: (
       <IconBox>
@@ -143,7 +144,7 @@ const categories: { label: string; href: string; icon: ReactNode }[] = [
     ),
   },
   {
-    label: "Hospital Cleaning",
+    label: "Hospital Cleaning", hi: "हॉस्पिटल की सफाई",
     href: "/industries#hospitals",
     icon: (
       <IconBox>
@@ -153,7 +154,7 @@ const categories: { label: string; href: string; icon: ReactNode }[] = [
     ),
   },
   {
-    label: "Office Cleaning",
+    label: "Office Cleaning", hi: "ऑफिस की सफाई",
     href: "/industries#offices",
     icon: (
       <IconBox>
@@ -163,7 +164,7 @@ const categories: { label: string; href: string; icon: ReactNode }[] = [
     ),
   },
   {
-    label: "Sanitization",
+    label: "Sanitization", hi: "सैनिटाइज़ेशन",
     href: "/products/sanitizer",
     icon: (
       <IconBox>
@@ -180,7 +181,7 @@ export function CategoryRail() {
       <div className="container-wide">
         <Reveal>
           <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-ink-muted">
-            Shop by Category
+            <T en="Shop by Category" hi="कैटेगरी से चुनें" />
           </p>
           <div className="mt-5 flex snap-x gap-3 overflow-x-auto pb-2 lg:flex-wrap lg:justify-center lg:overflow-visible lg:pb-0">
             {categories.map((c) => (
@@ -191,7 +192,7 @@ export function CategoryRail() {
               >
                 {c.icon}
                 <span className="text-[11px] font-semibold leading-tight text-ink-soft transition-colors group-hover:text-brand-blue">
-                  {c.label}
+                  <T en={c.label} hi={c.hi} />
                 </span>
               </Link>
             ))}

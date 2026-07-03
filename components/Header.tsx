@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { mainNav } from "@/lib/nav";
 import { site, telLink } from "@/lib/site";
+import { T } from "@/lib/lang";
+import { LanguageToggle } from "./LanguageToggle";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -79,7 +81,7 @@ export function Header() {
                       solid ? "text-ink-soft hover:text-brand-blue" : "text-white/90 hover:text-white"
                     }`}
                   >
-                    {link.label}
+                    <T en={link.label} hi={link.hi} />
                     <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
                   </button>
                   <div className="invisible absolute left-0 top-full w-56 translate-y-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
@@ -90,7 +92,7 @@ export function Header() {
                           href={child.href}
                           className="block rounded-xl px-4 py-2.5 text-sm text-ink-soft transition-colors hover:bg-brand-blue/5 hover:text-brand-blue"
                         >
-                          {child.label}
+                          <T en={child.label} hi={child.hi} />
                         </Link>
                       ))}
                     </div>
@@ -110,7 +112,7 @@ export function Header() {
                       : "text-white/90 hover:text-white"
                   }`}
                 >
-                  {link.label}
+                  <T en={link.label} hi={link.hi} />
                 </Link>
               )
             )}
@@ -126,21 +128,25 @@ export function Header() {
               <Phone className="h-4 w-4" />
               {site.phoneDisplay}
             </a>
+            <LanguageToggle solid={solid} />
             <Link href="/get-a-quote" className="btn-primary">
-              Get a Quote
+              <T en="Get a Quote" hi="कोटेशन पाएं" />
             </Link>
           </div>
 
-          {/* Mobile toggle */}
-          <button
-            onClick={() => setMobileOpen((v) => !v)}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            className={`lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl ${
-              solid ? "text-brand-navy" : "text-white"
-            }`}
-          >
-            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {/* Mobile: language + menu toggle */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <LanguageToggle solid={solid} />
+            <button
+              onClick={() => setMobileOpen((v) => !v)}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              className={`inline-flex h-11 w-11 items-center justify-center rounded-xl ${
+                solid ? "text-brand-navy" : "text-white"
+              }`}
+            >
+              {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -155,7 +161,7 @@ export function Header() {
                     onClick={() => setOpenGroup((g) => (g === link.label ? null : link.label))}
                     className="flex w-full items-center justify-between px-2 py-3 text-left text-base font-medium text-ink"
                   >
-                    {link.label}
+                    <T en={link.label} hi={link.hi} />
                     <ChevronDown
                       className={`h-5 w-5 transition-transform ${openGroup === link.label ? "rotate-180" : ""}`}
                     />
@@ -168,7 +174,7 @@ export function Header() {
                           href={child.href}
                           className="rounded-lg px-2 py-2.5 text-sm text-ink-soft hover:text-brand-blue"
                         >
-                          {child.label}
+                          <T en={child.label} hi={child.hi} />
                         </Link>
                       ))}
                     </div>
@@ -180,7 +186,7 @@ export function Header() {
                   href={link.href}
                   className="border-b border-slate-50 px-2 py-3 text-base font-medium text-ink hover:text-brand-blue"
                 >
-                  {link.label}
+                  <T en={link.label} hi={link.hi} />
                 </Link>
               )
             )}
@@ -189,7 +195,7 @@ export function Header() {
                 <Phone className="h-4 w-4" /> {site.phoneDisplay}
               </a>
               <Link href="/get-a-quote" className="btn-primary w-full">
-                Get a Quote
+                <T en="Get a Quote" hi="कोटेशन पाएं" />
               </Link>
             </div>
           </nav>

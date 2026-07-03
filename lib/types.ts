@@ -60,21 +60,27 @@ export interface Testimonial {
 export interface Industry {
   slug: string;
   name: string;
+  nameHi: string;
   icon: string; // lucide icon name
   description: string;
+  descriptionHi: string;
   points: string[];
   image: string;
 }
 
 export interface ProcessStep {
   title: string;
+  titleHi: string;
   description: string;
+  descriptionHi: string;
   icon: string;
 }
 
 export interface Category {
   name: string;
+  nameHi: string;
   slug: string;
   description: string;
+  descriptionHi: string;
   icon: string;
 }

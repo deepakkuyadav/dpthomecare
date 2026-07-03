@@ -12,11 +12,11 @@ export function CTABand({
   primary,
   showCall = true,
 }: {
-  eyebrow?: string;
-  title: string;
-  text: string;
+  eyebrow?: React.ReactNode;
+  title: React.ReactNode;
+  text: React.ReactNode;
   image?: string;
-  primary: { label: string; href: string };
+  primary: { label: React.ReactNode; href: string };
   showCall?: boolean;
 }) {
   return (

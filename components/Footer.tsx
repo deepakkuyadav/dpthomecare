@@ -5,6 +5,7 @@ import { site, telLink, whatsappLink } from "@/lib/site";
 import { footerNav } from "@/lib/nav";
 import { products } from "@/lib/products";
 import { Newsletter } from "./Newsletter";
+import { T } from "@/lib/lang";
 
 const socials = [
   { icon: Facebook, href: site.social.facebook, label: "Facebook" },
@@ -22,17 +23,22 @@ export function Footer() {
       <div className="relative border-b border-white/10">
         <div className="container-wide flex flex-col items-center justify-between gap-6 py-10 md:flex-row">
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold text-white">Ready to experience the Power of Hygiene?</h3>
+            <h3 className="text-2xl font-bold text-white">
+              <T en="Ready to experience the Power of Hygiene?" hi="Power of Hygiene अनुभव करने के लिए तैयार हैं?" />
+            </h3>
             <p className="mt-1 text-white/70">
-              Talk to our team about products, bulk supply or distributorship.
+              <T
+                en="Talk to our team about products, bulk supply or distributorship."
+                hi="प्रोडक्ट्स, बल्क सप्लाई या डिस्ट्रीब्यूटरशिप के लिए हमारी टीम से बात करें।"
+              />
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-green">
-              Chat on WhatsApp
+              <T en="Chat on WhatsApp" hi="WhatsApp पर चैट करें" />
             </a>
             <a href={telLink()} className="btn-white">
-              <Phone className="h-4 w-4" /> Call Now
+              <Phone className="h-4 w-4" /> <T en="Call Now" hi="अभी कॉल करें" />
             </a>
           </div>
         </div>
@@ -61,7 +67,10 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/70">
-            {site.shortDesc}
+            <T
+              en={site.shortDesc}
+              hi="DPT Home Care घरेलू और संस्थागत क्लीनिंग प्रोडक्ट्स का भरोसेमंद निर्माता और सप्लायर है — स्वच्छता, सुरक्षा और रोज़ाना ताज़गी के वादे पर आधारित।"
+            />
           </p>
           <div className="mt-6 flex gap-3">
             {socials.map((s) => (
@@ -81,12 +90,14 @@ export function Footer() {
 
         {/* Quick links */}
         <div className="lg:col-span-2">
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-white">Quick Links</h4>
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <T en="Quick Links" hi="क्विक लिंक्स" />
+          </h4>
           <ul className="mt-4 space-y-2.5 text-sm">
             {footerNav.quickLinks.map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className="text-white/70 transition-colors hover:text-brand-green-light">
-                  {l.label}
+                  <T en={l.label} hi={l.hi} />
                 </Link>
               </li>
             ))}
@@ -95,7 +106,9 @@ export function Footer() {
 
         {/* Products */}
         <div className="lg:col-span-3">
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-white">Our Products</h4>
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <T en="Our Products" hi="हमारे प्रोडक्ट्स" />
+          </h4>
           <ul className="mt-4 grid grid-cols-1 gap-2.5 text-sm sm:grid-cols-2">
             {products.slice(0, 10).map((p) => (
               <li key={p.slug}>
@@ -109,7 +122,7 @@ export function Footer() {
             ))}
             <li className="sm:col-span-2">
               <Link href="/products" className="font-semibold text-brand-green-light hover:underline">
-                View all products →
+                <T en="View all products →" hi="सभी प्रोडक्ट्स देखें →" />
               </Link>
             </li>
           </ul>
@@ -117,7 +130,9 @@ export function Footer() {
 
         {/* Contact + newsletter */}
         <div className="lg:col-span-3">
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-white">Get in Touch</h4>
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <T en="Get in Touch" hi="संपर्क करें" />
+          </h4>
           <ul className="mt-4 space-y-3 text-sm text-white/70">
             <li className="flex gap-3">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-brand-green-light" />
@@ -133,11 +148,15 @@ export function Footer() {
             </li>
             <li className="flex gap-3">
               <Clock className="mt-0.5 h-5 w-5 shrink-0 text-brand-green-light" />
-              <span>Mon–Sat: 9:00 AM – 7:00 PM</span>
+              <span>
+                <T en="Mon–Sat: 9:00 AM – 7:00 PM" hi="सोम–शनि: सुबह 9:00 – शाम 7:00" />
+              </span>
             </li>
           </ul>
           <div className="mt-6">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white">Newsletter</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
+              <T en="Newsletter" hi="न्यूज़लेटर" />
+            </h4>
             <Newsletter />
           </div>
         </div>
@@ -147,12 +166,12 @@ export function Footer() {
       <div className="relative border-t border-white/10">
         <div className="container-wide flex flex-col items-center justify-between gap-3 py-6 text-sm text-white/60 md:flex-row">
           <p>
-            © {new Date().getFullYear()} {site.name}. All rights reserved.
+            © {new Date().getFullYear()} {site.name}. <T en="All rights reserved." hi="सर्वाधिकार सुरक्षित।" />
           </p>
           <div className="flex gap-5">
             {footerNav.company.slice(2).map((l) => (
               <Link key={l.href} href={l.href} className="hover:text-white">
-                {l.label}
+                <T en={l.label} hi={l.hi} />
               </Link>
             ))}
           </div>

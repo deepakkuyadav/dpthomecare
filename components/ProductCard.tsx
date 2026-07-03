@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import type { Product } from "@/lib/types";
 import { whatsappLink } from "@/lib/site";
+import { T } from "@/lib/lang";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
@@ -34,7 +35,7 @@ export function ProductCard({ product }: { product: Product }) {
             href={`/products/${product.slug}`}
             className="inline-flex items-center gap-1.5 rounded-full bg-brand-blue/10 px-4 py-2 text-sm font-semibold text-brand-blue transition-colors hover:bg-brand-blue hover:text-white"
           >
-            View Details <ArrowRight className="h-4 w-4" />
+            <T en="View Details" hi="पूरी जानकारी" /> <ArrowRight className="h-4 w-4" />
           </Link>
           <a
             href={whatsappLink(`Hello DPT Home Care, I'm interested in ${product.name}. Please share details and pricing.`)}
@@ -43,7 +44,7 @@ export function ProductCard({ product }: { product: Product }) {
             aria-label={`Enquire about ${product.name} on WhatsApp`}
             className="inline-flex items-center gap-1.5 rounded-full border border-brand-green/30 px-4 py-2 text-sm font-semibold text-brand-green-dark transition-colors hover:bg-brand-green hover:text-white hover:border-brand-green"
           >
-            <MessageCircle className="h-4 w-4" /> Enquiry
+            <MessageCircle className="h-4 w-4" /> <T en="Enquiry" hi="पूछताछ" />
           </a>
         </div>
       </div>

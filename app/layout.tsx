@@ -7,6 +7,7 @@ import { ChatWidget } from "@/components/ChatWidget";
 import { JsonLd } from "@/components/JsonLd";
 import { organizationSchema, localBusinessSchema, websiteSchema } from "@/lib/seo";
 import { site } from "@/lib/site";
+import { LanguageProvider } from "@/lib/lang";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -75,10 +76,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <body>
         <JsonLd data={[organizationSchema(), localBusinessSchema(), websiteSchema()]} />
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <ChatWidget />
+        <LanguageProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <ChatWidget />
+        </LanguageProvider>
       </body>
     </html>
   );

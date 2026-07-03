@@ -1,14 +1,14 @@
 import type { Product, Category } from "./types";
 
 export const categories: Category[] = [
-  { name: "Floor Care", slug: "floor-care", description: "Deep-cleaning floor cleaners and phenyl for sparkling, disinfected floors.", icon: "Sparkles" },
-  { name: "Bathroom & Toilet", slug: "bathroom-toilet", description: "Powerful acid and surface cleaners for germ-free bathrooms.", icon: "ShowerHead" },
-  { name: "Kitchen & Dishwash", slug: "kitchen-dishwash", description: "Grease-cutting dishwash and kitchen cleaners that are tough on grime.", icon: "UtensilsCrossed" },
-  { name: "Glass & Surface", slug: "glass-surface", description: "Streak-free glass and versatile multi-surface cleaners.", icon: "SprayCan" },
-  { name: "Fabric Care", slug: "fabric-care", description: "Liquid detergents and conditioners for bright, soft, fresh clothes.", icon: "Shirt" },
-  { name: "Personal Care", slug: "personal-care", description: "Gentle hand wash, liquid soap and sanitizers for daily hygiene.", icon: "HandHeart" },
-  { name: "Air Care", slug: "air-care", description: "Long-lasting room fresheners for a welcoming home.", icon: "Wind" },
-  { name: "Auto Care", slug: "auto-care", description: "High-foam car shampoo for a showroom shine.", icon: "Car" },
+  { name: "Floor Care", nameHi: "फ्लोर केयर", slug: "floor-care", description: "Deep-cleaning floor cleaners and phenyl for sparkling, disinfected floors.", descriptionHi: "चमकते, कीटाणु-मुक्त फर्श के लिए दमदार फ्लोर क्लीनर और फिनाइल।", icon: "Sparkles" },
+  { name: "Bathroom & Toilet", nameHi: "बाथरूम व टॉयलेट", slug: "bathroom-toilet", description: "Powerful acid and surface cleaners for germ-free bathrooms.", descriptionHi: "कीटाणु-मुक्त बाथरूम के लिए शक्तिशाली एसिड और सरफेस क्लीनर।", icon: "ShowerHead" },
+  { name: "Kitchen & Dishwash", nameHi: "किचन व डिशवॉश", slug: "kitchen-dishwash", description: "Grease-cutting dishwash and kitchen cleaners that are tough on grime.", descriptionHi: "चिकनाई काटने वाले डिशवॉश और किचन क्लीनर — मैल पर सख्त।", icon: "UtensilsCrossed" },
+  { name: "Glass & Surface", nameHi: "ग्लास व सरफेस", slug: "glass-surface", description: "Streak-free glass and versatile multi-surface cleaners.", descriptionHi: "बेदाग शीशे और हर सतह के लिए मल्टी-सरफेस क्लीनर।", icon: "SprayCan" },
+  { name: "Fabric Care", nameHi: "फैब्रिक केयर", slug: "fabric-care", description: "Liquid detergents and conditioners for bright, soft, fresh clothes.", descriptionHi: "चमकदार, मुलायम और ताज़े कपड़ों के लिए लिक्विड डिटर्जेंट और कंडीशनर।", icon: "Shirt" },
+  { name: "Personal Care", nameHi: "पर्सनल केयर", slug: "personal-care", description: "Gentle hand wash, liquid soap and sanitizers for daily hygiene.", descriptionHi: "रोज़ाना स्वच्छता के लिए सौम्य हैंड वॉश, लिक्विड सोप और सैनिटाइज़र।", icon: "HandHeart" },
+  { name: "Air Care", nameHi: "एयर केयर", slug: "air-care", description: "Long-lasting room fresheners for a welcoming home.", descriptionHi: "स्वागत करते घर के लिए देर तक टिकने वाले रूम फ्रेशनर।", icon: "Wind" },
+  { name: "Auto Care", nameHi: "ऑटो केयर", slug: "auto-care", description: "High-foam car shampoo for a showroom shine.", descriptionHi: "शोरूम जैसी चमक के लिए हाई-फोम कार शैम्पू।", icon: "Car" },
 ];
 
 const commonSafety = [
