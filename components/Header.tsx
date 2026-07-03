@@ -40,7 +40,7 @@ export function Header() {
         <div className="flex h-20 items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3" aria-label={`${site.name} home`}>
             <span
-              className={`flex items-center justify-center rounded-2xl transition-colors ${
+              className={`flex items-center justify-center overflow-hidden rounded-2xl transition-colors ${
                 solid ? "bg-white" : "bg-white/95 shadow-md"
               }`}
             >
@@ -49,7 +49,7 @@ export function Header() {
                 alt={`${site.name} — ${site.tagline}`}
                 width={120}
                 height={120}
-                className="h-12 w-12 md:h-14 md:w-14 object-contain p-1"
+                className="h-12 w-12 md:h-14 md:w-14 rounded-2xl object-contain p-1"
                 priority
               />
             </span>

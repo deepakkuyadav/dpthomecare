@@ -48,13 +48,13 @@ export function Footer() {
         {/* Brand */}
         <div className="lg:col-span-4">
           <div className="flex items-center gap-3">
-            <span className="flex items-center justify-center rounded-2xl bg-white p-1">
+            <span className="flex items-center justify-center overflow-hidden rounded-2xl bg-white p-1">
               <Image
                 src={site.logo}
                 alt={`${site.name} logo`}
                 width={120}
                 height={120}
-                className="h-14 w-14 object-contain"
+                className="h-14 w-14 rounded-xl object-contain"
               />
             </span>
             <span className="leading-tight">
