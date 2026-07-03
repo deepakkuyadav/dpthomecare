@@ -183,12 +183,12 @@ export function CategoryRail() {
           <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-ink-muted">
             <T en="Shop by Category" hi="कैटेगरी से चुनें" />
           </p>
-          <div className="mt-5 flex snap-x gap-3 overflow-x-auto pb-2 lg:flex-wrap lg:justify-center lg:overflow-visible lg:pb-0">
+          <div className="mt-5 flex snap-x gap-3 overflow-x-auto pb-2 lg:gap-2 lg:overflow-visible lg:pb-0 xl:gap-2.5">
             {categories.map((c) => (
               <Link
                 key={c.label}
                 href={c.href}
-                className="group flex w-[96px] shrink-0 snap-start flex-col items-center gap-2 rounded-2xl border border-slate-100 bg-white px-2 py-3.5 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-brand-blue/25 hover:shadow-card"
+                className="group flex w-[96px] shrink-0 snap-start flex-col items-center justify-start gap-2 rounded-2xl border border-slate-100 bg-white px-2 py-3.5 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-brand-blue/25 hover:shadow-card lg:w-auto lg:min-w-0 lg:flex-1 lg:shrink lg:px-1"
               >
                 {c.icon}
                 <span className="text-[11px] font-semibold leading-tight text-ink-soft transition-colors group-hover:text-brand-blue">
