@@ -9,7 +9,7 @@ export const IMG = {
   // Hero & brand
   heroMopping: px(4440541, 1600),
   cleaningProducts: "/brand/cleaning-products.jpg", // DPT-branded (logo added)
-  cleaningProductsTable: px(5217900, 1400),
+  cleaningProductsTable: "/brand/products-lineup.jpg", // DPT-branded product lineup
   sparkleKitchen: px(3634739, 1400),
   modernHome: px(6238679, 1400),
   cozyHome: px(5570222, 1400),
