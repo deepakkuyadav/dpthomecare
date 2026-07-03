@@ -63,7 +63,7 @@ export const IMG = {
   // Manufacturing / warehouse
   warehouse: "/brand/warehouse.jpg", // DPT-branded warehouse
   warehouseAisle: "/brand/warehouse-aisle.jpg", // DPT-branded warehouse aisle
-  warehousePallet: px(4483943, 1400),
+  warehousePallet: "/brand/warehouse-pallet.jpg", // DPT-branded packed stock
 } as const;
 
 export type ImageKey = keyof typeof IMG;
