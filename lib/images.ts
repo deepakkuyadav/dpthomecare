@@ -21,7 +21,7 @@ export const IMG = {
   familyTogether: px(7642039, 1400),
 
   // Cleaning actions
-  glassSpray: px(9462101, 1200),
+  glassSpray: "/brand/glass-cleaning.jpg", // DPT-branded glass cleaner (bottle + in action)
   kitchenSurface: px(4239037, 1200),
   kitchenSink: px(9462224, 1200),
   kitchenEquipment: px(10568353, 1200),
