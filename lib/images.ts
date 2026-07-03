@@ -37,7 +37,7 @@ export const IMG = {
   dishwash3: px(7641231, 1200),
 
   // Hand & personal care
-  handWash: px(3992952, 1200),
+  handWash: "/brand/hand-wash.jpg", // DPT-branded hand wash (bottle front/back + washing hands)
   handWash2: px(4154169, 1200),
   handWash3: px(3995736, 1200),
 
