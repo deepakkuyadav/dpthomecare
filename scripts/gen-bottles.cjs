@@ -5,7 +5,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "public", "products");
-const LOGO = path.join(ROOT, "public", "logo.png");
+const LOGO = path.join(ROOT, "public", "logo-v2.png");
 const BGSRC = path.join(ROOT, ".scratch", "bg-src.jpg");
 const CW = 1000, CH = 750, WHITE = { r: 255, g: 255, b: 255 };
 
@@ -22,8 +22,8 @@ function label(name, sub, size, textDark) {
     .join("");
   const subY = 470 + lines.length * 52 + 10;
   return `
-    <rect x="150" y="330" width="320" height="360" rx="26" fill="#ffffff"/>
-    <rect x="150" y="330" width="320" height="360" rx="26" fill="none" stroke="#e5e7eb" stroke-width="2"/>
+    <rect x="150" y="245" width="320" height="445" rx="26" fill="#ffffff"/>
+    <rect x="150" y="245" width="320" height="445" rx="26" fill="none" stroke="#e5e7eb" stroke-width="2"/>
     ${nameSvg}
     <rect x="205" y="${subY}" width="210" height="40" rx="20" fill="${textDark}"/>
     <text x="310" y="${subY + 27}" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="21" fill="#ffffff">${esc(sub)}</text>
@@ -76,7 +76,7 @@ const products = [
   { slug: "sanitizer", shape: pumpBottle, light: "#4FC3F7", dark: "#1976D2", cap: "#0D47A1", textDark: "#0B4EA2", name: "SANITIZER", sub: "70% Alcohol", size: "500 ml" },
   { slug: "liquid-soap", shape: pumpBottle, light: "#66BB6A", dark: "#2E7D32", cap: "#1B5E20", textDark: "#22862c", name: "LIQUID SOAP", sub: "Gentle Care", size: "500 ml" },
   { slug: "fabric-conditioner", shape: jugBottle, light: "#B085E0", dark: "#7B3FBF", cap: "#5E2E9E", textDark: "#5E2E9E", name: "FABRIC\nCONDITIONER", sub: "Blossom Soft", size: "1 Ltr." },
-  { slug: "car-shampoo", shape: jugBottle, light: "#EF5350", dark: "#C62828", cap: "#0B4EA2", textDark: "#C62828", name: "CAR SHAMPOO", sub: "High Foam Wash", size: "500 ml" },
+  { slug: "car-shampoo", shape: jugBottle, light: "#EF5350", dark: "#C62828", cap: "#0B4EA2", textDark: "#C62828", name: "CAR\nSHAMPOO", sub: "High Foam Wash", size: "500 ml" },
   { slug: "room-freshener", shape: canBottle, light: "#9575CD", dark: "#5E35B1", cap: "#4527A0", textDark: "#5E35B1", name: "ROOM\nFRESHENER", sub: "Lavender", size: "250 ml" },
 ];
 
@@ -96,7 +96,7 @@ async function buildBg() {
     const svg = p.shape(p);
     const bottle = await sharp(Buffer.from(svg), { density: 200 })
       .resize(BW, BH)
-      .composite([{ input: logo, top: 250, left: Math.round((BW - 168) / 2) }])
+      .composite([{ input: logo, top: 262, left: Math.round((BW - 168) / 2) }])
       .png()
       .toBuffer();
     // scale bottle to fit canvas height
@@ -109,7 +109,7 @@ async function buildBg() {
       .composite([{ input: shadow }, { input: scaled, top, left }])
       .flatten({ background: WHITE })
       .png()
-      .toFile(path.join(OUT, `${p.slug}.png`));
+      .toFile(path.join(OUT, `${p.slug}-v2.png`));
     console.log("generated", p.slug);
   }
 
@@ -117,7 +117,7 @@ async function buildBg() {
   const cols = 5, tw = 260, th = 195, pad = 8;
   const comp = [];
   for (let i = 0; i < products.length; i++) {
-    const buf = await sharp(path.join(OUT, `${products[i].slug}.png`)).resize(tw, th, { fit: "cover" }).png().toBuffer();
+    const buf = await sharp(path.join(OUT, `${products[i].slug}-v2.png`)).resize(tw, th, { fit: "cover" }).png().toBuffer();
     comp.push({ input: buf, left: (i % cols) * (tw + pad) + pad, top: Math.floor(i / cols) * (th + pad) + pad });
   }
   await sharp({ create: { width: cols * (tw + pad) + pad, height: Math.ceil(products.length / cols) * (th + pad) + pad, channels: 3, background: { r: 226, g: 232, b: 240 } } })

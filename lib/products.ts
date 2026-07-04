@@ -542,7 +542,7 @@ export const products: Product[] = [
       "DPT Fabric Conditioner wraps each fibre in a protective layer of softness, making your clothes feel luxurious against the skin. It reduces wrinkles for easier ironing, protects fabric from wear, controls static and infuses garments with a long-lasting freshness that lingers wash after wash.",
     descriptionHi:
       "DPT फैब्रिक कंडीशनर हर रेशे को मुलायमियत की सुरक्षा परत में लपेट देता है, जिससे कपड़े त्वचा पर बेहद आरामदायक महसूस होते हैं। यह सिलवटें घटाकर इस्त्री आसान बनाता है, कपड़ों को घिसाव से बचाता है, स्टैटिक पर काबू रखता है और हर धुलाई के बाद कपड़ों में देर तक टिकने वाली ताज़गी भर देता है।",
-    image: "/products/fabric-conditioner.png",
+    image: "/products/fabric-conditioner-v2.png",
     fragrance: "Available in Blossom, Morning Fresh and Baby Soft",
     fragranceHi: "ब्लॉसम, मॉर्निंग फ्रेश और बेबी सॉफ्ट में उपलब्ध",
     featured: false,
@@ -824,7 +824,7 @@ export const products: Product[] = [
       "DPT Room Freshener does more than mask smells — it neutralises odour molecules and fills the air with a rich, long-lasting fragrance. A few sprays transform living rooms, bedrooms, washrooms, offices and cars into fresh, welcoming spaces. Available in a range of premium fragrances to match every mood.",
     descriptionHi:
       "DPT रूम फ्रेशनर सिर्फ बदबू छिपाता नहीं — यह बदबू के कणों को बेअसर करता है और हवा में गहरी, देर तक टिकने वाली खुशबू घोल देता है। कुछ ही स्प्रे लिविंग रूम, बेडरूम, वॉशरूम, ऑफिस और कार को ताज़ा, स्वागत करती जगहों में बदल देते हैं। हर मूड के हिसाब से प्रीमियम खुशबुओं की रेंज में उपलब्ध।",
-    image: "/products/room-freshener.png",
+    image: "/products/room-freshener-v2.png",
     fragrance: "Available in Lavender, Citrus Bloom, Rose and Ocean",
     fragranceHi: "लैवेंडर, सिट्रस ब्लूम, रोज़ और ओशन में उपलब्ध",
     featured: false,
@@ -900,7 +900,7 @@ export const products: Product[] = [
       "DPT Hand Sanitizer offers instant, water-free protection wherever you are. Its 70% alcohol formula kills germs and viruses in seconds, while added moisturisers prevent the dryness typical of sanitizers. Compact and quick-drying, it's ideal for homes, offices, hospitals, schools and travel.",
     descriptionHi:
       "DPT हैंड सैनिटाइज़र आप जहाँ भी हों, तुरंत, बिना पानी के सुरक्षा देता है। इसका 70% अल्कोहल फॉर्मूला सेकंडों में कीटाणुओं और वायरस को मारता है, जबकि मॉइस्चराइज़र सैनिटाइज़र से होने वाले रूखेपन को रोकते हैं। कॉम्पैक्ट और जल्दी सूखने वाला — घर, ऑफिस, अस्पताल, स्कूल और सफर के लिए आदर्श।",
-    image: "/products/sanitizer.png",
+    image: "/products/sanitizer-v2.png",
     fragrance: "Neutral / Mild fragrance",
     fragranceHi: "न्यूट्रल / हल्की खुशबू",
     featured: false,
@@ -977,7 +977,7 @@ export const products: Product[] = [
       "DPT Car Shampoo gives your vehicle a showroom-quality shine without harming the paint or wax coat. Its thick, high-foam formula gently lifts road grime, dust and bird droppings, while the pH-neutral base protects the clear coat. Rinses off cleanly for a spotless, streak-free, glossy finish every time.",
     descriptionHi:
       "DPT कार शैम्पू आपकी गाड़ी को पेंट या वैक्स कोट को नुकसान पहुँचाए बिना शोरूम जैसी चमक देता है। इसका गाढ़ा, हाई-फोम फॉर्मूला सड़क की गंदगी, धूल और पक्षियों की बीट को नरमी से हटाता है, जबकि pH-न्यूट्रल बेस क्लियर कोट की रक्षा करता है। आसानी से धुलकर हर बार बेदाग, ग्लॉसी फिनिश देता है।",
-    image: "/products/car-shampoo.png",
+    image: "/products/car-shampoo-v2.png",
     fragrance: "Fresh Auto",
     fragranceHi: "फ्रेश ऑटो",
     featured: false,
@@ -1049,7 +1049,7 @@ export const products: Product[] = [
       "DPT Liquid Soap is a versatile, mild cleanser perfect for high-usage settings such as schools, offices, hospitals and public washrooms, as well as everyday home use. It produces a rich lather that cleanses effectively, rinses easily and leaves skin fresh and cared for — available in bulk for cost-effective hygiene at scale.",
     descriptionHi:
       "DPT लिक्विड सोप एक बहुउपयोगी, माइल्ड क्लीनज़र है — स्कूलों, दफ्तरों, अस्पतालों और सार्वजनिक वॉशरूम जैसी ज़्यादा इस्तेमाल वाली जगहों के साथ-साथ रोज़ के घरेलू उपयोग के लिए भी एकदम सही। इसका गाढ़ा झाग असरदार सफाई करता है, आसानी से धुल जाता है और त्वचा को तरोताज़ा रखता है — बड़े पैमाने पर किफायती हाइजीन के लिए बल्क सप्लाई में उपलब्ध।",
-    image: "/products/liquid-soap.png",
+    image: "/products/liquid-soap-v2.png",
     fragrance: "Available in Classic, Rose and Lemon",
     fragranceHi: "क्लासिक, रोज़ और लेमन में उपलब्ध",
     featured: false,
