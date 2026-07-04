@@ -97,6 +97,22 @@ export function Header() {
                         <Link
                           key={child.href}
                           href={child.href}
+                          onClick={(e) => {
+                            // Hide the hover dropdown immediately after choosing an item;
+                            // it re-arms once the cursor leaves the menu area.
+                            const dd = e.currentTarget.closest(".absolute") as HTMLElement | null;
+                            const group = dd?.parentElement;
+                            if (dd && group) {
+                              dd.style.display = "none";
+                              group.addEventListener(
+                                "mouseleave",
+                                () => {
+                                  dd.style.display = "";
+                                },
+                                { once: true }
+                              );
+                            }
+                          }}
                           className="block rounded-xl px-4 py-2.5 text-sm text-ink-soft transition-colors hover:bg-brand-blue/5 hover:text-brand-blue"
                         >
                           <T en={child.label} hi={child.hi} />
