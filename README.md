@@ -1,4 +1,4 @@
-# DPT Home Care — Power of Hygiene
+﻿# DPT Home Care — Power of Hygiene
 
 Premium marketing website for **DPT Home Care**, a cleaning products manufacturer & supplier based in Jaunpur, Uttar Pradesh.
 
@@ -33,7 +33,7 @@ app/                 # App Router pages (home, about, products, blog, contact, l
   blog/[slug]/       # dynamic blog article pages
 components/          # reusable UI (Header, Footer, forms, cards, sections, animations)
 lib/                 # data + config (site, products, blog, faqs, testimonials, industries, seo, images)
-public/logo.png      # brand logo
+public/logo-v2.png      # brand logo
 ```
 
 ## 🖼️ Images
@@ -42,7 +42,7 @@ All imagery uses royalty-free photos hotlinked from [Pexels](https://www.pexels.
 
 ## ✏️ Things to customise
 
-- **Logo** — replace `public/logo.png` (and `app/icon.png`, `app/apple-icon.png`).
+- **Logo** — replace `public/logo-v2.png` (and `app/icon.png`, `app/apple-icon.png`).
 - **Email** — set the real business email in `lib/site.ts` (`site.email`).
 - **Social links** — add real URLs in `lib/site.ts` (`site.social`).
 - **Domain** — update `site.url` in `lib/site.ts` for correct SEO/canonical URLs.
