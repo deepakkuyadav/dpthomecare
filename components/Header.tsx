@@ -55,21 +55,21 @@ export function Header() {
             </span>
             <span className="hidden sm:block leading-tight">
               <span
-                className={`block font-heading text-lg font-bold tracking-tight ${
+                className={`block whitespace-nowrap font-heading text-lg font-bold tracking-tight ${
                   solid ? "text-brand-navy" : "text-white"
                 }`}
               >
                 DPT <span className="text-brand-green">Home Care</span>
               </span>
               <span
-                className={`block text-[8.5px] font-bold uppercase tracking-[0.12em] ${
+                className={`block whitespace-nowrap text-[8px] font-bold uppercase tracking-[0.08em] ${
                   solid ? "text-brand-green-dark" : "text-brand-green-light"
                 }`}
               >
                 {site.subTagline}
               </span>
               <span
-                className={`block text-[10px] font-semibold uppercase tracking-[0.22em] ${
+                className={`block whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.22em] ${
                   solid ? "text-ink-muted" : "text-white/70"
                 }`}
               >
@@ -84,7 +84,7 @@ export function Header() {
               link.children ? (
                 <div key={link.label} className="group relative">
                   <button
-                    className={`flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                    className={`flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium transition-colors xl:px-4 ${
                       solid ? "text-ink-soft hover:text-brand-blue" : "text-white/90 hover:text-white"
                     }`}
                   >
@@ -109,7 +109,7 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                  className={`whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium transition-colors xl:px-4 ${
                     pathname === link.href
                       ? solid
                         ? "text-brand-blue"
@@ -128,7 +128,7 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href={telLink()}
-              className={`flex items-center gap-2 text-sm font-semibold transition-colors ${
+              className={`hidden items-center gap-2 whitespace-nowrap text-sm font-semibold transition-colors xl:flex ${
                 solid ? "text-brand-blue" : "text-white"
               }`}
             >
@@ -136,7 +136,7 @@ export function Header() {
               {site.phoneDisplay}
             </a>
             <LanguageToggle solid={solid} />
-            <Link href="/get-a-quote" className="btn-primary">
+            <Link href="/get-a-quote" className="btn-primary whitespace-nowrap">
               <T en="Get a Quote" hi="कोटेशन पाएं" />
             </Link>
           </div>
