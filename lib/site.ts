@@ -2,6 +2,7 @@ export const site = {
   name: "DPT Home Care",
   legalName: "DPT Home Care",
   tagline: "Power of Hygiene",
+  subTagline: "Deep Protection Technology",
   shortDesc:
     "DPT Home Care is a trusted manufacturer and supplier of premium household and institutional cleaning products, built on the promise of hygiene, safety and everyday freshness.",
   domain: "dpthomecare.com",

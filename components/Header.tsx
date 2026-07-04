@@ -62,6 +62,13 @@ export function Header() {
                 DPT <span className="text-brand-green">Home Care</span>
               </span>
               <span
+                className={`block text-[8.5px] font-bold uppercase tracking-[0.12em] ${
+                  solid ? "text-brand-green-dark" : "text-brand-green-light"
+                }`}
+              >
+                {site.subTagline}
+              </span>
+              <span
                 className={`block text-[10px] font-semibold uppercase tracking-[0.22em] ${
                   solid ? "text-ink-muted" : "text-white/70"
                 }`}
