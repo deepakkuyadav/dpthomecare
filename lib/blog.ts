@@ -214,7 +214,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-03-25",
     readTime: "6 min read",
     readTimeHi: "6 मिनट",
-    image: "/brand/blog-stain-removal-v2.jpg",
+    image: "/brand/blog-stain-removal-v3.jpg",
     keywords: ["how to remove tough stains", "stain removal", "hard water stains", "grease stain remover"],
     content: [
       { type: "p", text: "Every home battles stubborn stains — grease on the stove, hard-water marks in the bathroom, ink on the sofa. The key to winning is knowing which product to use and giving it enough contact time. Here's your room-by-room stain-removal playbook.", textHi: "हर घर ज़िद्दी दागों से जूझता है — चूल्हे पर चिकनाई, बाथरूम में हार्ड-वाटर के निशान, सोफे पर स्याही। जीत की कुंजी है सही प्रोडक्ट चुनना और उसे पर्याप्त कॉन्टैक्ट टाइम देना। पेश है आपकी कमरे-दर-कमरे दाग हटाने की गाइड।" },

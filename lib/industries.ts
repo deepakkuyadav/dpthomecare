@@ -52,7 +52,7 @@ export const industries: Industry[] = [
       "चिकनाई काटने वाले किचन और डिशवॉश समाधान, जो कमर्शियल किचन को फूड-सेफ और चमकदार रखते हैं।",
     points: ["High-foam dish wash", "Heavy-duty degreasers", "Bulk economy packs"],
     pointsHi: ["हाई-फोम डिशवॉश", "हेवी-ड्यूटी डिग्रीज़र", "किफायती बल्क पैक"],
-    image: "/brand/industries-restaurants.jpg",
+    image: "/brand/industries-restaurants-v3.jpg",
   },
   {
     slug: "schools",
