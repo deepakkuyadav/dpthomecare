@@ -54,14 +54,14 @@ export function GalleryGrid({
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
               onClick={() => setLightbox(item)}
-              className="group relative aspect-[4/3] overflow-hidden rounded-3xl shadow-card"
+              className="group relative aspect-[4/3] overflow-hidden rounded-3xl bg-white shadow-card"
             >
               <Image
                 src={item.image}
                 alt={item.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                className="object-contain transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               <div className="absolute inset-x-0 bottom-0 translate-y-2 p-5 text-left opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">

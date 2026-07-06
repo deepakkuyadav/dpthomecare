@@ -21,7 +21,7 @@ export const IMG = {
   familyTogether: px(7642039, 1400),
 
   // Cleaning actions
-  glassSpray: "/brand/glass-cleaning.jpg", // DPT-branded glass cleaner (bottle + in action)
+  glassSpray: "/brand/glass-cleaning-v3.jpg", // DPT-branded glass cleaner (bottle + in action)
   kitchenSurface: px(4239037, 1200),
   kitchenSink: px(9462224, 1200),
   kitchenEquipment: px(10568353, 1200),
@@ -37,7 +37,7 @@ export const IMG = {
   dishwash3: px(7641231, 1200),
 
   // Hand & personal care
-  handWash: "/brand/hand-wash.jpg", // DPT-branded hand wash (bottle front/back + washing hands)
+  handWash: "/brand/hand-wash-v3.jpg", // DPT-branded hand wash (bottle front/back + washing hands)
   handWash2: px(4154169, 1200),
   handWash3: px(3995736, 1200),
 
