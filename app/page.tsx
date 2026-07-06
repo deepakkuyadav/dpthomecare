@@ -181,8 +181,8 @@ export default function HomePage() {
                     src={IMG.cleaningProducts}
                     alt="DPT Home Care cleaning products range"
                     width={900}
-                    height={1100}
-                    className="h-full w-full object-cover"
+                    height={720}
+                    className="h-full w-full object-contain"
                     priority
                   />
                 </div>
@@ -484,7 +484,7 @@ export default function HomePage() {
                     alt={ind.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/30 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-5">
@@ -594,7 +594,7 @@ export default function HomePage() {
                       alt={post.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     />
                     <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-brand-blue">
                       {post.category}

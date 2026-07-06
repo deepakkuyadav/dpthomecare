@@ -49,7 +49,7 @@ export default function BlogPage() {
               className="group grid overflow-hidden rounded-[2rem] border border-slate-100 bg-white shadow-card md:grid-cols-2"
             >
               <div className="relative aspect-[16/10] md:aspect-auto">
-                <Image src={featured.image} alt={featured.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                <Image src={featured.image} alt={featured.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                 <span className="absolute left-4 top-4 rounded-full bg-brand-green px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
                   <T en="Featured" hi="फ़ीचर्ड" />
                 </span>
@@ -81,7 +81,7 @@ export default function BlogPage() {
               <Reveal key={post.slug} delay={(i % 3) * 0.06}>
                 <article className="group card-surface flex h-full flex-col overflow-hidden hover:-translate-y-1 hover:shadow-card-hover">
                   <Link href={`/blog/${post.slug}`} className="relative block aspect-[16/10] overflow-hidden">
-                    <Image src={post.image} alt={post.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <Image src={post.image} alt={post.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                     <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-brand-blue">
                       <T en={post.category} hi={post.categoryHi ?? post.category} />
                     </span>

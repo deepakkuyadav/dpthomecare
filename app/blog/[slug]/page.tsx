@@ -129,7 +129,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="container-wide max-w-4xl">
           <Reveal>
             <div className="overflow-hidden rounded-[2rem] shadow-card">
-              <Image src={post.image} alt={post.title} width={1200} height={700} className="aspect-[16/9] w-full object-cover" priority />
+              <Image src={post.image} alt={post.title} width={1200} height={700} className="aspect-[16/9] w-full object-cover object-top" priority />
             </div>
           </Reveal>
 
@@ -189,7 +189,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {related.map((p) => (
               <article key={p.slug} className="group card-surface overflow-hidden hover:-translate-y-1 hover:shadow-card-hover">
                 <Link href={`/blog/${p.slug}`} className="relative block aspect-[16/10] overflow-hidden">
-                  <Image src={p.image} alt={p.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <Image src={p.image} alt={p.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                 </Link>
                 <div className="p-6">
                   <span className="text-xs font-semibold uppercase tracking-wide text-brand-blue">

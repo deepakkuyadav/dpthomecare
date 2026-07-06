@@ -52,8 +52,8 @@ export default function IndustriesPage() {
             {industries.map((ind, i) => (
               <Reveal key={ind.slug} delay={i * 0.03}>
                 <div id={ind.slug} className={`grid scroll-mt-28 items-center gap-6 overflow-hidden rounded-[2rem] border border-slate-100 bg-white shadow-card md:grid-cols-2 ${i % 2 ? "md:[&>div:first-child]:order-2" : ""}`}>
-                  <div className="relative h-56 md:h-full md:min-h-[260px]">
-                    <Image src={ind.image} alt={ind.name} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+                  <div className="relative h-56 bg-white md:h-full md:min-h-[260px]">
+                    <Image src={ind.image} alt={ind.name} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-contain" />
                   </div>
                   <div className="p-7 md:p-10">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-blue/10 text-brand-blue">
