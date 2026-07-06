@@ -40,7 +40,7 @@ export const products: Product[] = [
       "DPT Floor Cleaner is a premium, concentrated formula engineered for daily floor care across homes, hotels, hospitals and offices. It lifts away tough dirt, oily footmarks and stubborn stains from marble, tiles, granite, ceramic and vitrified surfaces while leaving them disinfected and fresh. A little goes a long way: one capful in a bucket of water leaves your floors visibly clean, streak-free and fragrant for hours.",
     descriptionHi:
       "DPT फ्लोर क्लीनर एक प्रीमियम, कंसन्ट्रेटेड फॉर्मूला है, जो घरों, होटलों, अस्पतालों और दफ्तरों में रोज़ाना फर्श की देखभाल के लिए बनाया गया है। यह मार्बल, टाइल्स, ग्रेनाइट, सिरेमिक और विट्रिफाइड सतहों से जिद्दी मैल, तेल भरे पैरों के निशान और पक्के दाग हटाता है और साथ ही उन्हें कीटाणु-मुक्त और तरोताज़ा बनाता है। थोड़ा ही काफी है: बाल्टी भर पानी में बस एक ढक्कन, और आपके फर्श साफ, बेदाग और घंटों महकते रहते हैं।",
-    image: "/products/floor-cleaner-v2.png",
+    image: "/products/floor-cleaner-v3.png",
     fragrance: "Available in Floral, Citrus, Jasmine and Lavender",
     fragranceHi: "फ्लोरल, सिट्रस, जैस्मिन और लैवेंडर में उपलब्ध",
     featured: true,
@@ -112,7 +112,7 @@ export const products: Product[] = [
       "DPT Toilet Cleaner is a heavy-duty acid formula that clings to the toilet bowl to dissolve limescale, hard-water stains, rust and yellow deposits. Its thick consistency ensures maximum contact time for a deep, hygienic clean that removes stains and destroys odour-causing bacteria — leaving your washroom sparkling and fresh.",
     descriptionHi:
       "DPT टॉयलेट क्लीनर एक हैवी-ड्यूटी एसिड फॉर्मूला है जो टॉयलेट बाउल पर चिपककर लाइमस्केल, हार्ड वॉटर के दाग, जंग और पीली परत को घोल देता है। इसकी गाढ़ी बनावट सतह पर ज़्यादा देर टिकती है, जिससे गहरी और हाइजीनिक सफाई मिलती है — दाग हटते हैं, बदबू फैलाने वाले बैक्टीरिया खत्म होते हैं और आपका वॉशरूम चमकदार व तरोताज़ा रहता है।",
-    image: "/products/toilet-cleaner-v2.png",
+    image: "/products/toilet-cleaner-v3.png",
     fragrance: "Fresh Pine",
     fragranceHi: "फ्रेश पाइन",
     featured: true,
@@ -189,7 +189,7 @@ export const products: Product[] = [
       "DPT Glass Cleaner gives windows, mirrors, glass tables and display cases a crystal-clear, streak-free shine in seconds. Its quick-evaporating formula cuts through fingerprints, dust, grease and water spots without leaving smears — ideal for homes, showrooms, hotels and retail stores where a spotless look matters.",
     descriptionHi:
       "DPT ग्लास क्लीनर खिड़कियों, आईनों, काँच की टेबलों और डिस्प्ले केसों को सेकंडों में क्रिस्टल-क्लियर, बेदाग चमक देता है। इसका जल्दी उड़ने वाला फॉर्मूला उँगलियों के निशान, धूल, चिकनाई और पानी के धब्बों को बिना धारियाँ छोड़े साफ कर देता है — घरों, शोरूम, होटलों और रिटेल स्टोर्स के लिए बिल्कुल सही, जहाँ बेदाग लुक मायने रखता है।",
-    image: "/products/glass-cleaner-v2.png",
+    image: "/products/glass-cleaner-v3.png",
     fragrance: "Fresh Mint",
     fragranceHi: "फ्रेश मिंट",
     featured: true,
@@ -259,7 +259,7 @@ export const products: Product[] = [
       "DPT Dish Wash Liquid is a high-performance, lemon-fortified formula that dissolves stubborn grease and dried-on food in seconds. Rich, long-lasting foam means fewer squeezes per wash, while the gentle, skin-friendly base protects your hands. It rinses off cleanly to leave your utensils, glassware and cookware spotless and shining.",
     descriptionHi:
       "DPT डिशवॉश लिक्विड एक हाई-परफॉर्मेंस, नींबू-युक्त फॉर्मूला है जो जिद्दी चिकनाई और सूखे खाने के दाग सेकंडों में घोल देता है। गाढ़ा, देर तक टिकने वाला झाग यानी हर धुलाई में कम लिक्विड, और सौम्य, त्वचा के अनुकूल बेस आपके हाथों का ख्याल रखता है। यह आसानी से धुल जाता है और बर्तनों, काँच के सामान और कुकवेयर को बेदाग चमक देता है।",
-    image: "/products/dish-wash-liquid-v2.png",
+    image: "/products/dish-wash-liquid-v3.png",
     fragrance: "Lemon",
     fragranceHi: "लेमन",
     featured: true,
@@ -331,7 +331,7 @@ export const products: Product[] = [
       "DPT Liquid Detergent dissolves instantly to penetrate deep into fabric fibres, lifting away tough stains, sweat, dirt and odour. Unlike powders, it leaves no white residue on clothes or in your machine, and its colour-guard formula keeps whites bright and colours vivid, wash after wash. Suitable for both top-load and front-load machines as well as hand wash.",
     descriptionHi:
       "DPT लिक्विड डिटर्जेंट तुरंत घुलकर कपड़ों के रेशों के अंदर तक पहुँचता है और जिद्दी दाग, पसीना, मैल और बदबू को निकाल देता है। पाउडर की तरह यह कपड़ों या मशीन में सफेद अवशेष नहीं छोड़ता, और इसका कलर-गार्ड फॉर्मूला हर धुलाई में सफेद कपड़ों को चमकदार और रंगों को गहरा बनाए रखता है। टॉप-लोड, फ्रंट-लोड मशीन और हाथ धुलाई — तीनों के लिए उपयुक्त।",
-    image: "/products/liquid-detergent-v2.png",
+    image: "/products/liquid-detergent-v3.png",
     fragrance: "Spring Fresh",
     fragranceHi: "स्प्रिंग फ्रेश",
     featured: false,
@@ -401,7 +401,7 @@ export const products: Product[] = [
       "DPT Hand Wash combines effective germ protection with skin-loving care. The rich, creamy lather cleans away dirt and germs, while added moisturisers and glycerine keep your hands soft, not dry. Perfect for homes, offices, hotels, restaurants and hospitals where frequent hand hygiene matters.",
     descriptionHi:
       "DPT हैंड वॉश कीटाणुओं से असरदार सुरक्षा और त्वचा की देखभाल — दोनों साथ देता है। इसका गाढ़ा, क्रीमी झाग मैल और कीटाणुओं को साफ करता है, जबकि मॉइस्चराइज़र और ग्लिसरीन हाथों को नरम रखते हैं, रूखा नहीं होने देते। घरों, दफ्तरों, होटलों, रेस्टोरेंट और अस्पतालों के लिए एकदम सही, जहाँ बार-बार हाथ धोना ज़रूरी है।",
-    image: "/products/hand-wash-v2.png",
+    image: "/products/hand-wash-v3.png",
     fragrance: "Available in Rose, Lemon, Aloe Vera and Sea Breeze",
     fragranceHi: "रोज़, लेमन, एलोवेरा और सी ब्रीज़ में उपलब्ध",
     featured: true,
@@ -472,7 +472,7 @@ export const products: Product[] = [
       "DPT Phenyl is a powerful concentrated disinfectant for floors, corridors, drains and washrooms. Available in classic white (emulsion) and black variants, it destroys germs, controls odour and leaves a fresh, sanitised environment. Ideal for institutions, hospitals, schools, factories and large housing complexes where economical, high-strength disinfection is essential.",
     descriptionHi:
       "DPT फिनाइल फर्श, गलियारों, नालियों और वॉशरूम के लिए एक दमदार कंसन्ट्रेटेड डिसइन्फेक्टेंट है। क्लासिक सफेद (इमल्शन) और काले वैरिएंट में उपलब्ध, यह कीटाणुओं को खत्म करता है, बदबू पर काबू रखता है और माहौल को ताज़ा व सैनिटाइज़्ड बनाता है। संस्थानों, अस्पतालों, स्कूलों, फैक्ट्रियों और बड़ी हाउसिंग सोसाइटियों के लिए आदर्श, जहाँ किफायती, हाई-स्ट्रेंथ डिसइन्फेक्शन ज़रूरी है।",
-    image: "/products/phenyl-v2.png",
+    image: "/products/phenyl-v3.png",
     fragrance: "Classic Phenyl / Floral",
     fragranceHi: "क्लासिक फिनाइल / फ्लोरल",
     featured: false,
@@ -612,7 +612,7 @@ export const products: Product[] = [
       "DPT Bathroom Cleaner tackles the toughest bathroom grime — soap scum, hard-water spots, mineral deposits and dirt — on tiles, wash basins, taps, showers and fittings. Its powerful yet surface-safe formula restores the original shine of your bathroom while leaving a hygienic, fresh finish.",
     descriptionHi:
       "DPT बाथरूम क्लीनर बाथरूम की सबसे जिद्दी गंदगी — साबुन की परत, हार्ड वॉटर के धब्बे, मिनरल जमाव और मैल — को टाइल्स, वॉश बेसिन, नल, शावर और फिटिंग्स से हटा देता है। इसका ताकतवर लेकिन सतह-सुरक्षित फॉर्मूला आपके बाथरूम की असली चमक लौटाता है और एक हाइजीनिक, ताज़ा फिनिश देता है।",
-    image: "/products/bathroom-cleaner-v2.png",
+    image: "/products/bathroom-cleaner-v3.png",
     fragrance: "Ocean Fresh",
     fragranceHi: "ओशन फ्रेश",
     featured: false,
@@ -682,7 +682,7 @@ export const products: Product[] = [
       "DPT Kitchen Cleaner is a heavy-duty degreaser designed for the toughest kitchen messes. It dissolves baked-on oil, grease splatter and food residue from countertops, tiles, chimneys, gas stoves and sinks — quickly and without hard scrubbing — leaving your kitchen hygienic, shining and food-safe.",
     descriptionHi:
       "DPT किचन क्लीनर किचन की सबसे मुश्किल गंदगी के लिए बना हैवी-ड्यूटी डिग्रीज़र है। यह काउंटरटॉप, टाइल्स, चिमनी, गैस स्टोव और सिंक से जमी हुई चिकनाई, तेल के छींटे और खाने के अवशेष — तेज़ी से और बिना ज़ोरदार रगड़ के — घोल देता है और आपके किचन को हाइजीनिक, चमकदार और फूड-सेफ बनाता है।",
-    image: "/products/kitchen-cleaner-v2.png",
+    image: "/products/kitchen-cleaner-v3.png",
     fragrance: "Citrus Zest",
     fragranceHi: "सिट्रस ज़ेस्ट",
     featured: false,
@@ -754,7 +754,7 @@ export const products: Product[] = [
       "DPT Multi Purpose Cleaner is your all-in-one hygiene solution. From floors and walls to doors, furniture, plastic, glass and painted surfaces, it cleans, disinfects and deodorises in a single step. Its balanced formula is tough on dirt yet gentle on surfaces — the smart, economical choice for busy homes and businesses.",
     descriptionHi:
       "DPT मल्टी परपज़ क्लीनर आपका ऑल-इन-वन हाइजीन समाधान है। फर्श और दीवारों से लेकर दरवाज़ों, फर्नीचर, प्लास्टिक, काँच और पेंट की हुई सतहों तक — यह एक ही चरण में सफाई, डिसइन्फेक्शन और ताज़गी तीनों देता है। इसका संतुलित फॉर्मूला मैल पर सख्त और सतहों पर सौम्य है — व्यस्त घरों और कारोबारों के लिए समझदार, किफायती विकल्प।",
-    image: "/products/multi-purpose-cleaner-v2.png",
+    image: "/products/multi-purpose-cleaner-v3.png",
     fragrance: "Fresh Lily",
     fragranceHi: "फ्रेश लिली",
     featured: true,
