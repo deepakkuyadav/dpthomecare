@@ -8,11 +8,11 @@ export function px(id: number, w = 1260): string {
 export const IMG = {
   // Hero & brand
   heroMopping: px(4440541, 1600),
-  cleaningProducts: "/brand/cleaning-products-v2.jpg", // DPT-branded pink set (v2, cache-busted)
+  cleaningProducts: "/brand/cleaning-products-v4.jpg", // DPT-branded pink set (v2, cache-busted)
   cleaningProductsTable: "/brand/products-lineup-v2.jpg", // DPT-branded product lineup (v2)
   sparkleKitchen: px(3634739, 1400),
   modernHome: px(6238679, 1400),
-  cozyHome: "/brand/home-essentials.jpg", // DPT-branded daily essentials tray
+  cozyHome: "/brand/home-essentials-v3.jpg", // DPT-branded daily essentials tray
   homeInterior: px(5179534, 1400),
   homePlants: px(5825380, 1400),
 
@@ -61,8 +61,8 @@ export const IMG = {
   hospitalWaiting: px(8459996, 1200),
 
   // Manufacturing / warehouse
-  warehouse: "/brand/warehouse-v2.jpg", // DPT-branded warehouse (v2)
-  warehouseAisle: "/brand/warehouse-aisle-v2.jpg", // DPT-branded warehouse aisle (v2)
+  warehouse: "/brand/warehouse-v4.jpg", // DPT-branded warehouse (v2)
+  warehouseAisle: "/brand/warehouse-aisle-v4.jpg", // DPT-branded warehouse aisle (v2)
   warehousePallet: "/brand/warehouse-pallet-v2.jpg", // DPT-branded packed stock (v2)
 } as const;
 
