@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { QuotesTable } from "@/components/QuotesTable";
 
 export const metadata: Metadata = {
-  title: "Admin — Quote Requests",
+  title: "Admin — Form Submissions",
   robots: { index: false, follow: false },
 };
 

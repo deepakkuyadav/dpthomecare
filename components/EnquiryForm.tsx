@@ -28,6 +28,19 @@ export function EnquiryForm({
 
   function submit(e: React.FormEvent) {
     e.preventDefault();
+    // save into the backend table first (best-effort), then open WhatsApp
+    void fetch("/api/quote", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        type: "enquiry",
+        name: form.name,
+        phone: form.phone,
+        email: form.email,
+        subject: productName ?? form.subject,
+        message: form.message,
+      }),
+    }).catch(() => {});
     const lines = [
       `New enquiry — ${site.name}`,
       productName ? `Product: ${productName}` : form.subject ? `Subject: ${form.subject}` : "",

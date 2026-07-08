@@ -44,6 +44,22 @@ export function DistributorForm() {
 
   function submit(e: React.FormEvent) {
     e.preventDefault();
+    // save into the backend table first (best-effort), then open WhatsApp
+    void fetch("/api/quote", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        type: "distributor",
+        name: form.name,
+        phone: form.phone,
+        email: form.email,
+        city: form.city,
+        state: form.state,
+        businessType: form.businessType,
+        investment: form.investment,
+        message: form.message,
+      }),
+    }).catch(() => {});
     const lines = [
       `Distributor / Dealer enquiry — ${site.name}`,
       `Name: ${form.name}`,

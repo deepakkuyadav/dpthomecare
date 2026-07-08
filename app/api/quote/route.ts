@@ -6,17 +6,23 @@ import crypto from "crypto";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-// Simple file-backed "table" of quote requests. Works when the app runs on a
-// persistent server (npm start on your machine/VPS). For serverless hosting
-// (e.g. Vercel), swap this for a hosted database — the API shape stays the same.
+// Simple file-backed "table" of every website form submission: quote requests,
+// contact/product enquiries and distributor applications. Works when the app
+// runs on a persistent server (npm start on your machine/VPS). For serverless
+// hosting (e.g. Vercel), swap this for a hosted database — the API shape stays
+// the same.
 const DATA_DIR = path.join(process.cwd(), "data");
 const FILE = path.join(DATA_DIR, "quotes.json");
 
 const ADMIN_KEY = process.env.ADMIN_KEY || "dpt-admin-2026";
 
-export interface QuoteRow {
+const TYPES = ["quote", "enquiry", "distributor"] as const;
+export type LeadType = (typeof TYPES)[number];
+
+export interface LeadRow {
   id: string;
   createdAt: string;
+  type: LeadType;
   name: string;
   phone: string;
   email: string;
@@ -24,18 +30,41 @@ export interface QuoteRow {
   product: string;
   quantity: string;
   message: string;
+  // enquiry-only
+  subject: string;
+  // distributor-only
+  state: string;
+  businessType: string;
+  investment: string;
 }
 
-async function readQuotes(): Promise<QuoteRow[]> {
+async function readLeads(): Promise<LeadRow[]> {
   try {
     const raw = await fs.readFile(FILE, "utf8");
-    return JSON.parse(raw) as QuoteRow[];
+    const rows = JSON.parse(raw) as Partial<LeadRow>[];
+    // older rows were written before `type` and the extra fields existed
+    return rows.map((r) => ({
+      id: r.id ?? crypto.randomUUID(),
+      createdAt: r.createdAt ?? "",
+      type: TYPES.includes(r.type as LeadType) ? (r.type as LeadType) : "quote",
+      name: r.name ?? "",
+      phone: r.phone ?? "",
+      email: r.email ?? "",
+      city: r.city ?? "",
+      product: r.product ?? "",
+      quantity: r.quantity ?? "",
+      message: r.message ?? "",
+      subject: r.subject ?? "",
+      state: r.state ?? "",
+      businessType: r.businessType ?? "",
+      investment: r.investment ?? "",
+    }));
   } catch {
     return [];
   }
 }
 
-async function writeQuotes(rows: QuoteRow[]) {
+async function writeLeads(rows: LeadRow[]) {
   await fs.mkdir(DATA_DIR, { recursive: true });
   await fs.writeFile(FILE, JSON.stringify(rows, null, 2), "utf8");
 }
@@ -44,7 +73,7 @@ function str(v: unknown, max = 500): string {
   return typeof v === "string" ? v.trim().slice(0, max) : "";
 }
 
-// POST — insert a new quote request into the table
+// POST — insert a new form submission into the table
 export async function POST(req: Request) {
   let body: Record<string, unknown>;
   try {
@@ -59,9 +88,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Name and phone are required." }, { status: 400 });
   }
 
-  const row: QuoteRow = {
+  const row: LeadRow = {
     id: crypto.randomUUID(),
     createdAt: new Date().toISOString(),
+    type: TYPES.includes(body.type as LeadType) ? (body.type as LeadType) : "quote",
     name,
     phone,
     email: str(body.email, 160),
@@ -69,26 +99,30 @@ export async function POST(req: Request) {
     product: str(body.product, 160),
     quantity: str(body.quantity, 120),
     message: str(body.message, 1000),
+    subject: str(body.subject, 200),
+    state: str(body.state, 120),
+    businessType: str(body.businessType, 120),
+    investment: str(body.investment, 120),
   };
 
   try {
-    const rows = await readQuotes();
+    const rows = await readLeads();
     rows.push(row);
-    await writeQuotes(rows);
+    await writeLeads(rows);
     return NextResponse.json({ ok: true, id: row.id });
   } catch (err) {
-    console.error("Quote save error:", err);
+    console.error("Lead save error:", err);
     return NextResponse.json({ error: "Could not save. Please try WhatsApp or call." }, { status: 500 });
   }
 }
 
-// GET — admin: list all quote requests (requires x-admin-key header)
+// GET — admin: list all submissions (requires x-admin-key header)
 export async function GET(req: Request) {
   const key = req.headers.get("x-admin-key");
   if (key !== ADMIN_KEY) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
-  const rows = await readQuotes();
+  const rows = await readLeads();
   rows.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
   return NextResponse.json({ quotes: rows, count: rows.length });
 }
