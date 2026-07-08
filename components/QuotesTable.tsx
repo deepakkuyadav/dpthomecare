@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Lock, RefreshCw, Download, Inbox, Search, Users, CalendarDays, BellRing, Trophy } from "lucide-react";
 
-type LeadType = "quote" | "enquiry" | "distributor";
+type LeadType = "quote" | "enquiry" | "distributor" | "newsletter";
 type LeadStatus = "new" | "contacted" | "won" | "closed";
 
 interface LeadRow {
@@ -29,6 +29,7 @@ const TYPE_META: Record<LeadType, { label: string; badge: string }> = {
   quote: { label: "Quote", badge: "bg-blue-50 text-brand-blue" },
   enquiry: { label: "Enquiry", badge: "bg-emerald-50 text-emerald-700" },
   distributor: { label: "Distributor", badge: "bg-purple-50 text-purple-700" },
+  newsletter: { label: "Newsletter", badge: "bg-cyan-50 text-cyan-700" },
 };
 
 const STATUS_META: Record<LeadStatus, { label: string; cls: string }> = {
@@ -220,7 +221,7 @@ export function QuotesTable() {
       </div>
 
       <div className="mb-4 flex flex-wrap items-center gap-2">
-        {(["all", "quote", "enquiry", "distributor"] as const).map((t) => {
+        {(["all", "quote", "enquiry", "distributor", "newsletter"] as const).map((t) => {
           const count = t === "all" ? rows.length : rows.filter((r) => r.type === t).length;
           return (
             <button
@@ -279,13 +280,17 @@ export function QuotesTable() {
                     </span>
                   </td>
                   <td className="px-4 py-3 font-medium text-brand-navy">
-                    {r.name}
+                    {r.name || "—"}
                     {r.email && <span className="block text-xs font-normal text-ink-muted">{r.email}</span>}
                   </td>
                   <td className="whitespace-nowrap px-4 py-3">
-                    <a href={`tel:${r.phone}`} className="text-brand-blue hover:underline">
-                      {r.phone}
-                    </a>
+                    {r.phone ? (
+                      <a href={`tel:${r.phone}`} className="text-brand-blue hover:underline">
+                        {r.phone}
+                      </a>
+                    ) : (
+                      "—"
+                    )}
                   </td>
                   <td className="px-4 py-3 text-ink-soft">
                     {r.city || "—"}

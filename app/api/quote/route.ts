@@ -16,7 +16,7 @@ const FILE = path.join(DATA_DIR, "quotes.json");
 
 const ADMIN_KEY = process.env.ADMIN_KEY || "dpt-admin-2026";
 
-const TYPES = ["quote", "enquiry", "distributor"] as const;
+const TYPES = ["quote", "enquiry", "distributor", "newsletter"] as const;
 export type LeadType = (typeof TYPES)[number];
 
 const STATUSES = ["new", "contacted", "won", "closed"] as const;
@@ -90,19 +90,26 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
   }
 
+  const type: LeadType = TYPES.includes(body.type as LeadType) ? (body.type as LeadType) : "quote";
   const name = str(body.name, 120);
   const phone = str(body.phone, 20);
-  if (!name || !phone) {
+  const email = str(body.email, 160);
+  // newsletter signups only have an email; every other form needs name + phone
+  if (type === "newsletter") {
+    if (!email.includes("@")) {
+      return NextResponse.json({ error: "A valid email is required." }, { status: 400 });
+    }
+  } else if (!name || !phone) {
     return NextResponse.json({ error: "Name and phone are required." }, { status: 400 });
   }
 
   const row: LeadRow = {
     id: crypto.randomUUID(),
     createdAt: new Date().toISOString(),
-    type: TYPES.includes(body.type as LeadType) ? (body.type as LeadType) : "quote",
+    type,
     name,
     phone,
-    email: str(body.email, 160),
+    email,
     city: str(body.city, 120),
     product: str(body.product, 160),
     quantity: str(body.quantity, 120),

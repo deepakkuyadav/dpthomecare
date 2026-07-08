@@ -12,6 +12,12 @@ export function Newsletter() {
   function submit(e: React.FormEvent) {
     e.preventDefault();
     if (!email) return;
+    // save the subscriber into the backend leads table (best-effort)
+    void fetch("/api/quote", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ type: "newsletter", email }),
+    }).catch(() => {});
     setDone(true);
     setEmail("");
     setTimeout(() => setDone(false), 4000);
