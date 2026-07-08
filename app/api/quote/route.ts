@@ -19,6 +19,9 @@ const ADMIN_KEY = process.env.ADMIN_KEY || "dpt-admin-2026";
 const TYPES = ["quote", "enquiry", "distributor"] as const;
 export type LeadType = (typeof TYPES)[number];
 
+const STATUSES = ["new", "contacted", "won", "closed"] as const;
+export type LeadStatus = (typeof STATUSES)[number];
+
 export interface LeadRow {
   id: string;
   createdAt: string;
@@ -36,6 +39,9 @@ export interface LeadRow {
   state: string;
   businessType: string;
   investment: string;
+  // admin-side follow-up tracking
+  status: LeadStatus;
+  note: string;
 }
 
 async function readLeads(): Promise<LeadRow[]> {
@@ -58,6 +64,8 @@ async function readLeads(): Promise<LeadRow[]> {
       state: r.state ?? "",
       businessType: r.businessType ?? "",
       investment: r.investment ?? "",
+      status: STATUSES.includes(r.status as LeadStatus) ? (r.status as LeadStatus) : "new",
+      note: r.note ?? "",
     }));
   } catch {
     return [];
@@ -103,6 +111,8 @@ export async function POST(req: Request) {
     state: str(body.state, 120),
     businessType: str(body.businessType, 120),
     investment: str(body.investment, 120),
+    status: "new",
+    note: "",
   };
 
   try {
@@ -113,6 +123,39 @@ export async function POST(req: Request) {
   } catch (err) {
     console.error("Lead save error:", err);
     return NextResponse.json({ error: "Could not save. Please try WhatsApp or call." }, { status: 500 });
+  }
+}
+
+// PATCH — admin: update a lead's follow-up status / note (requires x-admin-key header)
+export async function PATCH(req: Request) {
+  const key = req.headers.get("x-admin-key");
+  if (key !== ADMIN_KEY) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  let body: Record<string, unknown>;
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid request" }, { status: 400 });
+  }
+  const id = str(body.id, 64);
+  const rows = await readLeads();
+  const row = rows.find((r) => r.id === id);
+  if (!row) {
+    return NextResponse.json({ error: "Lead not found" }, { status: 404 });
+  }
+  if (typeof body.status === "string" && STATUSES.includes(body.status as LeadStatus)) {
+    row.status = body.status as LeadStatus;
+  }
+  if (typeof body.note === "string") {
+    row.note = body.note.trim().slice(0, 500);
+  }
+  try {
+    await writeLeads(rows);
+    return NextResponse.json({ ok: true, lead: row });
+  } catch (err) {
+    console.error("Lead update error:", err);
+    return NextResponse.json({ error: "Could not save." }, { status: 500 });
   }
 }
 

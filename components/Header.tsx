@@ -9,6 +9,7 @@ import { mainNav } from "@/lib/nav";
 import { site, telLink } from "@/lib/site";
 import { T } from "@/lib/lang";
 import { LanguageToggle } from "./LanguageToggle";
+import { AnnouncementBar } from "./AnnouncementBar";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,6 +37,7 @@ export function Header() {
         solid ? "bg-white shadow-[0_8px_30px_-12px_rgba(11,78,162,0.25)]" : "bg-transparent"
       }`}
     >
+      <AnnouncementBar />
       <div className="container-wide">
         <div className="flex h-20 items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3" aria-label={`${site.name} home`}>

@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Lock, RefreshCw, Download, Inbox } from "lucide-react";
+import { Lock, RefreshCw, Download, Inbox, Search, Users, CalendarDays, BellRing, Trophy } from "lucide-react";
 
 type LeadType = "quote" | "enquiry" | "distributor";
+type LeadStatus = "new" | "contacted" | "won" | "closed";
 
 interface LeadRow {
   id: string;
@@ -20,12 +21,21 @@ interface LeadRow {
   state: string;
   businessType: string;
   investment: string;
+  status: LeadStatus;
+  note: string;
 }
 
 const TYPE_META: Record<LeadType, { label: string; badge: string }> = {
   quote: { label: "Quote", badge: "bg-blue-50 text-brand-blue" },
   enquiry: { label: "Enquiry", badge: "bg-emerald-50 text-emerald-700" },
   distributor: { label: "Distributor", badge: "bg-purple-50 text-purple-700" },
+};
+
+const STATUS_META: Record<LeadStatus, { label: string; cls: string }> = {
+  new: { label: "New", cls: "border-amber-200 bg-amber-50 text-amber-700" },
+  contacted: { label: "Contacted", cls: "border-blue-200 bg-blue-50 text-brand-blue" },
+  won: { label: "Deal Won", cls: "border-emerald-200 bg-emerald-50 text-emerald-700" },
+  closed: { label: "Closed", cls: "border-slate-200 bg-slate-100 text-slate-500" },
 };
 
 // what the visitor asked about / how much — differs per form type
@@ -37,6 +47,7 @@ export function QuotesTable() {
   const [authed, setAuthed] = useState(false);
   const [rows, setRows] = useState<LeadRow[]>([]);
   const [filter, setFilter] = useState<"all" | LeadType>("all");
+  const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -60,10 +71,55 @@ export function QuotesTable() {
     }
   }
 
-  const filtered = filter === "all" ? rows : rows.filter((r) => r.type === filter);
+  // optimistic update; the server write is best-effort and re-synced on Refresh
+  async function patch(id: string, changes: Partial<Pick<LeadRow, "status" | "note">>) {
+    setRows((rs) => rs.map((r) => (r.id === id ? { ...r, ...changes } : r)));
+    try {
+      await fetch("/api/quote", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json", "x-admin-key": key },
+        body: JSON.stringify({ id, ...changes }),
+      });
+    } catch {}
+  }
+
+  const q = query.trim().toLowerCase();
+  const filtered = rows
+    .filter((r) => filter === "all" || r.type === filter)
+    .filter(
+      (r) =>
+        !q ||
+        [r.name, r.phone, r.email, r.city, r.state, r.product, r.subject, r.businessType, r.message, r.note]
+          .join(" ")
+          .toLowerCase()
+          .includes(q)
+    );
+
+  const weekAgo = Date.now() - 7 * 24 * 3600 * 1000;
+  const stats = [
+    { label: "Total Leads", value: rows.length, icon: Users, cls: "bg-blue-50 text-brand-blue" },
+    {
+      label: "This Week",
+      value: rows.filter((r) => new Date(r.createdAt).getTime() > weekAgo).length,
+      icon: CalendarDays,
+      cls: "bg-purple-50 text-purple-700",
+    },
+    {
+      label: "New — follow up!",
+      value: rows.filter((r) => r.status === "new").length,
+      icon: BellRing,
+      cls: "bg-amber-50 text-amber-700",
+    },
+    {
+      label: "Deals Won",
+      value: rows.filter((r) => r.status === "won").length,
+      icon: Trophy,
+      cls: "bg-emerald-50 text-emerald-700",
+    },
+  ];
 
   function exportCsv() {
-    const header = ["Date", "Type", "Name", "Phone", "Email", "City", "State", "Product / Subject", "Business Type", "Quantity / Investment", "Message"];
+    const header = ["Date", "Type", "Status", "Name", "Phone", "Email", "City", "State", "Product / Subject", "Business Type", "Quantity / Investment", "Message", "Note"];
     const escape = (v: string) => `"${(v || "").replace(/"/g, '""')}"`;
     const lines = [
       header.join(","),
@@ -71,6 +127,7 @@ export function QuotesTable() {
         [
           new Date(r.createdAt).toLocaleString("en-IN"),
           TYPE_META[r.type]?.label ?? r.type,
+          STATUS_META[r.status]?.label ?? r.status,
           r.name,
           r.phone,
           r.email,
@@ -80,6 +137,7 @@ export function QuotesTable() {
           r.businessType,
           amountOf(r),
           r.message,
+          r.note,
         ]
           .map((v) => escape(String(v ?? "")))
           .join(",")
@@ -134,7 +192,7 @@ export function QuotesTable() {
         <div>
           <h1 className="text-2xl font-bold text-brand-navy">Form Submissions</h1>
           <p className="text-sm text-ink-muted">
-            {filter === "all" ? `${rows.length} total` : `${filtered.length} of ${rows.length}`}
+            {filtered.length === rows.length ? `${rows.length} total` : `${filtered.length} of ${rows.length}`}
           </p>
         </div>
         <div className="flex gap-2">
@@ -147,7 +205,21 @@ export function QuotesTable() {
         </div>
       </div>
 
-      <div className="mb-4 flex flex-wrap gap-2">
+      <div className="mb-6 grid grid-cols-2 gap-3 lg:grid-cols-4">
+        {stats.map((s) => (
+          <div key={s.label} className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white p-4 shadow-card">
+            <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${s.cls}`}>
+              <s.icon className="h-5 w-5" />
+            </span>
+            <div>
+              <p className="text-2xl font-bold leading-none text-brand-navy">{s.value}</p>
+              <p className="mt-1 text-xs font-medium text-ink-muted">{s.label}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mb-4 flex flex-wrap items-center gap-2">
         {(["all", "quote", "enquiry", "distributor"] as const).map((t) => {
           const count = t === "all" ? rows.length : rows.filter((r) => r.type === t).length;
           return (
@@ -162,22 +234,33 @@ export function QuotesTable() {
             </button>
           );
         })}
+        <div className="relative ml-auto min-w-[220px] flex-1 sm:max-w-xs">
+          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-muted" />
+          <input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search name, phone, city, product…"
+            className="w-full rounded-xl border border-slate-200 bg-white py-2.5 pl-9 pr-3 text-sm focus:border-brand-blue focus:outline-none"
+          />
+        </div>
       </div>
 
       {filtered.length === 0 ? (
         <div className="rounded-3xl border border-dashed border-slate-200 py-16 text-center">
           <Inbox className="mx-auto h-10 w-10 text-slate-300" />
-          <p className="mt-3 font-semibold text-brand-navy">No submissions yet</p>
+          <p className="mt-3 font-semibold text-brand-navy">{rows.length === 0 ? "No submissions yet" : "Nothing matches"}</p>
           <p className="text-sm text-ink-muted">
-            New submissions from the Get a Quote, Enquiry and Distributor forms will appear here.
+            {rows.length === 0
+              ? "New submissions from the Get a Quote, Enquiry and Distributor forms will appear here."
+              : "Try a different search or filter."}
           </p>
         </div>
       ) : (
         <div className="overflow-x-auto rounded-2xl border border-slate-100 bg-white shadow-card">
-          <table className="w-full min-w-[1000px] text-left text-sm">
+          <table className="w-full min-w-[1250px] text-left text-sm">
             <thead className="bg-slate-50 text-xs uppercase tracking-wide text-ink-muted">
               <tr>
-                {["Date", "Type", "Name", "Phone", "City", "Product / Subject", "Qty / Investment", "Message"].map((h) => (
+                {["Date", "Type", "Name", "Phone", "City", "Product / Subject", "Qty / Investment", "Message", "Status", "Note"].map((h) => (
                   <th key={h} className="whitespace-nowrap px-4 py-3 font-semibold">
                     {h}
                   </th>
@@ -211,6 +294,29 @@ export function QuotesTable() {
                   <td className="px-4 py-3 text-ink-soft">{topicOf(r) || "—"}</td>
                   <td className="px-4 py-3 text-ink-soft">{amountOf(r) || "—"}</td>
                   <td className="max-w-xs px-4 py-3 text-ink-soft">{r.message || "—"}</td>
+                  <td className="whitespace-nowrap px-4 py-3">
+                    <select
+                      value={r.status}
+                      onChange={(e) => patch(r.id, { status: e.target.value as LeadStatus })}
+                      className={`cursor-pointer rounded-full border px-2.5 py-1 text-xs font-semibold focus:outline-none ${STATUS_META[r.status]?.cls ?? ""}`}
+                    >
+                      {(Object.keys(STATUS_META) as LeadStatus[]).map((s) => (
+                        <option key={s} value={s}>
+                          {STATUS_META[s].label}
+                        </option>
+                      ))}
+                    </select>
+                  </td>
+                  <td className="px-4 py-3">
+                    <input
+                      defaultValue={r.note}
+                      onBlur={(e) => {
+                        if (e.target.value !== r.note) patch(r.id, { note: e.target.value });
+                      }}
+                      placeholder="Add note…"
+                      className="w-40 rounded-lg border border-transparent bg-slate-50 px-2.5 py-1.5 text-xs focus:border-brand-blue focus:bg-white focus:outline-none"
+                    />
+                  </td>
                 </tr>
               ))}
             </tbody>

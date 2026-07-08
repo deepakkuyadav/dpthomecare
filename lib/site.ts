@@ -41,6 +41,16 @@ export const site = {
     citiesServed: 45,
     yearsExperience: new Date().getFullYear() - 2016,
   },
+  // Offer strip shown at the very top of every page. To run a new offer,
+  // change the id (any new text), update en/hi, and set enabled: true.
+  // Visitors who dismissed an old offer will see the new one again.
+  announcement: {
+    enabled: true,
+    id: "bulk-offer-2026",
+    en: "Launch Offer: special prices on bulk orders — get your free quote today!",
+    hi: "लॉन्च ऑफ़र: थोक ऑर्डर पर स्पेशल दाम — आज ही मुफ़्त कोटेशन पाएं!",
+    href: "/get-a-quote",
+  },
 } as const;
 
 export function whatsappLink(message?: string) {
