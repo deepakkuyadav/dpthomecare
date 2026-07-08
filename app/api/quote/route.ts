@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { promises as fs } from "fs";
 import path from "path";
 import crypto from "crypto";
+import { sendLeadEmails } from "@/lib/mailer";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -126,6 +127,9 @@ export async function POST(req: Request) {
     const rows = await readLeads();
     rows.push(row);
     await writeLeads(rows);
+    // fire-and-forget: thank-you to the visitor + alert to the owner;
+    // the form response never waits on (or fails because of) SMTP
+    void sendLeadEmails(row).catch((err) => console.error("[mail] send failed:", err));
     return NextResponse.json({ ok: true, id: row.id });
   } catch (err) {
     console.error("Lead save error:", err);
