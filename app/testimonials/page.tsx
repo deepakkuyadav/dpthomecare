@@ -1,6 +1,5 @@
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
-import { Reveal } from "@/components/Reveal";
 import { Counter } from "@/components/Counter";
 import { CTABand } from "@/components/CTABand";
 import { JsonLd } from "@/components/JsonLd";
@@ -65,42 +64,8 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Grid */}
-      <section className="section">
-        <div className="container-wide">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((t, i) => (
-              <Reveal key={t.name} delay={(i % 3) * 0.06}>
-                <div className="flex h-full flex-col rounded-3xl border border-slate-100 bg-white p-7 shadow-card">
-                  <Quote className="h-9 w-9 text-brand-blue/15" />
-                  <div className="mt-3 flex gap-0.5">
-                    {Array.from({ length: 5 }).map((_, s) => (
-                      <Star key={s} className={`h-4 w-4 ${s < t.rating ? "fill-amber-400 text-amber-400" : "text-slate-200"}`} />
-                    ))}
-                  </div>
-                  <p className="mt-4 flex-1 text-[15px] leading-relaxed text-ink-soft">
-                    “<T en={t.quote} hi={t.quoteHi ?? t.quote} />”
-                  </p>
-                  <div className="mt-6 flex items-center gap-3">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-gradient text-sm font-bold text-white">
-                      {t.name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
-                    </div>
-                    <div>
-                      <p className="font-semibold text-brand-navy">{t.name}</p>
-                      <p className="text-xs text-ink-muted">
-                        <T en={t.role} hi={t.roleHi ?? t.role} /> · <T en={t.location} hi={t.locationHi ?? t.location} />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Visitor review form + live visitor reviews */}
-      <ReviewsSection />
+      {/* Testimonial grid (visitor reviews appear at the top) + review form */}
+      <ReviewsSection testimonials={testimonials} />
 
       <CTABand
         eyebrow={<T en="Join Them" hi="आप भी जुड़ें" />}
