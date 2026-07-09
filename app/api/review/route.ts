@@ -94,6 +94,40 @@ export async function POST(req: Request) {
   }
 }
 
+// PATCH — admin: edit a review (moderation), requires x-admin-key header
+export async function PATCH(req: Request) {
+  const key = req.headers.get("x-admin-key");
+  if (key !== ADMIN_KEY) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  let body: Record<string, unknown>;
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid request" }, { status: 400 });
+  }
+  const id = str(body.id, 64);
+  const rows = await readReviews();
+  const row = rows.find((r) => r.id === id);
+  if (!row) {
+    return NextResponse.json({ error: "Review not found" }, { status: 404 });
+  }
+  const name = str(body.name, 80);
+  const text = str(body.text, 600);
+  const rating = Math.round(Number(body.rating));
+  if (typeof body.name === "string" && name.length >= 2) row.name = name;
+  if (typeof body.place === "string") row.place = str(body.place, 80);
+  if (typeof body.text === "string" && text.length >= 10) row.text = text;
+  if (rating >= 1 && rating <= 5) row.rating = rating;
+  try {
+    await writeReviews(rows);
+    return NextResponse.json({ ok: true, review: row });
+  } catch (err) {
+    console.error("Review update error:", err);
+    return NextResponse.json({ error: "Could not save." }, { status: 500 });
+  }
+}
+
 // DELETE — admin: remove a review (moderation), /api/review?id=<id>
 export async function DELETE(req: Request) {
   const key = req.headers.get("x-admin-key");

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Lock, RefreshCw, Download, Inbox, Search, Users, CalendarDays, BellRing, Trophy } from "lucide-react";
+import { ReviewsAdmin } from "./ReviewsAdmin";
 
 type LeadType = "quote" | "enquiry" | "distributor" | "newsletter";
 type LeadStatus = "new" | "contacted" | "won" | "closed";
@@ -48,6 +49,7 @@ export function QuotesTable() {
   const [authed, setAuthed] = useState(false);
   const [rows, setRows] = useState<LeadRow[]>([]);
   const [filter, setFilter] = useState<"all" | LeadType>("all");
+  const [view, setView] = useState<"forms" | "reviews">("forms");
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -189,6 +191,30 @@ export function QuotesTable() {
 
   return (
     <div>
+      {/* section switcher: leads vs visitor reviews */}
+      <div className="mb-6 flex flex-wrap gap-2">
+        {(
+          [
+            ["forms", "Form Submissions"],
+            ["reviews", "Visitor Reviews"],
+          ] as const
+        ).map(([v, label]) => (
+          <button
+            key={v}
+            onClick={() => setView(v)}
+            className={`rounded-xl px-5 py-2.5 text-sm font-bold transition-colors ${
+              view === v ? "bg-brand-navy text-white shadow-sm" : "bg-white text-ink-soft shadow-card hover:bg-slate-100"
+            }`}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
+      {view === "reviews" ? (
+        <ReviewsAdmin adminKey={key} />
+      ) : (
+        <>
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl font-bold text-brand-navy">Form Submissions</h1>
@@ -327,6 +353,8 @@ export function QuotesTable() {
             </tbody>
           </table>
         </div>
+      )}
+        </>
       )}
     </div>
   );
