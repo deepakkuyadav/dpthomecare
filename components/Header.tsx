@@ -29,7 +29,9 @@ export function Header() {
     setOpenGroup(null);
   }, [pathname]);
 
-  const solid = scrolled || mobileOpen;
+  // admin pages have a light background and no hero gradient, so the
+  // transparent white-text header would be invisible there
+  const solid = scrolled || mobileOpen || pathname.startsWith("/admin");
 
   return (
     <header
