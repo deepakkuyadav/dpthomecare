@@ -4,6 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { Counter } from "@/components/Counter";
 import { CTABand } from "@/components/CTABand";
 import { JsonLd } from "@/components/JsonLd";
+import { ReviewsSection } from "@/components/ReviewsSection";
 import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
 import { testimonials } from "@/lib/testimonials";
 import { IMG } from "@/lib/images";
@@ -97,6 +98,9 @@ export default function TestimonialsPage() {
           </div>
         </div>
       </section>
+
+      {/* Visitor review form + live visitor reviews */}
+      <ReviewsSection />
 
       <CTABand
         eyebrow={<T en="Join Them" hi="आप भी जुड़ें" />}
