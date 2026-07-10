@@ -23,6 +23,8 @@ export interface Product {
   description: string;
   descriptionHi?: string;
   image: string;
+  /** extra pack shots shown as a thumbnail gallery on the product page */
+  images?: string[];
   fragrance?: string;
   fragranceHi?: string;
   featured?: boolean;

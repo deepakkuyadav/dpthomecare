@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -13,6 +12,7 @@ import {
   Package,
 } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ProductImageGallery } from "@/components/ProductImageGallery";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProductCard } from "@/components/ProductCard";
 import { FAQAccordion } from "@/components/FAQAccordion";
@@ -73,14 +73,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <div className="mt-8 grid items-start gap-10 lg:grid-cols-2">
             <Reveal direction="right">
               <div className="relative overflow-hidden rounded-[2rem] bg-white shadow-2xl ring-1 ring-white/20">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={900}
-                  height={800}
-                  className="aspect-[5/4] w-full object-cover"
-                  priority
-                />
+                <ProductImageGallery images={product.images ?? [product.image]} alt={product.name} />
                 <span className="absolute left-4 top-4 rounded-full bg-brand-blue px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
                   <T en={product.category} hi={categoryHi ?? product.category} />
                 </span>

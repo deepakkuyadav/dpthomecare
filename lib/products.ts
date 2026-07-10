@@ -402,6 +402,7 @@ export const products: Product[] = [
     descriptionHi:
       "DPT वॉशिंग पाउडर Deep Protection Technology के साथ हर धुलाई में गहरी, हाइजीनिक सफाई देता है। इसके एक्टिव स्टेन-फाइटिंग ग्रेन्यूल्स बाल्टी और मशीन दोनों में जल्दी घुलते हैं और जिद्दी दाग, पसीना और रोज़ का मैल निकाल देते हैं, जबकि नीले स्पेकल्स सफेद कपड़ों को और चमकाते हैं व रंगों की हिफाज़त करते हैं। कपड़ों और हाथों पर सौम्य यह पाउडर कपड़ों में देर तक टिकने वाली ताज़ी खुशबू छोड़ता है — परिवारों, हॉस्टलों, होटलों और लॉन्ड्री के लिए एक बेहतरीन रोज़ाना डिटर्जेंट।",
     image: "/products/washing-powder.png",
+    images: ["/products/washing-powder.png", "/products/washing-powder-500g.png", "/products/washing-powder-250g.png"],
     fragrance: "Fresh floral fragrance",
     fragranceHi: "ताज़ी फ्लोरल खुशबू",
     featured: false,
