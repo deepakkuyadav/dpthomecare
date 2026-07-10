@@ -36,7 +36,7 @@ export const site = {
     whatsapp: "https://wa.me/919451900062",
   },
   stats: {
-    products: 15,
+    products: 16,
     clients: 1200,
     citiesServed: 45,
     yearsExperience: new Date().getFullYear() - 2016,

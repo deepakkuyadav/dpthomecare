@@ -40,8 +40,8 @@ export default async function ProductsPage({
         }
         subtitle={
           <T
-            en="15 powerful, safe and affordable products for every surface and every space — for homes, institutions and businesses."
-            hi="हर सतह और हर जगह के लिए 15 दमदार, सुरक्षित और किफ़ायती प्रोडक्ट्स — घरों, संस्थानों और कारोबारों के लिए।"
+            en="16 powerful, safe and affordable products for every surface and every space — for homes, institutions and businesses."
+            hi="हर सतह और हर जगह के लिए 16 दमदार, सुरक्षित और किफ़ायती प्रोडक्ट्स — घरों, संस्थानों और कारोबारों के लिए।"
           />
         }
         image={IMG.cleaningProductsTable}

@@ -388,6 +388,93 @@ export const products: Product[] = [
     keywords: ["liquid detergent", "laundry liquid", "washing machine detergent", "fabric wash"],
   },
   {
+    slug: "washing-powder",
+    name: "Washing Powder",
+    category: "Fabric Care",
+    tagline: "Deep clean, brighter whites",
+    taglineHi: "गहरी सफाई, ज़्यादा चमकते सफेद कपड़े",
+    shortDescription:
+      "A high-performance detergent powder that removes tough stains and dirt, keeping clothes bright, fresh and soft — wash after wash.",
+    shortDescriptionHi:
+      "एक हाई-परफॉर्मेंस डिटर्जेंट पाउडर जो जिद्दी दाग और मैल हटाकर कपड़ों को हर धुलाई में चमकदार, ताज़ा और मुलायम रखता है।",
+    description:
+      "DPT Washing Powder is powered by Deep Protection Technology for a deep, hygienic clean in every wash. Its active stain-fighting granules dissolve quickly in both bucket and machine washes, lifting away tough stains, sweat and everyday dirt while blue speckles brighten whites and protect colours. Gentle on fabrics and hands, it leaves clothes with a long-lasting fresh fragrance — making it the perfect everyday detergent for families, hostels, hotels and laundries.",
+    descriptionHi:
+      "DPT वॉशिंग पाउडर Deep Protection Technology के साथ हर धुलाई में गहरी, हाइजीनिक सफाई देता है। इसके एक्टिव स्टेन-फाइटिंग ग्रेन्यूल्स बाल्टी और मशीन दोनों में जल्दी घुलते हैं और जिद्दी दाग, पसीना और रोज़ का मैल निकाल देते हैं, जबकि नीले स्पेकल्स सफेद कपड़ों को और चमकाते हैं व रंगों की हिफाज़त करते हैं। कपड़ों और हाथों पर सौम्य यह पाउडर कपड़ों में देर तक टिकने वाली ताज़ी खुशबू छोड़ता है — परिवारों, हॉस्टलों, होटलों और लॉन्ड्री के लिए एक बेहतरीन रोज़ाना डिटर्जेंट।",
+    image: "/products/washing-powder.png",
+    fragrance: "Fresh floral fragrance",
+    fragranceHi: "ताज़ी फ्लोरल खुशबू",
+    featured: false,
+    benefits: [
+      "Deep cleaning — removes tough stains and dirt",
+      "Brightens whites and keeps colours fresh",
+      "Fabric care formula, gentle on clothes",
+      "Dissolves quickly — no powder residue on clothes",
+      "Long-lasting fresh fragrance after every wash",
+    ],
+    benefitsHi: [
+      "गहरी सफाई — जिद्दी दाग और मैल हटाता है",
+      "सफेद कपड़ों को चमकाता है, रंगों को ताज़ा रखता है",
+      "फैब्रिक केयर फॉर्मूला — कपड़ों पर सौम्य",
+      "जल्दी घुलता है — कपड़ों पर पाउडर के निशान नहीं",
+      "हर धुलाई के बाद देर तक टिकने वाली ताज़ी खुशबू",
+    ],
+    features: [
+      "Active stain-fighting granules with blue brightening speckles",
+      "Works in bucket wash and washing machines (top & front load)",
+      "Low-foam, easy-rinse formula saves water",
+      "Effective even in hard water",
+    ],
+    featuresHi: [
+      "नीले ब्राइटनिंग स्पेकल्स के साथ एक्टिव स्टेन-फाइटिंग ग्रेन्यूल्स",
+      "बाल्टी और वॉशिंग मशीन (टॉप व फ्रंट लोड) दोनों में असरदार",
+      "कम झाग, आसान खंगाल — पानी की बचत",
+      "हार्ड वॉटर में भी पूरा असर",
+    ],
+    specifications: [
+      { label: "Form", labelHi: "रूप", value: "Detergent powder", valueHi: "डिटर्जेंट पाउडर" },
+      { label: "Fragrance", labelHi: "खुशबू", value: "Fresh floral", valueHi: "ताज़ी फ्लोरल" },
+      { label: "Suitable for", labelHi: "उपयुक्त", value: "Bucket wash & washing machines", valueHi: "बाल्टी धुलाई व वॉशिंग मशीन" },
+      { label: "Shelf life", labelHi: "शेल्फ लाइफ", value: "24 months", valueHi: "24 महीने" },
+    ],
+    usage: [
+      "For bucket wash: dissolve 1–2 scoops in a bucket of water, soak clothes for 20–30 minutes, then wash normally.",
+      "For machine wash: add powder as per load size directly into the detergent tray or drum.",
+      "For tough stains: apply a paste of powder and water on the stain before washing.",
+      "Rinse thoroughly and dry in shade for best fabric life.",
+    ],
+    usageHi: [
+      "बाल्टी धुलाई: बाल्टी भर पानी में 1–2 स्कूप घोलें, कपड़े 20–30 मिनट भिगोएँ, फिर सामान्य रूप से धोएँ।",
+      "मशीन धुलाई: लोड के हिसाब से पाउडर डिटर्जेंट ट्रे या ड्रम में डालें।",
+      "जिद्दी दागों पर: धोने से पहले पाउडर और पानी का पेस्ट दाग पर लगाएँ।",
+      "अच्छी तरह खंगालें और कपड़ों की लंबी उम्र के लिए छाँव में सुखाएँ।",
+    ],
+    packingSizes: ["250 g", "500 g", "1 kg"],
+    safety: commonSafety,
+    safetyHi: commonSafetyHi,
+    faqs: [
+      {
+        question: "Is it safe for washing machines?",
+        questionHi: "क्या यह वॉशिंग मशीन के लिए सुरक्षित है?",
+        answer: "Yes. DPT Washing Powder is a low-foam, easy-rinse formula that works well in both top-load and front-load machines as well as bucket wash.",
+        answerHi: "हाँ। DPT वॉशिंग पाउडर कम झाग वाला, आसानी से खंगलने वाला फॉर्मूला है जो टॉप-लोड, फ्रंट-लोड मशीन और बाल्टी धुलाई — तीनों में अच्छा काम करता है।",
+      },
+      {
+        question: "Will it fade coloured clothes?",
+        questionHi: "क्या इससे रंगीन कपड़े फीके पड़ेंगे?",
+        answer: "No. Its fabric-care formula is gentle on colours. For delicate fabrics, use a shorter soak time and wash in shade-dried conditions.",
+        answerHi: "नहीं। इसका फैब्रिक-केयर फॉर्मूला रंगों पर सौम्य है। नाज़ुक कपड़ों के लिए कम देर भिगोएँ और छाँव में सुखाएँ।",
+      },
+      {
+        question: "What pack sizes are available?",
+        questionHi: "कौन-कौन से पैक साइज़ उपलब्ध हैं?",
+        answer: "Washing Powder is available in 250 g, 500 g and 1 kg packs, with bulk supply available for institutions and laundries.",
+        answerHi: "वॉशिंग पाउडर 250 ग्राम, 500 ग्राम और 1 किलो पैक में उपलब्ध है; संस्थानों और लॉन्ड्री के लिए बल्क सप्लाई भी मिलती है।",
+      },
+    ],
+    keywords: ["washing powder", "detergent powder", "laundry detergent", "stain removal powder", "bright whites detergent"],
+  },
+  {
     slug: "hand-wash",
     name: "Hand Wash",
     category: "Personal Care",
