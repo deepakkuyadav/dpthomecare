@@ -9,9 +9,9 @@ export const testimonials: Testimonial[] = [
     locationHi: "जौनपुर, यूपी",
     rating: 5,
     quote:
-      "We switched our entire home to DPT products six months ago. The floor cleaner keeps our tiles spotless and the fragrance lasts all day. Genuinely the best value we've found.",
+      "We switched our entire home to DP Shudh Dhulai products six months ago. The floor cleaner keeps our tiles spotless and the fragrance lasts all day. Genuinely the best value we've found.",
     quoteHi:
-      "छह महीने पहले हमने पूरे घर के लिए DPT प्रोडक्ट्स अपना लिए। फ्लोर क्लीनर से हमारी टाइलें बेदाग़ रहती हैं और खुशबू पूरे दिन बनी रहती है। सच में, इससे बेहतर वैल्यू हमें कहीं नहीं मिली।",
+      "छह महीने पहले हमने पूरे घर के लिए DP Shudh Dhulai प्रोडक्ट्स अपना लिए। फ्लोर क्लीनर से हमारी टाइलें बेदाग़ रहती हैं और खुशबू पूरे दिन बनी रहती है। सच में, इससे बेहतर वैल्यू हमें कहीं नहीं मिली।",
   },
   {
     name: "Dr. Neha Srivastava",
@@ -21,9 +21,9 @@ export const testimonials: Testimonial[] = [
     locationHi: "वाराणसी, यूपी",
     rating: 5,
     quote:
-      "For a hospital, hygiene is non-negotiable. DPT's phenyl and sanitizers meet our standards consistently, and their bulk supply is always on time. A dependable partner.",
+      "For a hospital, hygiene is non-negotiable. DP Shudh Dhulai's phenyl and sanitizers meet our standards consistently, and their bulk supply is always on time. A dependable partner.",
     quoteHi:
-      "अस्पताल के लिए हाइजीन से कोई समझौता नहीं हो सकता। DPT के फिनाइल और सैनिटाइज़र हर बार हमारे मानकों पर खरे उतरते हैं, और उनकी बल्क सप्लाई हमेशा समय पर आती है। एक भरोसेमंद पार्टनर।",
+      "अस्पताल के लिए हाइजीन से कोई समझौता नहीं हो सकता। DP Shudh Dhulai के फिनाइल और सैनिटाइज़र हर बार हमारे मानकों पर खरे उतरते हैं, और उनकी बल्क सप्लाई हमेशा समय पर आती है। एक भरोसेमंद पार्टनर।",
   },
   {
     name: "Amit Kesarwani",
@@ -33,9 +33,9 @@ export const testimonials: Testimonial[] = [
     locationHi: "प्रयागराज, यूपी",
     rating: 5,
     quote:
-      "As a distributor, I care about margins and repeat orders. DPT gives me both — quality that customers trust and pricing that keeps my business growing. Highly recommended.",
+      "As a distributor, I care about margins and repeat orders. DP Shudh Dhulai gives me both — quality that customers trust and pricing that keeps my business growing. Highly recommended.",
     quoteHi:
-      "एक डिस्ट्रीब्यूटर के तौर पर मेरे लिए मार्जिन और रिपीट ऑर्डर मायने रखते हैं। DPT मुझे दोनों देता है — ऐसी क्वालिटी जिस पर ग्राहक भरोसा करते हैं और ऐसी प्राइसिंग जिससे मेरा बिज़नेस बढ़ता रहता है। मैं इसकी पूरी सिफ़ारिश करता हूँ।",
+      "एक डिस्ट्रीब्यूटर के तौर पर मेरे लिए मार्जिन और रिपीट ऑर्डर मायने रखते हैं। DP Shudh Dhulai मुझे दोनों देता है — ऐसी क्वालिटी जिस पर ग्राहक भरोसा करते हैं और ऐसी प्राइसिंग जिससे मेरा बिज़नेस बढ़ता रहता है। मैं इसकी पूरी सिफ़ारिश करता हूँ।",
   },
   {
     name: "Sunita Devi",
@@ -69,9 +69,9 @@ export const testimonials: Testimonial[] = [
     locationHi: "जौनपुर, यूपी",
     rating: 5,
     quote:
-      "The hand wash is gentle on my kids' skin but still protects against germs. I love the aloe vera variant. DPT has become a trusted name in our home.",
+      "The hand wash is gentle on my kids' skin but still protects against germs. I love the aloe vera variant. DP Shudh Dhulai has become a trusted name in our home.",
     quoteHi:
-      "हैंड वॉश मेरे बच्चों की त्वचा पर सौम्य है, फिर भी कीटाणुओं से पूरी सुरक्षा देता है। मुझे एलोवेरा वेरिएंट बहुत पसंद है। DPT हमारे घर में एक भरोसेमंद नाम बन गया है।",
+      "हैंड वॉश मेरे बच्चों की त्वचा पर सौम्य है, फिर भी कीटाणुओं से पूरी सुरक्षा देता है। मुझे एलोवेरा वेरिएंट बहुत पसंद है। DP Shudh Dhulai हमारे घर में एक भरोसेमंद नाम बन गया है।",
   },
   {
     name: "Mohd. Arif",
@@ -81,9 +81,9 @@ export const testimonials: Testimonial[] = [
     locationHi: "अयोध्या, यूपी",
     rating: 5,
     quote:
-      "Guests notice cleanliness first. DPT glass and bathroom cleaners give our rooms a premium, spotless finish every single time. Our review scores have improved.",
+      "Guests notice cleanliness first. DP Shudh Dhulai glass and bathroom cleaners give our rooms a premium, spotless finish every single time. Our review scores have improved.",
     quoteHi:
-      "मेहमान सबसे पहले सफ़ाई पर ध्यान देते हैं। DPT के ग्लास और बाथरूम क्लीनर हमारे कमरों को हर बार प्रीमियम, बेदाग़ फिनिश देते हैं। हमारे रिव्यू स्कोर भी बेहतर हो गए हैं।",
+      "मेहमान सबसे पहले सफ़ाई पर ध्यान देते हैं। DP Shudh Dhulai के ग्लास और बाथरूम क्लीनर हमारे कमरों को हर बार प्रीमियम, बेदाग़ फिनिश देते हैं। हमारे रिव्यू स्कोर भी बेहतर हो गए हैं।",
   },
   {
     name: "Kavita Yadav",
@@ -93,9 +93,9 @@ export const testimonials: Testimonial[] = [
     locationHi: "आज़मगढ़, यूपी",
     rating: 4,
     quote:
-      "Keeping a school hygienic for hundreds of children is a big responsibility. DPT's disinfectants and liquid soap are effective, affordable and safe for daily use.",
+      "Keeping a school hygienic for hundreds of children is a big responsibility. DP Shudh Dhulai's disinfectants and liquid soap are effective, affordable and safe for daily use.",
     quoteHi:
-      "सैकड़ों बच्चों के लिए स्कूल को स्वच्छ रखना एक बड़ी ज़िम्मेदारी है। DPT के डिसइंफेक्टेंट और लिक्विड सोप असरदार, किफ़ायती और रोज़ाना इस्तेमाल के लिए सुरक्षित हैं।",
+      "सैकड़ों बच्चों के लिए स्कूल को स्वच्छ रखना एक बड़ी ज़िम्मेदारी है। DP Shudh Dhulai के डिसइंफेक्टेंट और लिक्विड सोप असरदार, किफ़ायती और रोज़ाना इस्तेमाल के लिए सुरक्षित हैं।",
   },
   {
     name: "Sanjay Verma",
@@ -105,9 +105,9 @@ export const testimonials: Testimonial[] = [
     locationHi: "मिर्ज़ापुर, यूपी",
     rating: 5,
     quote:
-      "DPT products sell themselves off my shelves. Customers come back specifically asking for them. The packaging looks premium and the quality backs it up.",
+      "DP Shudh Dhulai products sell themselves off my shelves. Customers come back specifically asking for them. The packaging looks premium and the quality backs it up.",
     quoteHi:
-      "DPT प्रोडक्ट्स मेरी दुकान की शेल्फ से खुद-ब-खुद बिक जाते हैं। ग्राहक खास तौर पर इन्हीं का नाम लेकर वापस आते हैं। पैकेजिंग प्रीमियम दिखती है और क्वालिटी उस पर खरी उतरती है।",
+      "DP Shudh Dhulai प्रोडक्ट्स मेरी दुकान की शेल्फ से खुद-ब-खुद बिक जाते हैं। ग्राहक खास तौर पर इन्हीं का नाम लेकर वापस आते हैं। पैकेजिंग प्रीमियम दिखती है और क्वालिटी उस पर खरी उतरती है।",
   },
   {
     name: "Anjali Mishra",
@@ -129,9 +129,9 @@ export const testimonials: Testimonial[] = [
     locationHi: "सुल्तानपुर, यूपी",
     rating: 5,
     quote:
-      "We supply cleaning services to dozens of clients. DPT's institutional range gives us consistent, professional results and their support team is always responsive.",
+      "We supply cleaning services to dozens of clients. DP Shudh Dhulai's institutional range gives us consistent, professional results and their support team is always responsive.",
     quoteHi:
-      "हम दर्जनों क्लाइंट्स को क्लीनिंग सर्विस देते हैं। DPT की इंस्टीट्यूशनल रेंज हमें हर बार एक जैसे, प्रोफेशनल नतीजे देती है और उनकी सपोर्ट टीम हमेशा तुरंत जवाब देती है।",
+      "हम दर्जनों क्लाइंट्स को क्लीनिंग सर्विस देते हैं। DP Shudh Dhulai की इंस्टीट्यूशनल रेंज हमें हर बार एक जैसे, प्रोफेशनल नतीजे देती है और उनकी सपोर्ट टीम हमेशा तुरंत जवाब देती है।",
   },
   {
     name: "Farhan Ansari",
@@ -141,8 +141,8 @@ export const testimonials: Testimonial[] = [
     locationHi: "जौनपुर, यूपी",
     rating: 5,
     quote:
-      "Reliable stock, honest pricing and products that move fast — that's what I need as a wholesaler. DPT Home Care delivers on all three. A partnership worth having.",
+      "Reliable stock, honest pricing and products that move fast — that's what I need as a wholesaler. DP Shudh Dhulai Home Care delivers on all three. A partnership worth having.",
     quoteHi:
-      "भरोसेमंद स्टॉक, ईमानदार प्राइसिंग और तेज़ी से बिकने वाले प्रोडक्ट — एक होलसेलर के तौर पर मुझे यही चाहिए। DPT होम केयर तीनों पर खरा उतरता है। ऐसी पार्टनरशिप रखने लायक है।",
+      "भरोसेमंद स्टॉक, ईमानदार प्राइसिंग और तेज़ी से बिकने वाले प्रोडक्ट — एक होलसेलर के तौर पर मुझे यही चाहिए। DP Shudh Dhulai होम केयर तीनों पर खरा उतरता है। ऐसी पार्टनरशिप रखने लायक है।",
   },
 ];

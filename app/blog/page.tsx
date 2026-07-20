@@ -12,7 +12,7 @@ import { T } from "@/lib/lang";
 export const metadata = pageMetadata({
   title: "Blog — Cleaning Tips, Hygiene Guides & Advice",
   description:
-    "Practical cleaning tips and hygiene guides from DPT Home Care — how to clean your bathroom, kitchen and floors, remove tough stains, keep your home fresh and more.",
+    "Practical cleaning tips and hygiene guides from DP Shudh Dhulai Home Care — how to clean your bathroom, kitchen and floors, remove tough stains, keep your home fresh and more.",
   path: "/blog",
   keywords: ["cleaning tips", "hygiene blog", "home cleaning guide", "cleaning advice India"],
 });
@@ -32,8 +32,8 @@ export default function BlogPage() {
         title={<T en="Cleaning Tips & Hygiene Guides" hi="सफाई के टिप्स और हाइजीन गाइड" />}
         subtitle={
           <T
-            en="Expert advice to keep your home and business spotless, fresh and healthy — from the DPT Home Care team."
-            hi="अपने घर और बिज़नेस को साफ, फ्रेश और हेल्दी रखने के लिए एक्सपर्ट सलाह — DPT Home Care टीम की ओर से।"
+            en="Expert advice to keep your home and business spotless, fresh and healthy — from the DP Shudh Dhulai Home Care team."
+            hi="अपने घर और बिज़नेस को साफ, फ्रेश और हेल्दी रखने के लिए एक्सपर्ट सलाह — DP Shudh Dhulai Home Care टीम की ओर से।"
           />
         }
         image={IMG.cozyHome}

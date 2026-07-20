@@ -10,8 +10,8 @@ export interface GalleryItem {
 
 export const galleryItems: GalleryItem[] = [
   { image: IMG.cleaningProducts, title: "Our product range", titleHi: "हमारी प्रोडक्ट रेंज", category: "Products", categoryHi: "प्रोडक्ट्स" },
-  { image: "/products/washing-powder-500g.png", title: "Washing Powder — 500 g pack", titleHi: "वॉशिंग पाउडर — 500 ग्राम पैक", category: "Products", categoryHi: "प्रोडक्ट्स" },
-  { image: "/products/washing-powder-250g.png", title: "Washing Powder — 250 g pack", titleHi: "वॉशिंग पाउडर — 250 ग्राम पैक", category: "Products", categoryHi: "प्रोडक्ट्स" },
+  { image: "/products/washing-powder-500g-sd.png", title: "Washing Powder — 500 g pack", titleHi: "वॉशिंग पाउडर — 500 ग्राम पैक", category: "Products", categoryHi: "प्रोडक्ट्स" },
+  { image: "/products/washing-powder-250g-sd.png", title: "Washing Powder — 250 g pack", titleHi: "वॉशिंग पाउडर — 250 ग्राम पैक", category: "Products", categoryHi: "प्रोडक्ट्स" },
   { image: IMG.tiledFloor, title: "Sparkling floor care", titleHi: "चमचमाती फर्श की देखभाल", category: "In Action", categoryHi: "एक्शन में" },
   { image: IMG.glassSpray, title: "Streak-free glass cleaning", titleHi: "बेदाग़ ग्लास क्लीनिंग", category: "In Action", categoryHi: "एक्शन में" },
   { image: IMG.dishwash, title: "Grease-free dishwashing", titleHi: "चिकनाई-मुक्त बर्तन धुलाई", category: "In Action", categoryHi: "एक्शन में" },

@@ -37,10 +37,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "एक कंसन्ट्रेटेड डिसइन्फेक्टेंट फ्लोर क्लीनर जो धूल-मिट्टी, मैल और कीटाणुओं को हटाकर देर तक टिकने वाली खुशबू छोड़ता है।",
     description:
-      "DPT Floor Cleaner is a premium, concentrated formula engineered for daily floor care across homes, hotels, hospitals and offices. It lifts away tough dirt, oily footmarks and stubborn stains from marble, tiles, granite, ceramic and vitrified surfaces while leaving them disinfected and fresh. A little goes a long way: one capful in a bucket of water leaves your floors visibly clean, streak-free and fragrant for hours.",
+      "DP Shudh Dhulai Floor Cleaner is a premium, concentrated formula engineered for daily floor care across homes, hotels, hospitals and offices. It lifts away tough dirt, oily footmarks and stubborn stains from marble, tiles, granite, ceramic and vitrified surfaces while leaving them disinfected and fresh. A little goes a long way: one capful in a bucket of water leaves your floors visibly clean, streak-free and fragrant for hours.",
     descriptionHi:
-      "DPT फ्लोर क्लीनर एक प्रीमियम, कंसन्ट्रेटेड फॉर्मूला है, जो घरों, होटलों, अस्पतालों और दफ्तरों में रोज़ाना फर्श की देखभाल के लिए बनाया गया है। यह मार्बल, टाइल्स, ग्रेनाइट, सिरेमिक और विट्रिफाइड सतहों से जिद्दी मैल, तेल भरे पैरों के निशान और पक्के दाग हटाता है और साथ ही उन्हें कीटाणु-मुक्त और तरोताज़ा बनाता है। थोड़ा ही काफी है: बाल्टी भर पानी में बस एक ढक्कन, और आपके फर्श साफ, बेदाग और घंटों महकते रहते हैं।",
-    image: "/products/floor-cleaner-v5.png",
+      "DP Shudh Dhulai फ्लोर क्लीनर एक प्रीमियम, कंसन्ट्रेटेड फॉर्मूला है, जो घरों, होटलों, अस्पतालों और दफ्तरों में रोज़ाना फर्श की देखभाल के लिए बनाया गया है। यह मार्बल, टाइल्स, ग्रेनाइट, सिरेमिक और विट्रिफाइड सतहों से जिद्दी मैल, तेल भरे पैरों के निशान और पक्के दाग हटाता है और साथ ही उन्हें कीटाणु-मुक्त और तरोताज़ा बनाता है। थोड़ा ही काफी है: बाल्टी भर पानी में बस एक ढक्कन, और आपके फर्श साफ, बेदाग और घंटों महकते रहते हैं।",
+    image: "/products/floor-cleaner-sd.png",
     fragrance: "Available in Floral, Citrus, Jasmine and Lavender",
     fragranceHi: "फ्लोरल, सिट्रस, जैस्मिन और लैवेंडर में उपलब्ध",
     featured: true,
@@ -77,13 +77,13 @@ export const products: Product[] = [
       { label: "Shelf life", labelHi: "शेल्फ लाइफ", value: "24 months", valueHi: "24 महीने" },
     ],
     usage: [
-      "Add one capful of DPT Floor Cleaner to a bucket of water (approx. 1 litre).",
+      "Add one capful of DP Shudh Dhulai Floor Cleaner to a bucket of water (approx. 1 litre).",
       "Dip a mop, wring out the excess and wipe the floor evenly.",
       "For heavily soiled areas, use undiluted on the stain and mop after a minute.",
       "No need to rinse — allow the floor to dry naturally.",
     ],
     usageHi: [
-      "एक बाल्टी पानी (लगभग 1 लीटर) में DPT फ्लोर क्लीनर का एक ढक्कन डालें।",
+      "एक बाल्टी पानी (लगभग 1 लीटर) में DP Shudh Dhulai फ्लोर क्लीनर का एक ढक्कन डालें।",
       "पोछा भिगोएँ, अतिरिक्त पानी निचोड़ें और फर्श पर एक समान पोछा लगाएँ।",
       "ज़्यादा गंदे हिस्सों पर बिना घोले सीधे दाग पर लगाएँ और एक मिनट बाद पोछा लगाएँ।",
       "धोने की ज़रूरत नहीं — फर्श को अपने आप सूखने दें।",
@@ -93,7 +93,7 @@ export const products: Product[] = [
     safetyHi: commonSafetyHi,
     faqs: [
       { question: "Can I use it on wooden floors?", questionHi: "क्या इसे लकड़ी के फर्श पर इस्तेमाल कर सकते हैं?", answer: "Use a heavily diluted solution and wipe with a well-wrung mop. Avoid excess water on wooden surfaces.", answerHi: "खूब पतला घोल इस्तेमाल करें और अच्छी तरह निचोड़े हुए पोछे से पोंछें। लकड़ी की सतह पर ज़्यादा पानी न लगने दें।" },
-      { question: "Does it need rinsing?", questionHi: "क्या इसे पानी से धोना ज़रूरी है?", answer: "No. DPT Floor Cleaner is designed to be no-rinse and dries without leaving a sticky residue.", answerHi: "नहीं। DPT फ्लोर क्लीनर नो-रिंस फॉर्मूला है और बिना चिपचिपाहट छोड़े सूख जाता है।" },
+      { question: "Does it need rinsing?", questionHi: "क्या इसे पानी से धोना ज़रूरी है?", answer: "No. DP Shudh Dhulai Floor Cleaner is designed to be no-rinse and dries without leaving a sticky residue.", answerHi: "नहीं। DP Shudh Dhulai फ्लोर क्लीनर नो-रिंस फॉर्मूला है और बिना चिपचिपाहट छोड़े सूख जाता है।" },
       { question: "Is it safe for pets and children?", questionHi: "क्या यह बच्चों और पालतू जानवरों के लिए सुरक्षित है?", answer: "Once the floor is dry it is safe. Keep the concentrate away from children and pets.", answerHi: "फर्श सूख जाने के बाद यह पूरी तरह सुरक्षित है। कंसन्ट्रेट को बच्चों और पालतू जानवरों से दूर रखें।" },
     ],
     keywords: ["floor cleaner", "disinfectant floor cleaner", "tile cleaner", "marble cleaner", "phenyl alternative"],
@@ -109,10 +109,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "एक दमदार, गाढ़ा टॉयलेट क्लीनर जो सतह पर चिपककर हार्ड वॉटर के दाग घोलता है और कीटाणुओं व बदबू को खत्म करता है।",
     description:
-      "DPT Toilet Cleaner is a heavy-duty acid formula that clings to the toilet bowl to dissolve limescale, hard-water stains, rust and yellow deposits. Its thick consistency ensures maximum contact time for a deep, hygienic clean that removes stains and destroys odour-causing bacteria — leaving your washroom sparkling and fresh.",
+      "DP Shudh Dhulai Toilet Cleaner is a heavy-duty acid formula that clings to the toilet bowl to dissolve limescale, hard-water stains, rust and yellow deposits. Its thick consistency ensures maximum contact time for a deep, hygienic clean that removes stains and destroys odour-causing bacteria — leaving your washroom sparkling and fresh.",
     descriptionHi:
-      "DPT टॉयलेट क्लीनर एक हैवी-ड्यूटी एसिड फॉर्मूला है जो टॉयलेट बाउल पर चिपककर लाइमस्केल, हार्ड वॉटर के दाग, जंग और पीली परत को घोल देता है। इसकी गाढ़ी बनावट सतह पर ज़्यादा देर टिकती है, जिससे गहरी और हाइजीनिक सफाई मिलती है — दाग हटते हैं, बदबू फैलाने वाले बैक्टीरिया खत्म होते हैं और आपका वॉशरूम चमकदार व तरोताज़ा रहता है।",
-    image: "/products/toilet-cleaner-v5.png",
+      "DP Shudh Dhulai टॉयलेट क्लीनर एक हैवी-ड्यूटी एसिड फॉर्मूला है जो टॉयलेट बाउल पर चिपककर लाइमस्केल, हार्ड वॉटर के दाग, जंग और पीली परत को घोल देता है। इसकी गाढ़ी बनावट सतह पर ज़्यादा देर टिकती है, जिससे गहरी और हाइजीनिक सफाई मिलती है — दाग हटते हैं, बदबू फैलाने वाले बैक्टीरिया खत्म होते हैं और आपका वॉशरूम चमकदार व तरोताज़ा रहता है।",
+    image: "/products/toilet-cleaner-v6.png",
     fragrance: "Fresh Pine",
     fragranceHi: "फ्रेश पाइन",
     featured: true,
@@ -186,10 +186,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "एक तेज़ असर वाला ग्लास और मिरर क्लीनर जो उँगलियों के निशान, धूल और धब्बे हटाकर शानदार, बेदाग चमक देता है।",
     description:
-      "DPT Glass Cleaner gives windows, mirrors, glass tables and display cases a crystal-clear, streak-free shine in seconds. Its quick-evaporating formula cuts through fingerprints, dust, grease and water spots without leaving smears — ideal for homes, showrooms, hotels and retail stores where a spotless look matters.",
+      "DP Shudh Dhulai Glass Cleaner gives windows, mirrors, glass tables and display cases a crystal-clear, streak-free shine in seconds. Its quick-evaporating formula cuts through fingerprints, dust, grease and water spots without leaving smears — ideal for homes, showrooms, hotels and retail stores where a spotless look matters.",
     descriptionHi:
-      "DPT ग्लास क्लीनर खिड़कियों, आईनों, काँच की टेबलों और डिस्प्ले केसों को सेकंडों में क्रिस्टल-क्लियर, बेदाग चमक देता है। इसका जल्दी उड़ने वाला फॉर्मूला उँगलियों के निशान, धूल, चिकनाई और पानी के धब्बों को बिना धारियाँ छोड़े साफ कर देता है — घरों, शोरूम, होटलों और रिटेल स्टोर्स के लिए बिल्कुल सही, जहाँ बेदाग लुक मायने रखता है।",
-    image: "/products/glass-cleaner-v5.png",
+      "DP Shudh Dhulai ग्लास क्लीनर खिड़कियों, आईनों, काँच की टेबलों और डिस्प्ले केसों को सेकंडों में क्रिस्टल-क्लियर, बेदाग चमक देता है। इसका जल्दी उड़ने वाला फॉर्मूला उँगलियों के निशान, धूल, चिकनाई और पानी के धब्बों को बिना धारियाँ छोड़े साफ कर देता है — घरों, शोरूम, होटलों और रिटेल स्टोर्स के लिए बिल्कुल सही, जहाँ बेदाग लुक मायने रखता है।",
+    image: "/products/glass-cleaner-sd.png",
     fragrance: "Fresh Mint",
     fragranceHi: "फ्रेश मिंट",
     featured: true,
@@ -256,10 +256,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "नींबू की ताकत वाला कंसन्ट्रेटेड डिशवॉश लिक्विड जो तेल और चिकनाई काटकर बर्तनों को एकदम साफ और चमकदार बनाता है।",
     description:
-      "DPT Dish Wash Liquid is a high-performance, lemon-fortified formula that dissolves stubborn grease and dried-on food in seconds. Rich, long-lasting foam means fewer squeezes per wash, while the gentle, skin-friendly base protects your hands. It rinses off cleanly to leave your utensils, glassware and cookware spotless and shining.",
+      "DP Shudh Dhulai Dish Wash Liquid is a high-performance, lemon-fortified formula that dissolves stubborn grease and dried-on food in seconds. Rich, long-lasting foam means fewer squeezes per wash, while the gentle, skin-friendly base protects your hands. It rinses off cleanly to leave your utensils, glassware and cookware spotless and shining.",
     descriptionHi:
-      "DPT डिशवॉश लिक्विड एक हाई-परफॉर्मेंस, नींबू-युक्त फॉर्मूला है जो जिद्दी चिकनाई और सूखे खाने के दाग सेकंडों में घोल देता है। गाढ़ा, देर तक टिकने वाला झाग यानी हर धुलाई में कम लिक्विड, और सौम्य, त्वचा के अनुकूल बेस आपके हाथों का ख्याल रखता है। यह आसानी से धुल जाता है और बर्तनों, काँच के सामान और कुकवेयर को बेदाग चमक देता है।",
-    image: "/products/dish-wash-liquid-v5.png",
+      "DP Shudh Dhulai डिशवॉश लिक्विड एक हाई-परफॉर्मेंस, नींबू-युक्त फॉर्मूला है जो जिद्दी चिकनाई और सूखे खाने के दाग सेकंडों में घोल देता है। गाढ़ा, देर तक टिकने वाला झाग यानी हर धुलाई में कम लिक्विड, और सौम्य, त्वचा के अनुकूल बेस आपके हाथों का ख्याल रखता है। यह आसानी से धुल जाता है और बर्तनों, काँच के सामान और कुकवेयर को बेदाग चमक देता है।",
+    image: "/products/dish-wash-liquid-sd.png",
     fragrance: "Lemon",
     fragranceHi: "लेमन",
     featured: true,
@@ -328,10 +328,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "मशीन और हाथ धुलाई के लिए दमदार लिक्विड डिटर्जेंट जो जिद्दी दाग हटाता है और रंगों को चमकदार रखता है — बिना पाउडर के अवशेष के।",
     description:
-      "DPT Liquid Detergent dissolves instantly to penetrate deep into fabric fibres, lifting away tough stains, sweat, dirt and odour. Unlike powders, it leaves no white residue on clothes or in your machine, and its colour-guard formula keeps whites bright and colours vivid, wash after wash. Suitable for both top-load and front-load machines as well as hand wash.",
+      "DP Shudh Dhulai Liquid Detergent dissolves instantly to penetrate deep into fabric fibres, lifting away tough stains, sweat, dirt and odour. Unlike powders, it leaves no white residue on clothes or in your machine, and its colour-guard formula keeps whites bright and colours vivid, wash after wash. Suitable for both top-load and front-load machines as well as hand wash.",
     descriptionHi:
-      "DPT लिक्विड डिटर्जेंट तुरंत घुलकर कपड़ों के रेशों के अंदर तक पहुँचता है और जिद्दी दाग, पसीना, मैल और बदबू को निकाल देता है। पाउडर की तरह यह कपड़ों या मशीन में सफेद अवशेष नहीं छोड़ता, और इसका कलर-गार्ड फॉर्मूला हर धुलाई में सफेद कपड़ों को चमकदार और रंगों को गहरा बनाए रखता है। टॉप-लोड, फ्रंट-लोड मशीन और हाथ धुलाई — तीनों के लिए उपयुक्त।",
-    image: "/products/liquid-detergent-v5.png",
+      "DP Shudh Dhulai लिक्विड डिटर्जेंट तुरंत घुलकर कपड़ों के रेशों के अंदर तक पहुँचता है और जिद्दी दाग, पसीना, मैल और बदबू को निकाल देता है। पाउडर की तरह यह कपड़ों या मशीन में सफेद अवशेष नहीं छोड़ता, और इसका कलर-गार्ड फॉर्मूला हर धुलाई में सफेद कपड़ों को चमकदार और रंगों को गहरा बनाए रखता है। टॉप-लोड, फ्रंट-लोड मशीन और हाथ धुलाई — तीनों के लिए उपयुक्त।",
+    image: "/products/liquid-detergent-v6.png",
     fragrance: "Spring Fresh",
     fragranceHi: "स्प्रिंग फ्रेश",
     featured: false,
@@ -398,11 +398,11 @@ export const products: Product[] = [
     shortDescriptionHi:
       "एक हाई-परफॉर्मेंस डिटर्जेंट पाउडर जो जिद्दी दाग और मैल हटाकर कपड़ों को हर धुलाई में चमकदार, ताज़ा और मुलायम रखता है।",
     description:
-      "DPT Washing Powder is powered by Deep Protection Technology for a deep, hygienic clean in every wash. Its active stain-fighting granules dissolve quickly in both bucket and machine washes, lifting away tough stains, sweat and everyday dirt while blue speckles brighten whites and protect colours. Gentle on fabrics and hands, it leaves clothes with a long-lasting fresh fragrance — making it the perfect everyday detergent for families, hostels, hotels and laundries.",
+      "DP Shudh Dhulai Washing Powder is powered by Daag Proof Technology for a deep, hygienic clean in every wash. Its active stain-fighting granules dissolve quickly in both bucket and machine washes, lifting away tough stains, sweat and everyday dirt while blue speckles brighten whites and protect colours. Gentle on fabrics and hands, it leaves clothes with a long-lasting fresh fragrance — making it the perfect everyday detergent for families, hostels, hotels and laundries.",
     descriptionHi:
-      "DPT वॉशिंग पाउडर Deep Protection Technology के साथ हर धुलाई में गहरी, हाइजीनिक सफाई देता है। इसके एक्टिव स्टेन-फाइटिंग ग्रेन्यूल्स बाल्टी और मशीन दोनों में जल्दी घुलते हैं और जिद्दी दाग, पसीना और रोज़ का मैल निकाल देते हैं, जबकि नीले स्पेकल्स सफेद कपड़ों को और चमकाते हैं व रंगों की हिफाज़त करते हैं। कपड़ों और हाथों पर सौम्य यह पाउडर कपड़ों में देर तक टिकने वाली ताज़ी खुशबू छोड़ता है — परिवारों, हॉस्टलों, होटलों और लॉन्ड्री के लिए एक बेहतरीन रोज़ाना डिटर्जेंट।",
-    image: "/products/washing-powder.png",
-    images: ["/products/washing-powder.png", "/products/washing-powder-500g.png", "/products/washing-powder-250g.png"],
+      "DP Shudh Dhulai वॉशिंग पाउडर Daag Proof Technology के साथ हर धुलाई में गहरी, हाइजीनिक सफाई देता है। इसके एक्टिव स्टेन-फाइटिंग ग्रेन्यूल्स बाल्टी और मशीन दोनों में जल्दी घुलते हैं और जिद्दी दाग, पसीना और रोज़ का मैल निकाल देते हैं, जबकि नीले स्पेकल्स सफेद कपड़ों को और चमकाते हैं व रंगों की हिफाज़त करते हैं। कपड़ों और हाथों पर सौम्य यह पाउडर कपड़ों में देर तक टिकने वाली ताज़ी खुशबू छोड़ता है — परिवारों, हॉस्टलों, होटलों और लॉन्ड्री के लिए एक बेहतरीन रोज़ाना डिटर्जेंट।",
+    image: "/products/washing-powder-sd.png",
+    images: ["/products/washing-powder-sd.png", "/products/washing-powder-500g-sd.png", "/products/washing-powder-250g-sd.png"],
     fragrance: "Fresh floral fragrance",
     fragranceHi: "ताज़ी फ्लोरल खुशबू",
     featured: false,
@@ -457,8 +457,8 @@ export const products: Product[] = [
       {
         question: "Is it safe for washing machines?",
         questionHi: "क्या यह वॉशिंग मशीन के लिए सुरक्षित है?",
-        answer: "Yes. DPT Washing Powder is a low-foam, easy-rinse formula that works well in both top-load and front-load machines as well as bucket wash.",
-        answerHi: "हाँ। DPT वॉशिंग पाउडर कम झाग वाला, आसानी से खंगलने वाला फॉर्मूला है जो टॉप-लोड, फ्रंट-लोड मशीन और बाल्टी धुलाई — तीनों में अच्छा काम करता है।",
+        answer: "Yes. DP Shudh Dhulai Washing Powder is a low-foam, easy-rinse formula that works well in both top-load and front-load machines as well as bucket wash.",
+        answerHi: "हाँ। DP Shudh Dhulai वॉशिंग पाउडर कम झाग वाला, आसानी से खंगलने वाला फॉर्मूला है जो टॉप-लोड, फ्रंट-लोड मशीन और बाल्टी धुलाई — तीनों में अच्छा काम करता है।",
       },
       {
         question: "Will it fade coloured clothes?",
@@ -486,10 +486,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "एक मॉइस्चराइज़िंग लिक्विड हैंड वॉश जो कीटाणु और मैल हटाता है और हाथों को नरम, मुलायम और महकता हुआ रखता है।",
     description:
-      "DPT Hand Wash combines effective germ protection with skin-loving care. The rich, creamy lather cleans away dirt and germs, while added moisturisers and glycerine keep your hands soft, not dry. Perfect for homes, offices, hotels, restaurants and hospitals where frequent hand hygiene matters.",
+      "DP Shudh Dhulai Hand Wash combines effective germ protection with skin-loving care. The rich, creamy lather cleans away dirt and germs, while added moisturisers and glycerine keep your hands soft, not dry. Perfect for homes, offices, hotels, restaurants and hospitals where frequent hand hygiene matters.",
     descriptionHi:
-      "DPT हैंड वॉश कीटाणुओं से असरदार सुरक्षा और त्वचा की देखभाल — दोनों साथ देता है। इसका गाढ़ा, क्रीमी झाग मैल और कीटाणुओं को साफ करता है, जबकि मॉइस्चराइज़र और ग्लिसरीन हाथों को नरम रखते हैं, रूखा नहीं होने देते। घरों, दफ्तरों, होटलों, रेस्टोरेंट और अस्पतालों के लिए एकदम सही, जहाँ बार-बार हाथ धोना ज़रूरी है।",
-    image: "/products/hand-wash-v5.png",
+      "DP Shudh Dhulai हैंड वॉश कीटाणुओं से असरदार सुरक्षा और त्वचा की देखभाल — दोनों साथ देता है। इसका गाढ़ा, क्रीमी झाग मैल और कीटाणुओं को साफ करता है, जबकि मॉइस्चराइज़र और ग्लिसरीन हाथों को नरम रखते हैं, रूखा नहीं होने देते। घरों, दफ्तरों, होटलों, रेस्टोरेंट और अस्पतालों के लिए एकदम सही, जहाँ बार-बार हाथ धोना ज़रूरी है।",
+    image: "/products/hand-wash-v6.png",
     fragrance: "Available in Rose, Lemon, Aloe Vera and Sea Breeze",
     fragranceHi: "रोज़, लेमन, एलोवेरा और सी ब्रीज़ में उपलब्ध",
     featured: true,
@@ -557,10 +557,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "एक कंसन्ट्रेटेड सफेद/काला फिनाइल डिसइन्फेक्टेंट जो फर्श, नालियों और बड़े इलाकों को साफ, महकदार और कीटाणु-मुक्त बनाता है।",
     description:
-      "DPT Phenyl is a powerful concentrated disinfectant for floors, corridors, drains and washrooms. Available in classic white (emulsion) and black variants, it destroys germs, controls odour and leaves a fresh, sanitised environment. Ideal for institutions, hospitals, schools, factories and large housing complexes where economical, high-strength disinfection is essential.",
+      "DP Shudh Dhulai Phenyl is a powerful concentrated disinfectant for floors, corridors, drains and washrooms. Available in classic white (emulsion) and black variants, it destroys germs, controls odour and leaves a fresh, sanitised environment. Ideal for institutions, hospitals, schools, factories and large housing complexes where economical, high-strength disinfection is essential.",
     descriptionHi:
-      "DPT फिनाइल फर्श, गलियारों, नालियों और वॉशरूम के लिए एक दमदार कंसन्ट्रेटेड डिसइन्फेक्टेंट है। क्लासिक सफेद (इमल्शन) और काले वैरिएंट में उपलब्ध, यह कीटाणुओं को खत्म करता है, बदबू पर काबू रखता है और माहौल को ताज़ा व सैनिटाइज़्ड बनाता है। संस्थानों, अस्पतालों, स्कूलों, फैक्ट्रियों और बड़ी हाउसिंग सोसाइटियों के लिए आदर्श, जहाँ किफायती, हाई-स्ट्रेंथ डिसइन्फेक्शन ज़रूरी है।",
-    image: "/products/phenyl-v5.png",
+      "DP Shudh Dhulai फिनाइल फर्श, गलियारों, नालियों और वॉशरूम के लिए एक दमदार कंसन्ट्रेटेड डिसइन्फेक्टेंट है। क्लासिक सफेद (इमल्शन) और काले वैरिएंट में उपलब्ध, यह कीटाणुओं को खत्म करता है, बदबू पर काबू रखता है और माहौल को ताज़ा व सैनिटाइज़्ड बनाता है। संस्थानों, अस्पतालों, स्कूलों, फैक्ट्रियों और बड़ी हाउसिंग सोसाइटियों के लिए आदर्श, जहाँ किफायती, हाई-स्ट्रेंथ डिसइन्फेक्शन ज़रूरी है।",
+    image: "/products/phenyl-sd.png",
     fragrance: "Classic Phenyl / Floral",
     fragranceHi: "क्लासिक फिनाइल / फ्लोरल",
     featured: false,
@@ -627,10 +627,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "एक प्रीमियम फैब्रिक कंडीशनर जो कपड़ों को बेहद मुलायम बनाता है, सिलवटें घटाता है और कई दिनों तक ताज़ी खुशबू बनाए रखता है।",
     description:
-      "DPT Fabric Conditioner wraps each fibre in a protective layer of softness, making your clothes feel luxurious against the skin. It reduces wrinkles for easier ironing, protects fabric from wear, controls static and infuses garments with a long-lasting freshness that lingers wash after wash.",
+      "DP Shudh Dhulai Fabric Conditioner wraps each fibre in a protective layer of softness, making your clothes feel luxurious against the skin. It reduces wrinkles for easier ironing, protects fabric from wear, controls static and infuses garments with a long-lasting freshness that lingers wash after wash.",
     descriptionHi:
-      "DPT फैब्रिक कंडीशनर हर रेशे को मुलायमियत की सुरक्षा परत में लपेट देता है, जिससे कपड़े त्वचा पर बेहद आरामदायक महसूस होते हैं। यह सिलवटें घटाकर इस्त्री आसान बनाता है, कपड़ों को घिसाव से बचाता है, स्टैटिक पर काबू रखता है और हर धुलाई के बाद कपड़ों में देर तक टिकने वाली ताज़गी भर देता है।",
-    image: "/products/fabric-conditioner-v2.png",
+      "DP Shudh Dhulai फैब्रिक कंडीशनर हर रेशे को मुलायमियत की सुरक्षा परत में लपेट देता है, जिससे कपड़े त्वचा पर बेहद आरामदायक महसूस होते हैं। यह सिलवटें घटाकर इस्त्री आसान बनाता है, कपड़ों को घिसाव से बचाता है, स्टैटिक पर काबू रखता है और हर धुलाई के बाद कपड़ों में देर तक टिकने वाली ताज़गी भर देता है।",
+    image: "/products/fabric-conditioner-v3.png",
     fragrance: "Available in Blossom, Morning Fresh and Baby Soft",
     fragranceHi: "ब्लॉसम, मॉर्निंग फ्रेश और बेबी सॉफ्ट में उपलब्ध",
     featured: false,
@@ -697,10 +697,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "एक दमदार सरफेस क्लीनर जो टाइल्स, नल, सिंक और बाथरूम फिटिंग्स से साबुन की परत, हार्ड वॉटर के निशान और दाग हटाता है।",
     description:
-      "DPT Bathroom Cleaner tackles the toughest bathroom grime — soap scum, hard-water spots, mineral deposits and dirt — on tiles, wash basins, taps, showers and fittings. Its powerful yet surface-safe formula restores the original shine of your bathroom while leaving a hygienic, fresh finish.",
+      "DP Shudh Dhulai Bathroom Cleaner tackles the toughest bathroom grime — soap scum, hard-water spots, mineral deposits and dirt — on tiles, wash basins, taps, showers and fittings. Its powerful yet surface-safe formula restores the original shine of your bathroom while leaving a hygienic, fresh finish.",
     descriptionHi:
-      "DPT बाथरूम क्लीनर बाथरूम की सबसे जिद्दी गंदगी — साबुन की परत, हार्ड वॉटर के धब्बे, मिनरल जमाव और मैल — को टाइल्स, वॉश बेसिन, नल, शावर और फिटिंग्स से हटा देता है। इसका ताकतवर लेकिन सतह-सुरक्षित फॉर्मूला आपके बाथरूम की असली चमक लौटाता है और एक हाइजीनिक, ताज़ा फिनिश देता है।",
-    image: "/products/bathroom-cleaner-v5.png",
+      "DP Shudh Dhulai बाथरूम क्लीनर बाथरूम की सबसे जिद्दी गंदगी — साबुन की परत, हार्ड वॉटर के धब्बे, मिनरल जमाव और मैल — को टाइल्स, वॉश बेसिन, नल, शावर और फिटिंग्स से हटा देता है। इसका ताकतवर लेकिन सतह-सुरक्षित फॉर्मूला आपके बाथरूम की असली चमक लौटाता है और एक हाइजीनिक, ताज़ा फिनिश देता है।",
+    image: "/products/bathroom-cleaner-sd.png",
     fragrance: "Ocean Fresh",
     fragranceHi: "ओशन फ्रेश",
     featured: false,
@@ -767,10 +767,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "एक डिग्रीज़िंग किचन क्लीनर जो प्लेटफॉर्म, चिमनी, टाइल्स और गैस स्टोव से तेल, चिकनाई और खाने के दाग हटाता है।",
     description:
-      "DPT Kitchen Cleaner is a heavy-duty degreaser designed for the toughest kitchen messes. It dissolves baked-on oil, grease splatter and food residue from countertops, tiles, chimneys, gas stoves and sinks — quickly and without hard scrubbing — leaving your kitchen hygienic, shining and food-safe.",
+      "DP Shudh Dhulai Kitchen Cleaner is a heavy-duty degreaser designed for the toughest kitchen messes. It dissolves baked-on oil, grease splatter and food residue from countertops, tiles, chimneys, gas stoves and sinks — quickly and without hard scrubbing — leaving your kitchen hygienic, shining and food-safe.",
     descriptionHi:
-      "DPT किचन क्लीनर किचन की सबसे मुश्किल गंदगी के लिए बना हैवी-ड्यूटी डिग्रीज़र है। यह काउंटरटॉप, टाइल्स, चिमनी, गैस स्टोव और सिंक से जमी हुई चिकनाई, तेल के छींटे और खाने के अवशेष — तेज़ी से और बिना ज़ोरदार रगड़ के — घोल देता है और आपके किचन को हाइजीनिक, चमकदार और फूड-सेफ बनाता है।",
-    image: "/products/kitchen-cleaner-v5.png",
+      "DP Shudh Dhulai किचन क्लीनर किचन की सबसे मुश्किल गंदगी के लिए बना हैवी-ड्यूटी डिग्रीज़र है। यह काउंटरटॉप, टाइल्स, चिमनी, गैस स्टोव और सिंक से जमी हुई चिकनाई, तेल के छींटे और खाने के अवशेष — तेज़ी से और बिना ज़ोरदार रगड़ के — घोल देता है और आपके किचन को हाइजीनिक, चमकदार और फूड-सेफ बनाता है।",
+    image: "/products/kitchen-cleaner-v6.png",
     fragrance: "Citrus Zest",
     fragranceHi: "सिट्रस ज़ेस्ट",
     featured: false,
@@ -839,10 +839,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "एक बहुउपयोगी ऑल-सरफेस क्लीनर जो फर्श, दीवारों, दरवाज़ों, फर्नीचर और बहुत कुछ को साफ, कीटाणु-मुक्त और चमकदार बनाता है।",
     description:
-      "DPT Multi Purpose Cleaner is your all-in-one hygiene solution. From floors and walls to doors, furniture, plastic, glass and painted surfaces, it cleans, disinfects and deodorises in a single step. Its balanced formula is tough on dirt yet gentle on surfaces — the smart, economical choice for busy homes and businesses.",
+      "DP Shudh Dhulai Multi Purpose Cleaner is your all-in-one hygiene solution. From floors and walls to doors, furniture, plastic, glass and painted surfaces, it cleans, disinfects and deodorises in a single step. Its balanced formula is tough on dirt yet gentle on surfaces — the smart, economical choice for busy homes and businesses.",
     descriptionHi:
-      "DPT मल्टी परपज़ क्लीनर आपका ऑल-इन-वन हाइजीन समाधान है। फर्श और दीवारों से लेकर दरवाज़ों, फर्नीचर, प्लास्टिक, काँच और पेंट की हुई सतहों तक — यह एक ही चरण में सफाई, डिसइन्फेक्शन और ताज़गी तीनों देता है। इसका संतुलित फॉर्मूला मैल पर सख्त और सतहों पर सौम्य है — व्यस्त घरों और कारोबारों के लिए समझदार, किफायती विकल्प।",
-    image: "/products/multi-purpose-cleaner-v5.png",
+      "DP Shudh Dhulai मल्टी परपज़ क्लीनर आपका ऑल-इन-वन हाइजीन समाधान है। फर्श और दीवारों से लेकर दरवाज़ों, फर्नीचर, प्लास्टिक, काँच और पेंट की हुई सतहों तक — यह एक ही चरण में सफाई, डिसइन्फेक्शन और ताज़गी तीनों देता है। इसका संतुलित फॉर्मूला मैल पर सख्त और सतहों पर सौम्य है — व्यस्त घरों और कारोबारों के लिए समझदार, किफायती विकल्प।",
+    image: "/products/multi-purpose-cleaner-v6.png",
     fragrance: "Fresh Lily",
     fragranceHi: "फ्रेश लिली",
     featured: true,
@@ -909,10 +909,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "एक देर तक टिकने वाला एयर फ्रेशनर जो बदबू को तुरंत बेअसर करता है और आपकी जगह को प्रीमियम, स्वागत भरी खुशबू से भर देता है।",
     description:
-      "DPT Room Freshener does more than mask smells — it neutralises odour molecules and fills the air with a rich, long-lasting fragrance. A few sprays transform living rooms, bedrooms, washrooms, offices and cars into fresh, welcoming spaces. Available in a range of premium fragrances to match every mood.",
+      "DP Shudh Dhulai Room Freshener does more than mask smells — it neutralises odour molecules and fills the air with a rich, long-lasting fragrance. A few sprays transform living rooms, bedrooms, washrooms, offices and cars into fresh, welcoming spaces. Available in a range of premium fragrances to match every mood.",
     descriptionHi:
-      "DPT रूम फ्रेशनर सिर्फ बदबू छिपाता नहीं — यह बदबू के कणों को बेअसर करता है और हवा में गहरी, देर तक टिकने वाली खुशबू घोल देता है। कुछ ही स्प्रे लिविंग रूम, बेडरूम, वॉशरूम, ऑफिस और कार को ताज़ा, स्वागत करती जगहों में बदल देते हैं। हर मूड के हिसाब से प्रीमियम खुशबुओं की रेंज में उपलब्ध।",
-    image: "/products/room-freshener-v2.png",
+      "DP Shudh Dhulai रूम फ्रेशनर सिर्फ बदबू छिपाता नहीं — यह बदबू के कणों को बेअसर करता है और हवा में गहरी, देर तक टिकने वाली खुशबू घोल देता है। कुछ ही स्प्रे लिविंग रूम, बेडरूम, वॉशरूम, ऑफिस और कार को ताज़ा, स्वागत करती जगहों में बदल देते हैं। हर मूड के हिसाब से प्रीमियम खुशबुओं की रेंज में उपलब्ध।",
+    image: "/products/room-freshener-v3.png",
     fragrance: "Available in Lavender, Citrus Bloom, Rose and Ocean",
     fragranceHi: "लैवेंडर, सिट्रस ब्लूम, रोज़ और ओशन में उपलब्ध",
     featured: false,
@@ -985,10 +985,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "एक अल्कोहल-बेस्ड हैंड सैनिटाइज़र जो बिना पानी के सेकंडों में कीटाणु मारता है और चलते-फिरते हाथों को सुरक्षित रखता है।",
     description:
-      "DPT Hand Sanitizer offers instant, water-free protection wherever you are. Its 70% alcohol formula kills germs and viruses in seconds, while added moisturisers prevent the dryness typical of sanitizers. Compact and quick-drying, it's ideal for homes, offices, hospitals, schools and travel.",
+      "DP Shudh Dhulai Hand Sanitizer offers instant, water-free protection wherever you are. Its 70% alcohol formula kills germs and viruses in seconds, while added moisturisers prevent the dryness typical of sanitizers. Compact and quick-drying, it's ideal for homes, offices, hospitals, schools and travel.",
     descriptionHi:
-      "DPT हैंड सैनिटाइज़र आप जहाँ भी हों, तुरंत, बिना पानी के सुरक्षा देता है। इसका 70% अल्कोहल फॉर्मूला सेकंडों में कीटाणुओं और वायरस को मारता है, जबकि मॉइस्चराइज़र सैनिटाइज़र से होने वाले रूखेपन को रोकते हैं। कॉम्पैक्ट और जल्दी सूखने वाला — घर, ऑफिस, अस्पताल, स्कूल और सफर के लिए आदर्श।",
-    image: "/products/sanitizer-v2.png",
+      "DP Shudh Dhulai हैंड सैनिटाइज़र आप जहाँ भी हों, तुरंत, बिना पानी के सुरक्षा देता है। इसका 70% अल्कोहल फॉर्मूला सेकंडों में कीटाणुओं और वायरस को मारता है, जबकि मॉइस्चराइज़र सैनिटाइज़र से होने वाले रूखेपन को रोकते हैं। कॉम्पैक्ट और जल्दी सूखने वाला — घर, ऑफिस, अस्पताल, स्कूल और सफर के लिए आदर्श।",
+    image: "/products/sanitizer-v3.png",
     fragrance: "Neutral / Mild fragrance",
     fragranceHi: "न्यूट्रल / हल्की खुशबू",
     featured: false,
@@ -1062,10 +1062,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "एक हाई-फोम, pH-न्यूट्रल कार शैम्पू जो गंदगी को नरमी से हटाता है, पेंट की रक्षा करता है और बेदाग, ग्लॉसी फिनिश देता है।",
     description:
-      "DPT Car Shampoo gives your vehicle a showroom-quality shine without harming the paint or wax coat. Its thick, high-foam formula gently lifts road grime, dust and bird droppings, while the pH-neutral base protects the clear coat. Rinses off cleanly for a spotless, streak-free, glossy finish every time.",
+      "DP Shudh Dhulai Car Shampoo gives your vehicle a showroom-quality shine without harming the paint or wax coat. Its thick, high-foam formula gently lifts road grime, dust and bird droppings, while the pH-neutral base protects the clear coat. Rinses off cleanly for a spotless, streak-free, glossy finish every time.",
     descriptionHi:
-      "DPT कार शैम्पू आपकी गाड़ी को पेंट या वैक्स कोट को नुकसान पहुँचाए बिना शोरूम जैसी चमक देता है। इसका गाढ़ा, हाई-फोम फॉर्मूला सड़क की गंदगी, धूल और पक्षियों की बीट को नरमी से हटाता है, जबकि pH-न्यूट्रल बेस क्लियर कोट की रक्षा करता है। आसानी से धुलकर हर बार बेदाग, ग्लॉसी फिनिश देता है।",
-    image: "/products/car-shampoo-v2.png",
+      "DP Shudh Dhulai कार शैम्पू आपकी गाड़ी को पेंट या वैक्स कोट को नुकसान पहुँचाए बिना शोरूम जैसी चमक देता है। इसका गाढ़ा, हाई-फोम फॉर्मूला सड़क की गंदगी, धूल और पक्षियों की बीट को नरमी से हटाता है, जबकि pH-न्यूट्रल बेस क्लियर कोट की रक्षा करता है। आसानी से धुलकर हर बार बेदाग, ग्लॉसी फिनिश देता है।",
+    image: "/products/car-shampoo-v3.png",
     fragrance: "Fresh Auto",
     fragranceHi: "फ्रेश ऑटो",
     featured: false,
@@ -1134,10 +1134,10 @@ export const products: Product[] = [
     shortDescriptionHi:
       "एक सौम्य, किफायती लिक्विड सोप — घरों और ज़्यादा आवाजाही वाले संस्थानों में हाथ धोने और बॉडी क्लीनज़िंग के लिए आदर्श।",
     description:
-      "DPT Liquid Soap is a versatile, mild cleanser perfect for high-usage settings such as schools, offices, hospitals and public washrooms, as well as everyday home use. It produces a rich lather that cleanses effectively, rinses easily and leaves skin fresh and cared for — available in bulk for cost-effective hygiene at scale.",
+      "DP Shudh Dhulai Liquid Soap is a versatile, mild cleanser perfect for high-usage settings such as schools, offices, hospitals and public washrooms, as well as everyday home use. It produces a rich lather that cleanses effectively, rinses easily and leaves skin fresh and cared for — available in bulk for cost-effective hygiene at scale.",
     descriptionHi:
-      "DPT लिक्विड सोप एक बहुउपयोगी, माइल्ड क्लीनज़र है — स्कूलों, दफ्तरों, अस्पतालों और सार्वजनिक वॉशरूम जैसी ज़्यादा इस्तेमाल वाली जगहों के साथ-साथ रोज़ के घरेलू उपयोग के लिए भी एकदम सही। इसका गाढ़ा झाग असरदार सफाई करता है, आसानी से धुल जाता है और त्वचा को तरोताज़ा रखता है — बड़े पैमाने पर किफायती हाइजीन के लिए बल्क सप्लाई में उपलब्ध।",
-    image: "/products/liquid-soap-v2.png",
+      "DP Shudh Dhulai लिक्विड सोप एक बहुउपयोगी, माइल्ड क्लीनज़र है — स्कूलों, दफ्तरों, अस्पतालों और सार्वजनिक वॉशरूम जैसी ज़्यादा इस्तेमाल वाली जगहों के साथ-साथ रोज़ के घरेलू उपयोग के लिए भी एकदम सही। इसका गाढ़ा झाग असरदार सफाई करता है, आसानी से धुल जाता है और त्वचा को तरोताज़ा रखता है — बड़े पैमाने पर किफायती हाइजीन के लिए बल्क सप्लाई में उपलब्ध।",
+    image: "/products/liquid-soap-v3.png",
     fragrance: "Available in Classic, Rose and Lemon",
     fragranceHi: "क्लासिक, रोज़ और लेमन में उपलब्ध",
     featured: false,

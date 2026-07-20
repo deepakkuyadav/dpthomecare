@@ -37,22 +37,22 @@ const NAVY = "#0A2C5A";
 
 const INTRO: Record<LeadLike["type"], { en: string; hi: string; subject: string }> = {
   quote: {
-    subject: "Thank you! We received your quote request — DPT Home Care",
+    subject: "Thank you! We received your quote request — DP Shudh Dhulai Home Care",
     en: "We have received your quote request. Our team will contact you within 24 hours with our best prices.",
     hi: "आपकी कोटेशन रिक्वेस्ट हमें मिल गई है। हमारी टीम 24 घंटे के अंदर बेहतरीन दामों के साथ आपसे संपर्क करेगी।",
   },
   enquiry: {
-    subject: "Thank you! We received your enquiry — DPT Home Care",
+    subject: "Thank you! We received your enquiry — DP Shudh Dhulai Home Care",
     en: "We have received your enquiry. Our team will get back to you shortly.",
     hi: "आपकी पूछताछ हमें मिल गई है। हमारी टीम जल्द ही आपसे संपर्क करेगी।",
   },
   distributor: {
-    subject: "Thank you for your distributor application — DPT Home Care",
-    en: "Thank you for applying to become a DPT Home Care partner. Our partnership team will contact you within 1–2 business days.",
-    hi: "DPT Home Care का पार्टनर बनने के लिए आवेदन करने हेतु धन्यवाद। हमारी पार्टनरशिप टीम 1–2 कार्यदिवसों में आपसे संपर्क करेगी।",
+    subject: "Thank you for your distributor application — DP Shudh Dhulai Home Care",
+    en: "Thank you for applying to become a DP Shudh Dhulai Home Care partner. Our partnership team will contact you within 1–2 business days.",
+    hi: "DP Shudh Dhulai Home Care का पार्टनर बनने के लिए आवेदन करने हेतु धन्यवाद। हमारी पार्टनरशिप टीम 1–2 कार्यदिवसों में आपसे संपर्क करेगी।",
   },
   newsletter: {
-    subject: "Welcome! You are subscribed — DPT Home Care",
+    subject: "Welcome! You are subscribed — DP Shudh Dhulai Home Care",
     en: "Thank you for subscribing! You will now receive our latest offers, new products and hygiene tips.",
     hi: "सब्सक्राइब करने के लिए धन्यवाद! अब आपको हमारे नए ऑफ़र, नए प्रोडक्ट्स और सफाई के टिप्स मिलते रहेंगे।",
   },

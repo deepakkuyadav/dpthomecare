@@ -12,9 +12,9 @@ import { T } from "@/lib/lang";
 export const metadata = pageMetadata({
   title: "Testimonials — What Our Customers Say",
   description:
-    "Read genuine reviews from homeowners, hotels, hospitals, restaurants, retailers and distributors who trust DPT Home Care cleaning products.",
+    "Read genuine reviews from homeowners, hotels, hospitals, restaurants, retailers and distributors who trust DP Shudh Dhulai Home Care cleaning products.",
   path: "/testimonials",
-  keywords: ["DPT Home Care reviews", "cleaning products testimonials", "customer feedback"],
+  keywords: ["DP Shudh Dhulai Home Care reviews", "cleaning products testimonials", "customer feedback"],
 });
 
 const avg = (testimonials.reduce((s, t) => s + t.rating, 0) / testimonials.length).toFixed(1);
@@ -28,8 +28,8 @@ export default function TestimonialsPage() {
         title={<T en="Trusted by Thousands" hi="हज़ारों का भरोसा" />}
         subtitle={
           <T
-            en="Don't just take our word for it — hear from the families, businesses and partners who rely on DPT Home Care every day."
-            hi="सिर्फ हमारी बात न मानें — उन परिवारों, बिज़नेस और पार्टनर्स से सुनें जो हर दिन DPT Home Care पर भरोसा करते हैं।"
+            en="Don't just take our word for it — hear from the families, businesses and partners who rely on DP Shudh Dhulai Home Care every day."
+            hi="सिर्फ हमारी बात न मानें — उन परिवारों, बिज़नेस और पार्टनर्स से सुनें जो हर दिन DP Shudh Dhulai Home Care पर भरोसा करते हैं।"
           />
         }
         image={IMG.family}
@@ -72,8 +72,8 @@ export default function TestimonialsPage() {
         title={<T en="Experience the Power of Hygiene" hi="हाइजीन की ताकत का अनुभव करें" />}
         text={
           <T
-            en="Discover why thousands trust DPT Home Care. Explore our products or reach out for bulk supply."
-            hi="जानें क्यों हज़ारों लोग DPT Home Care पर भरोसा करते हैं। हमारे उत्पाद देखें या बल्क सप्लाई के लिए संपर्क करें।"
+            en="Discover why thousands trust DP Shudh Dhulai Home Care. Explore our products or reach out for bulk supply."
+            hi="जानें क्यों हज़ारों लोग DP Shudh Dhulai Home Care पर भरोसा करते हैं। हमारे उत्पाद देखें या बल्क सप्लाई के लिए संपर्क करें।"
           />
         }
         image={IMG.sparkleKitchen}

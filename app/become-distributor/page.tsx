@@ -11,9 +11,9 @@ import { IMG } from "@/lib/images";
 import { T } from "@/lib/lang";
 
 export const metadata = pageMetadata({
-  title: "Become a Distributor — DPT Home Care Dealership",
+  title: "Become a Distributor — DP Shudh Dhulai Home Care Dealership",
   description:
-    "Partner with DPT Home Care. Enjoy competitive pricing, reliable stock, marketing support and strong margins as a distributor or dealer of premium cleaning products. Apply today.",
+    "Partner with DP Shudh Dhulai Home Care. Enjoy competitive pricing, reliable stock, marketing support and strong margins as a distributor or dealer of premium cleaning products. Apply today.",
   path: "/become-distributor",
   keywords: ["cleaning products distributor", "cleaning products dealership", "become a distributor", "wholesale cleaning products"],
 });
@@ -92,7 +92,7 @@ export default function BecomeDistributorPage() {
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Become a Distributor", path: "/become-distributor" }])} />
       <PageHero
         eyebrow={<T en="Business Opportunity" hi="व्यापार का अवसर" />}
-        title={<T en="Partner With DPT Home Care" hi="DPT Home Care के पार्टनर बनें" />}
+        title={<T en="Partner With DP Shudh Dhulai Home Care" hi="DP Shudh Dhulai Home Care के पार्टनर बनें" />}
         subtitle={
           <T
             en="Join our growing network of distributors and dealers. Build a profitable business with a trusted hygiene brand behind you."
@@ -118,8 +118,8 @@ export default function BecomeDistributorPage() {
             </h2>
             <p className="mt-4 text-ink-soft leading-relaxed">
               <T
-                en="Cleaning and hygiene products are used every single day in every home and business — making them one of the most dependable, repeat-purchase categories in retail. As a DPT Home Care partner, you tap into this steady demand with a complete product range, trusted quality and pricing that keeps your business profitable."
-                hi="सफाई और स्वच्छता के उत्पाद हर घर और हर व्यवसाय में रोज़ इस्तेमाल होते हैं — इसीलिए यह रिटेल की सबसे भरोसेमंद, बार-बार बिकने वाली कैटेगरी में से एक है। DPT Home Care के पार्टनर के रूप में आपको मिलती है पूरी प्रोडक्ट रेंज, भरोसेमंद क्वालिटी और ऐसी कीमतें जो आपके व्यवसाय को मुनाफ़े में रखती हैं।"
+                en="Cleaning and hygiene products are used every single day in every home and business — making them one of the most dependable, repeat-purchase categories in retail. As a DP Shudh Dhulai Home Care partner, you tap into this steady demand with a complete product range, trusted quality and pricing that keeps your business profitable."
+                hi="सफाई और स्वच्छता के उत्पाद हर घर और हर व्यवसाय में रोज़ इस्तेमाल होते हैं — इसीलिए यह रिटेल की सबसे भरोसेमंद, बार-बार बिकने वाली कैटेगरी में से एक है। DP Shudh Dhulai Home Care के पार्टनर के रूप में आपको मिलती है पूरी प्रोडक्ट रेंज, भरोसेमंद क्वालिटी और ऐसी कीमतें जो आपके व्यवसाय को मुनाफ़े में रखती हैं।"
               />
             </p>
           </div>

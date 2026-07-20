@@ -9,11 +9,11 @@ import { IMG } from "@/lib/images";
 import { T } from "@/lib/lang";
 
 export const metadata = pageMetadata({
-  title: "Contact Us — Get in Touch with DPT Home Care",
+  title: "Contact Us — Get in Touch with DP Shudh Dhulai Home Care",
   description:
-    "Contact DPT Home Care in Jaunpur, Uttar Pradesh. Call 9451900062, message us on WhatsApp, or send an enquiry for products, bulk supply and distributorship.",
+    "Contact DP Shudh Dhulai Home Care in Jaunpur, Uttar Pradesh. Call 9451900062, message us on WhatsApp, or send an enquiry for products, bulk supply and distributorship.",
   path: "/contact",
-  keywords: ["contact DPT Home Care", "cleaning products Jaunpur contact", "bulk cleaning supply enquiry"],
+  keywords: ["contact DP Shudh Dhulai Home Care", "cleaning products Jaunpur contact", "bulk cleaning supply enquiry"],
 });
 
 const cards: {

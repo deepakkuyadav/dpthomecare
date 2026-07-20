@@ -14,9 +14,9 @@ import { T } from "@/lib/lang";
 export const metadata = pageMetadata({
   title: "About Us — Our Story, Mission & Values",
   description:
-    "Learn about DPT Home Care, a trusted cleaning products manufacturer in Jaunpur, UP. Our story, mission, vision, core values, manufacturing standards and quality commitment.",
+    "Learn about DP Shudh Dhulai Home Care, a trusted cleaning products manufacturer in Jaunpur, UP. Our story, mission, vision, core values, manufacturing standards and quality commitment.",
   path: "/about",
-  keywords: ["about DPT Home Care", "cleaning products manufacturer", "hygiene company Jaunpur"],
+  keywords: ["about DP Shudh Dhulai Home Care", "cleaning products manufacturer", "hygiene company Jaunpur"],
 });
 
 const values = [
@@ -81,7 +81,7 @@ export default function AboutPage() {
         <div className="container-wide grid items-center gap-12 lg:grid-cols-2">
           <Reveal direction="right">
             <div className="overflow-hidden rounded-[2rem] shadow-card">
-              <Image src={IMG.cleaningProducts} alt="DPT Home Care product range" width={900} height={720} className="h-full w-full object-cover" />
+              <Image src={IMG.cleaningProducts} alt="DP Shudh Dhulai Home Care product range" width={900} height={720} className="h-full w-full object-cover" />
             </div>
           </Reveal>
           <Reveal direction="left">
@@ -94,7 +94,7 @@ export default function AboutPage() {
                 <T
                   en={
                     <>
-                      DPT Home Care was founded in {site.founded} in Jaunpur, Uttar Pradesh, on a simple belief: that
+                      DP Shudh Dhulai Home Care was founded in {site.founded} in Jaunpur, Uttar Pradesh, on a simple belief: that
                       effective, safe hygiene shouldn't be a luxury. Too many families and businesses were forced to
                       choose between products that worked and products they could afford. We set out to remove that
                       compromise.
@@ -102,7 +102,7 @@ export default function AboutPage() {
                   }
                   hi={
                     <>
-                      DPT Home Care की शुरुआत {site.founded} में जौनपुर, उत्तर प्रदेश में एक सरल विश्वास के साथ हुई:
+                      DP Shudh Dhulai Home Care की शुरुआत {site.founded} में जौनपुर, उत्तर प्रदेश में एक सरल विश्वास के साथ हुई:
                       असरदार और सुरक्षित स्वच्छता कोई लग्ज़री नहीं होनी चाहिए। बहुत से परिवारों और बिज़नेस को असरदार
                       प्रोडक्ट और किफायती प्रोडक्ट में से किसी एक को चुनना पड़ता था। हमने इसी समझौते को खत्म करने की ठानी।
                     </>
@@ -111,8 +111,8 @@ export default function AboutPage() {
               </p>
               <p>
                 <T
-                  en="Starting with a handful of essential cleaners, we listened closely to our customers and grew our range steadily. Today, DPT Home Care manufactures over 15 household and institutional cleaning products — from floor and toilet cleaners to dishwash, hand wash, sanitizers and more."
-                  hi="कुछ ज़रूरी क्लीनर्स से शुरुआत करके, हमने अपने ग्राहकों की बात ध्यान से सुनी और अपनी रेंज लगातार बढ़ाई। आज DPT Home Care 15 से अधिक घरेलू और संस्थागत क्लीनिंग प्रोडक्ट्स बनाता है — फ्लोर और टॉयलेट क्लीनर से लेकर डिशवॉश, हैंड वॉश, सैनिटाइज़र और भी बहुत कुछ।"
+                  en="Starting with a handful of essential cleaners, we listened closely to our customers and grew our range steadily. Today, DP Shudh Dhulai Home Care manufactures over 15 household and institutional cleaning products — from floor and toilet cleaners to dishwash, hand wash, sanitizers and more."
+                  hi="कुछ ज़रूरी क्लीनर्स से शुरुआत करके, हमने अपने ग्राहकों की बात ध्यान से सुनी और अपनी रेंज लगातार बढ़ाई। आज DP Shudh Dhulai Home Care 15 से अधिक घरेलू और संस्थागत क्लीनिंग प्रोडक्ट्स बनाता है — फ्लोर और टॉयलेट क्लीनर से लेकर डिशवॉश, हैंड वॉश, सैनिटाइज़र और भी बहुत कुछ।"
                 />
               </p>
               <p>
@@ -214,7 +214,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal direction="left">
             <div className="overflow-hidden rounded-[2rem] shadow-card">
-              <Image src={IMG.warehousePallet} alt="DPT Home Care quality control and packaging" width={900} height={720} className="h-full w-full object-cover" />
+              <Image src={IMG.warehousePallet} alt="DP Shudh Dhulai Home Care quality control and packaging" width={900} height={720} className="h-full w-full object-cover" />
             </div>
           </Reveal>
         </div>
@@ -228,8 +228,8 @@ export default function AboutPage() {
               <h3 className="text-2xl font-bold text-brand-navy"><T en="Our Quality Policy" hi="हमारी क्वालिटी नीति" /></h3>
               <p className="mt-3 text-ink-soft leading-relaxed">
                 <T
-                  en="We are committed to manufacturing cleaning products that meet high standards of effectiveness and safety. Through careful sourcing, controlled production and batch-wise testing, we ensure that every DPT product performs exactly as promised — protecting the health and satisfaction of the people who use it."
-                  hi="हम ऐसे क्लीनिंग प्रोडक्ट्स बनाने के लिए प्रतिबद्ध हैं जो असर और सुरक्षा के ऊंचे मानकों पर खरे उतरें। सावधानी से सोर्सिंग, नियंत्रित उत्पादन और बैच-दर-बैच टेस्टिंग के ज़रिए हम सुनिश्चित करते हैं कि हर DPT प्रोडक्ट ठीक वैसा ही काम करे जैसा वादा किया गया है — और इस्तेमाल करने वालों की सेहत और संतुष्टि सुरक्षित रहे।"
+                  en="We are committed to manufacturing cleaning products that meet high standards of effectiveness and safety. Through careful sourcing, controlled production and batch-wise testing, we ensure that every DP Shudh Dhulai product performs exactly as promised — protecting the health and satisfaction of the people who use it."
+                  hi="हम ऐसे क्लीनिंग प्रोडक्ट्स बनाने के लिए प्रतिबद्ध हैं जो असर और सुरक्षा के ऊंचे मानकों पर खरे उतरें। सावधानी से सोर्सिंग, नियंत्रित उत्पादन और बैच-दर-बैच टेस्टिंग के ज़रिए हम सुनिश्चित करते हैं कि हर DP Shudh Dhulai प्रोडक्ट ठीक वैसा ही काम करे जैसा वादा किया गया है — और इस्तेमाल करने वालों की सेहत और संतुष्टि सुरक्षित रहे।"
                 />
               </p>
             </div>

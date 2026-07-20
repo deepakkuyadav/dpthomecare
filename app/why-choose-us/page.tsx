@@ -22,11 +22,11 @@ import { IMG } from "@/lib/images";
 import { T } from "@/lib/lang";
 
 export const metadata = pageMetadata({
-  title: "Why Choose Us — The DPT Home Care Advantage",
+  title: "Why Choose Us — The DP Shudh Dhulai Home Care Advantage",
   description:
-    "Discover why homes, businesses and dealers trust DPT Home Care: powerful cleaning performance, concentrated formulas, strict quality control, long-lasting fragrance, safe ingredients and reliable bulk supply.",
+    "Discover why homes, businesses and dealers trust DP Shudh Dhulai Home Care: powerful cleaning performance, concentrated formulas, strict quality control, long-lasting fragrance, safe ingredients and reliable bulk supply.",
   path: "/why-choose-us",
-  keywords: ["why choose DPT Home Care", "best cleaning products", "quality cleaning products supplier"],
+  keywords: ["why choose DP Shudh Dhulai Home Care", "best cleaning products", "quality cleaning products supplier"],
 });
 
 const reasons = [
@@ -101,7 +101,7 @@ export default function WhyChooseUsPage() {
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Why Choose Us", path: "/why-choose-us" }])} />
       <PageHero
         eyebrow={<T en="Why Choose Us" hi="हमें क्यों चुनें" />}
-        title={<T en="The DPT Home Care Advantage" hi="DPT Home Care की खासियत" />}
+        title={<T en="The DP Shudh Dhulai Home Care Advantage" hi="DP Shudh Dhulai Home Care की खासियत" />}
         subtitle={
           <T
             en="Powerful performance, honest value and dependable service — the reasons thousands of homes and businesses trust us for their hygiene needs."
@@ -116,7 +116,7 @@ export default function WhyChooseUsPage() {
         <div className="container-wide">
           <SectionHeading
             eyebrow={<T en="Our Strengths" hi="हमारी ताकत" />}
-            title={<T en="Nine Reasons to Choose DPT" hi="DPT चुनने की नौ वजहें" />}
+            title={<T en="Nine Reasons to Choose DP Shudh Dhulai" hi="DP Shudh Dhulai चुनने की नौ वजहें" />}
             subtitle={
               <T
                 en="We've built our reputation on doing the fundamentals exceptionally well."
@@ -145,7 +145,7 @@ export default function WhyChooseUsPage() {
         <div className="container-wide grid items-center gap-12 lg:grid-cols-2">
           <Reveal direction="right">
             <div className="overflow-hidden rounded-[2rem] shadow-card">
-              <Image src={IMG.dishwash} alt="DPT Home Care quality in action" width={900} height={720} className="h-full w-full object-cover" />
+              <Image src={IMG.dishwash} alt="DP Shudh Dhulai Home Care quality in action" width={900} height={720} className="h-full w-full object-cover" />
             </div>
           </Reveal>
           <Reveal direction="left">
@@ -155,8 +155,8 @@ export default function WhyChooseUsPage() {
             </h2>
             <p className="mt-4 text-ink-soft leading-relaxed">
               <T
-                en="We believe you shouldn't have to choose between products that work and products you can afford. Every DPT product is engineered to deliver visible, reliable results at a price that makes sense — whether you're cleaning a family home or running a large institution."
-                hi="हमारा मानना है कि आपको असरदार प्रोडक्ट और किफायती प्रोडक्ट में से किसी एक को चुनना नहीं पड़ना चाहिए। हर DPT प्रोडक्ट साफ दिखने वाले, भरोसेमंद नतीजे सही दाम पर देने के लिए बनाया गया है — चाहे आप घर की सफाई कर रहे हों या कोई बड़ा संस्थान चला रहे हों।"
+                en="We believe you shouldn't have to choose between products that work and products you can afford. Every DP Shudh Dhulai product is engineered to deliver visible, reliable results at a price that makes sense — whether you're cleaning a family home or running a large institution."
+                hi="हमारा मानना है कि आपको असरदार प्रोडक्ट और किफायती प्रोडक्ट में से किसी एक को चुनना नहीं पड़ना चाहिए। हर DP Shudh Dhulai प्रोडक्ट साफ दिखने वाले, भरोसेमंद नतीजे सही दाम पर देने के लिए बनाया गया है — चाहे आप घर की सफाई कर रहे हों या कोई बड़ा संस्थान चला रहे हों।"
               />
             </p>
             <ul className="mt-6 space-y-3">

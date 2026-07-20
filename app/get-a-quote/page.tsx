@@ -11,7 +11,7 @@ import { T } from "@/lib/lang";
 export const metadata = pageMetadata({
   title: "Get a Quote — Request Pricing for Cleaning Products",
   description:
-    "Request a free quote from DPT Home Care for bulk and retail cleaning products. Fast response with competitive pricing for homes, institutions, dealers and distributors.",
+    "Request a free quote from DP Shudh Dhulai Home Care for bulk and retail cleaning products. Fast response with competitive pricing for homes, institutions, dealers and distributors.",
   path: "/get-a-quote",
   keywords: ["cleaning products quote", "bulk cleaning products price", "request quote", "wholesale cleaning products"],
 });
@@ -100,7 +100,7 @@ export default function GetAQuotePage() {
                 <T en="Prefer to talk directly?" hi="सीधे बात करना चाहते हैं?" />
               </p>
               <div className="mt-3 flex flex-wrap gap-3">
-                <a href={whatsappLink("Hi DPT Home Care, I'd like a quote for your products.")} target="_blank" rel="noopener noreferrer" className="btn-green">
+                <a href={whatsappLink("Hi DP Shudh Dhulai Home Care, I'd like a quote for your products.")} target="_blank" rel="noopener noreferrer" className="btn-green">
                   <MessageCircle className="h-4 w-4" /> WhatsApp
                 </a>
                 <a href={telLink()} className="btn-outline">

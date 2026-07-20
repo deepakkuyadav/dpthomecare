@@ -8,11 +8,11 @@ export function px(id: number, w = 1260): string {
 export const IMG = {
   // Hero & brand
   heroMopping: px(4440541, 1600),
-  cleaningProducts: "/brand/cleaning-products-v4.jpg", // DPT-branded pink set (v2, cache-busted)
-  cleaningProductsTable: "/brand/products-lineup-v4.jpg", // DPT-branded product lineup (v2)
+  cleaningProducts: "/brand/cleaning-products-v4.jpg", // DP Shudh Dhulai-branded pink set (v2, cache-busted)
+  cleaningProductsTable: "/brand/products-lineup-v4.jpg", // DP Shudh Dhulai-branded product lineup (v2)
   sparkleKitchen: px(3634739, 1400),
   modernHome: px(6238679, 1400),
-  cozyHome: "/brand/home-essentials-v3.jpg", // DPT-branded daily essentials tray
+  cozyHome: "/brand/home-essentials-v3.jpg", // DP Shudh Dhulai-branded daily essentials tray
   homeInterior: px(5179534, 1400),
   homePlants: px(5825380, 1400),
 
@@ -21,7 +21,7 @@ export const IMG = {
   familyTogether: px(7642039, 1400),
 
   // Cleaning actions
-  glassSpray: "/brand/glass-cleaning-v3.jpg", // DPT-branded glass cleaner (bottle + in action)
+  glassSpray: "/brand/glass-cleaning-v3.jpg", // DP Shudh Dhulai-branded glass cleaner (bottle + in action)
   kitchenSurface: px(4239037, 1200),
   kitchenSink: px(9462224, 1200),
   kitchenEquipment: px(10568353, 1200),
@@ -37,7 +37,7 @@ export const IMG = {
   dishwash3: px(7641231, 1200),
 
   // Hand & personal care
-  handWash: "/brand/hand-wash-v3.jpg", // DPT-branded hand wash (bottle front/back + washing hands)
+  handWash: "/brand/hand-wash-v3.jpg", // DP Shudh Dhulai-branded hand wash (bottle front/back + washing hands)
   handWash2: px(4154169, 1200),
   handWash3: px(3995736, 1200),
 
@@ -61,9 +61,9 @@ export const IMG = {
   hospitalWaiting: px(8459996, 1200),
 
   // Manufacturing / warehouse
-  warehouse: "/brand/warehouse-v4.jpg", // DPT-branded warehouse (v2)
-  warehouseAisle: "/brand/warehouse-aisle-v4.jpg", // DPT-branded warehouse aisle (v2)
-  warehousePallet: "/brand/warehouse-pallet-v4.jpg", // DPT-branded packed stock (v2)
+  warehouse: "/brand/warehouse-v4.jpg", // DP Shudh Dhulai-branded warehouse (v2)
+  warehouseAisle: "/brand/warehouse-aisle-v4.jpg", // DP Shudh Dhulai-branded warehouse aisle (v2)
+  warehousePallet: "/brand/warehouse-pallet-v4.jpg", // DP Shudh Dhulai-branded packed stock (v2)
 } as const;
 
 export type ImageKey = keyof typeof IMG;

@@ -10,11 +10,11 @@ type Msg = { role: "user" | "assistant"; content: string };
 const GREETING: Msg = {
   role: "assistant",
   content:
-    "Hi! 👋 I'm the DPT Assistant. Ask me about our cleaning products, bulk supply, distributorship, or anything hygiene-related.",
+    "Hi! 👋 I'm the DP Shudh Dhulai Assistant. Ask me about our cleaning products, bulk supply, distributorship, or anything hygiene-related.",
 };
 
 const GREETING_HI =
-  "नमस्ते! 👋 मैं DPT असिस्टेंट हूँ। हमारे सफाई उत्पादों, थोक सप्लाई, डिस्ट्रीब्यूटरशिप या हाइजीन से जुड़ा कोई भी सवाल मुझसे पूछें।";
+  "नमस्ते! 👋 मैं DP Shudh Dhulai असिस्टेंट हूँ। हमारे सफाई उत्पादों, थोक सप्लाई, डिस्ट्रीब्यूटरशिप या हाइजीन से जुड़ा कोई भी सवाल मुझसे पूछें।";
 
 const QUICK = [
   { en: "Which products do you make?", hi: "आप कौन-कौन से उत्पाद बनाते हैं?" },
@@ -89,7 +89,7 @@ export function ChatWidget() {
                 <Bot className="h-5 w-5" />
               </span>
               <div className="leading-tight">
-                <p className="text-sm font-semibold"><T en="DPT Assistant" hi="DPT असिस्टेंट" /></p>
+                <p className="text-sm font-semibold"><T en="DP Shudh Dhulai Assistant" hi="DP Shudh Dhulai असिस्टेंट" /></p>
                 <p className="flex items-center gap-1 text-[11px] text-white/80">
                   <span className="h-1.5 w-1.5 rounded-full bg-green-300" /> <T en="Online now" hi="अभी ऑनलाइन" />
                 </p>

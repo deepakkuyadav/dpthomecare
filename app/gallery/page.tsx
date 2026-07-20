@@ -10,9 +10,9 @@ import { T } from "@/lib/lang";
 export const metadata = pageMetadata({
   title: "Gallery — Our Products, Facility & Hygiene in Action",
   description:
-    "Browse the DPT Home Care gallery — our cleaning product range, hygiene in action, warehouse facility and commercial applications across homes and institutions.",
+    "Browse the DP Shudh Dhulai Home Care gallery — our cleaning product range, hygiene in action, warehouse facility and commercial applications across homes and institutions.",
   path: "/gallery",
-  keywords: ["cleaning products gallery", "DPT Home Care photos", "hygiene products images"],
+  keywords: ["cleaning products gallery", "DP Shudh Dhulai Home Care photos", "hygiene products images"],
 });
 
 export default function GalleryPage() {

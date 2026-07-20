@@ -5,7 +5,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "public", "products");
-const LOGO = path.join(ROOT, "public", "logo-v2.png");
+const LOGO = path.join(ROOT, "public", "shudh-dhulai-logo.png");
 const BGSRC = path.join(ROOT, ".scratch", "bg-src.jpg");
 const CW = 1000, CH = 750, WHITE = { r: 255, g: 255, b: 255 };
 
@@ -109,7 +109,7 @@ async function buildBg() {
       .composite([{ input: shadow }, { input: scaled, top, left }])
       .flatten({ background: WHITE })
       .png()
-      .toFile(path.join(OUT, `${p.slug}-v2.png`));
+      .toFile(path.join(OUT, `${p.slug}-v3.png`));
     console.log("generated", p.slug);
   }
 
@@ -117,7 +117,7 @@ async function buildBg() {
   const cols = 5, tw = 260, th = 195, pad = 8;
   const comp = [];
   for (let i = 0; i < products.length; i++) {
-    const buf = await sharp(path.join(OUT, `${products[i].slug}-v2.png`)).resize(tw, th, { fit: "cover" }).png().toBuffer();
+    const buf = await sharp(path.join(OUT, `${products[i].slug}-v3.png`)).resize(tw, th, { fit: "cover" }).png().toBuffer();
     comp.push({ input: buf, left: (i % cols) * (tw + pad) + pad, top: Math.floor(i / cols) * (th + pad) + pad });
   }
   await sharp({ create: { width: cols * (tw + pad) + pad, height: Math.ceil(products.length / cols) * (th + pad) + pad, channels: 3, background: { r: 226, g: 232, b: 240 } } })

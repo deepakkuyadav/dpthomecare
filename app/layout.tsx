@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "hand wash",
     "phenyl",
     "sanitizer",
-    "DPT Home Care",
+    "DP Shudh Dhulai Home Care",
     "cleaning products Jaunpur",
     "cleaning products Uttar Pradesh",
     "bulk cleaning products",

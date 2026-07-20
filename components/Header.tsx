@@ -63,7 +63,7 @@ export function Header() {
                   solid ? "text-brand-navy" : "text-white"
                 }`}
               >
-                DPT <span className="text-brand-green">Home Care</span>
+                DP Shudh Dhulai <span className="text-brand-green">Home Care</span>
               </span>
               <span
                 className={`block whitespace-nowrap text-[8px] font-bold uppercase tracking-[0.08em] ${

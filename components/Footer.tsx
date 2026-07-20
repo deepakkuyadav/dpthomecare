@@ -59,7 +59,7 @@ export function Footer() {
             </span>
             <span className="leading-tight">
               <span className="block font-heading text-xl font-bold">
-                DPT <span className="text-brand-green-light">Home Care</span>
+                DP Shudh Dhulai <span className="text-brand-green-light">Home Care</span>
               </span>
               <span className="block text-[9px] font-bold uppercase tracking-[0.12em] text-brand-green-light">
                 {site.subTagline}
@@ -72,7 +72,7 @@ export function Footer() {
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/70">
             <T
               en={site.shortDesc}
-              hi="DPT Home Care घरेलू और संस्थागत क्लीनिंग प्रोडक्ट्स का भरोसेमंद निर्माता और सप्लायर है — स्वच्छता, सुरक्षा और रोज़ाना ताज़गी के वादे पर आधारित।"
+              hi="DP Shudh Dhulai Home Care घरेलू और संस्थागत क्लीनिंग प्रोडक्ट्स का भरोसेमंद निर्माता और सप्लायर है — स्वच्छता, सुरक्षा और रोज़ाना ताज़गी के वादे पर आधारित।"
             />
           </p>
           <div className="mt-6 flex gap-3">

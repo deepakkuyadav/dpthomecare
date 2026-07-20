@@ -38,7 +38,7 @@ export function ProductCard({ product }: { product: Product }) {
             <T en="View Details" hi="पूरी जानकारी" /> <ArrowRight className="h-4 w-4" />
           </Link>
           <a
-            href={whatsappLink(`Hello DPT Home Care, I'm interested in ${product.name}. Please share details and pricing.`)}
+            href={whatsappLink(`Hello DP Shudh Dhulai Home Care, I'm interested in ${product.name}. Please share details and pricing.`)}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Enquire about ${product.name} on WhatsApp`}

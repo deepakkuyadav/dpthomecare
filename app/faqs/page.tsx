@@ -13,9 +13,9 @@ import { T } from "@/lib/lang";
 export const metadata = pageMetadata({
   title: "FAQs — Frequently Asked Questions",
   description:
-    "Answers to common questions about DPT Home Care cleaning products, orders, bulk supply, distributorship, usage, safety and delivery.",
+    "Answers to common questions about DP Shudh Dhulai Home Care cleaning products, orders, bulk supply, distributorship, usage, safety and delivery.",
   path: "/faqs",
-  keywords: ["DPT Home Care FAQ", "cleaning products questions", "distributor FAQ"],
+  keywords: ["DP Shudh Dhulai Home Care FAQ", "cleaning products questions", "distributor FAQ"],
 });
 
 export default function FaqsPage() {

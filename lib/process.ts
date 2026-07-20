@@ -5,9 +5,9 @@ export const processSteps: ProcessStep[] = [
     title: "Raw Material Sourcing",
     titleHi: "कच्चे माल की सोर्सिंग",
     description:
-      "We source high-grade raw materials and active ingredients from trusted, verified suppliers — the foundation of every effective DPT product.",
+      "We source high-grade raw materials and active ingredients from trusted, verified suppliers — the foundation of every effective DP Shudh Dhulai product.",
     descriptionHi:
-      "हम भरोसेमंद, सत्यापित सप्लायर्स से उच्च-गुणवत्ता का कच्चा माल और सक्रिय तत्व लेते हैं — यही हर असरदार DPT प्रोडक्ट की नींव है।",
+      "हम भरोसेमंद, सत्यापित सप्लायर्स से उच्च-गुणवत्ता का कच्चा माल और सक्रिय तत्व लेते हैं — यही हर असरदार DP Shudh Dhulai प्रोडक्ट की नींव है।",
     icon: "PackageSearch",
   },
   {

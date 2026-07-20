@@ -70,7 +70,7 @@ export function QuoteForm() {
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <a
             href={whatsappLink(
-              `Hi DPT Home Care, I just submitted a quote request for ${form.product || "your products"} (Qty: ${form.quantity || "NA"}). Name: ${form.name}.`
+              `Hi DP Shudh Dhulai Home Care, I just submitted a quote request for ${form.product || "your products"} (Qty: ${form.quantity || "NA"}). Name: ${form.name}.`
             )}
             target="_blank"
             rel="noopener noreferrer"

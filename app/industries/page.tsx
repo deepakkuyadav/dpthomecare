@@ -14,7 +14,7 @@ import { T } from "@/lib/lang";
 export const metadata = pageMetadata({
   title: "Industries We Serve — Homes, Hotels, Hospitals & More",
   description:
-    "DPT Home Care supplies cleaning and hygiene products to homes, hotels, hospitals, restaurants, schools, offices, retail stores, wholesalers, distributors and cleaning agencies.",
+    "DP Shudh Dhulai Home Care supplies cleaning and hygiene products to homes, hotels, hospitals, restaurants, schools, offices, retail stores, wholesalers, distributors and cleaning agencies.",
   path: "/industries",
   keywords: ["industries served", "commercial cleaning products", "institutional cleaning supplies", "bulk hygiene supplier"],
 });
@@ -43,8 +43,8 @@ export default function IndustriesPage() {
             title={<T en="Tailored for Your Environment" hi="आपके माहौल के हिसाब से" />}
             subtitle={
               <T
-                en="Different spaces need different hygiene solutions. Here's how DPT Home Care supports each sector."
-                hi="अलग-अलग जगहों को अलग-अलग हाइजीन समाधान चाहिए। जानिए DPT Home Care हर सेक्टर की मदद कैसे करता है।"
+                en="Different spaces need different hygiene solutions. Here's how DP Shudh Dhulai Home Care supports each sector."
+                hi="अलग-अलग जगहों को अलग-अलग हाइजीन समाधान चाहिए। जानिए DP Shudh Dhulai Home Care हर सेक्टर की मदद कैसे करता है।"
               />
             }
           />

@@ -13,7 +13,7 @@ import { T } from "@/lib/lang";
 export const metadata = pageMetadata({
   title: "Our Products — Complete Cleaning Products Range",
   description:
-    "Explore DPT Home Care's complete range of cleaning products: floor cleaner, toilet cleaner, glass cleaner, dish wash liquid, hand wash, phenyl, sanitizer, detergent and more. Search, filter and enquire.",
+    "Explore DP Shudh Dhulai Home Care's complete range of cleaning products: floor cleaner, toilet cleaner, glass cleaner, dish wash liquid, hand wash, phenyl, sanitizer, detergent and more. Search, filter and enquire.",
   path: "/products",
   keywords: products.flatMap((p) => p.keywords).slice(0, 20),
 });
@@ -73,7 +73,7 @@ export default async function ProductsPage({
               </p>
             </div>
             <div className="flex shrink-0 flex-wrap justify-center gap-3">
-              <a href={whatsappLink("Hello DPT Home Care, I would like a bulk quotation for your products.")} target="_blank" rel="noopener noreferrer" className="btn-green">
+              <a href={whatsappLink("Hello DP Shudh Dhulai Home Care, I would like a bulk quotation for your products.")} target="_blank" rel="noopener noreferrer" className="btn-green">
                 <MessageCircle className="h-4 w-4" /> <T en="Bulk Enquiry" hi="थोक पूछताछ" />
               </a>
               <Link href="/contact" className="btn-outline">

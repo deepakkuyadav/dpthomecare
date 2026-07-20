@@ -127,7 +127,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a
-                    href={whatsappLink(`Hello DPT Home Care, I'm interested in ${product.name}. Please share pricing and packing details.`)}
+                    href={whatsappLink(`Hello DP Shudh Dhulai Home Care, I'm interested in ${product.name}. Please share pricing and packing details.`)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-green"
@@ -280,7 +280,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                   />
                 </p>
                 <a
-                  href={whatsappLink(`Hello DPT Home Care, please share pricing for ${product.name}.`)}
+                  href={whatsappLink(`Hello DP Shudh Dhulai Home Care, please share pricing for ${product.name}.`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-green mt-4 w-full"

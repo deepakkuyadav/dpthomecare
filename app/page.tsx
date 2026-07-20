@@ -138,14 +138,14 @@ export default function HomePage() {
                   <T
                     en={
                       <>
-                        From floors to fabrics, kitchens to washrooms — DPT Home Care manufactures a complete range of
+                        From floors to fabrics, kitchens to washrooms — DP Shudh Dhulai Home Care manufactures a complete range of
                         powerful, safe and affordable cleaning products. This is the{" "}
                         <strong className="text-white">Power of Hygiene</strong>.
                       </>
                     }
                     hi={
                       <>
-                        फर्श से कपड़ों तक, किचन से वॉशरूम तक — DPT Home Care शक्तिशाली, सुरक्षित और किफायती क्लीनिंग
+                        फर्श से कपड़ों तक, किचन से वॉशरूम तक — DP Shudh Dhulai Home Care शक्तिशाली, सुरक्षित और किफायती क्लीनिंग
                         प्रोडक्ट्स की पूरी रेंज बनाता है। यही है <strong className="text-white">Power of Hygiene</strong>।
                       </>
                     }
@@ -179,7 +179,7 @@ export default function HomePage() {
                 <div className="overflow-hidden rounded-[2rem] shadow-2xl ring-1 ring-white/20">
                   <Image
                     src={IMG.cleaningProducts}
-                    alt="DPT Home Care cleaning products range"
+                    alt="DP Shudh Dhulai Home Care cleaning products range"
                     width={900}
                     height={720}
                     className="h-full w-full object-contain"
@@ -261,12 +261,12 @@ export default function HomePage() {
       <section className="section bg-slate-50">
         <div className="container-wide">
           <SectionHeading
-            eyebrow={<T en="Why DPT Home Care" hi="DPT Home Care ही क्यों" />}
+            eyebrow={<T en="Why DP Shudh Dhulai Home Care" hi="DP Shudh Dhulai Home Care ही क्यों" />}
             title={<T en="Cleaning Products You Can Trust" hi="क्लीनिंग प्रोडक्ट्स जिन पर आप भरोसा कर सकते हैं" />}
             subtitle={
               <T
-                en="We combine powerful performance with everyday safety and honest value — the reasons thousands choose DPT."
-                hi="दमदार परफॉर्मेंस, रोज़ाना की सुरक्षा और ईमानदार कीमत — यही वजह है कि हज़ारों लोग DPT चुनते हैं।"
+                en="We combine powerful performance with everyday safety and honest value — the reasons thousands choose DP Shudh Dhulai."
+                hi="दमदार परफॉर्मेंस, रोज़ाना की सुरक्षा और ईमानदार कीमत — यही वजह है कि हज़ारों लोग DP Shudh Dhulai चुनते हैं।"
               />
             }
           />
@@ -298,8 +298,8 @@ export default function HomePage() {
             title={<T en="A Complete Hygiene Solution" hi="स्वच्छता का संपूर्ण समाधान" />}
             subtitle={
               <T
-                en="Whatever the surface, whatever the space — there's a DPT product made to clean it beautifully."
-                hi="सतह कोई भी हो, जगह कोई भी हो — उसे चमकाने के लिए एक DPT प्रोडक्ट बना है।"
+                en="Whatever the surface, whatever the space — there's a DP Shudh Dhulai product made to clean it beautifully."
+                hi="सतह कोई भी हो, जगह कोई भी हो — उसे चमकाने के लिए एक DP Shudh Dhulai प्रोडक्ट बना है।"
               />
             }
           />
@@ -338,7 +338,7 @@ export default function HomePage() {
               <div className="overflow-hidden rounded-[2rem] shadow-card">
                 <Image
                   src={IMG.warehouse}
-                  alt="DPT Home Care manufacturing and warehouse"
+                  alt="DP Shudh Dhulai Home Care manufacturing and warehouse"
                   width={900}
                   height={700}
                   className="h-full w-full object-cover"
@@ -356,7 +356,7 @@ export default function HomePage() {
           </Reveal>
           <Reveal direction="left">
             <span className="chip">
-              <T en="About DPT Home Care" hi="DPT Home Care के बारे में" />
+              <T en="About DP Shudh Dhulai Home Care" hi="DP Shudh Dhulai Home Care के बारे में" />
             </span>
             <h2 className="mt-4 text-3xl md:text-4xl leading-tight text-brand-navy text-balance">
               <T
@@ -366,11 +366,11 @@ export default function HomePage() {
             </h2>
             <p className="mt-5 text-ink-soft leading-relaxed">
               <T
-                en="DPT Home Care is a dedicated manufacturer and supplier of household and institutional cleaning
+                en="DP Shudh Dhulai Home Care is a dedicated manufacturer and supplier of household and institutional cleaning
               products based in Jaunpur, Uttar Pradesh. What began with a simple belief — that quality hygiene
               should be affordable for every family and business — has grown into a complete range trusted across
               homes, hotels, hospitals, restaurants, schools and offices."
-                hi="DPT Home Care जौनपुर, उत्तर प्रदेश का समर्पित क्लीनिंग प्रोडक्ट्स निर्माता और सप्लायर है। एक साधारण सोच से शुरुआत हुई — कि अच्छी स्वच्छता हर परिवार और व्यवसाय के लिए किफायती होनी चाहिए — और आज यह घरों, होटलों, हॉस्पिटलों, रेस्टोरेंट, स्कूलों और ऑफिसों में भरोसेमंद पूरी रेंज बन चुकी है।"
+                hi="DP Shudh Dhulai Home Care जौनपुर, उत्तर प्रदेश का समर्पित क्लीनिंग प्रोडक्ट्स निर्माता और सप्लायर है। एक साधारण सोच से शुरुआत हुई — कि अच्छी स्वच्छता हर परिवार और व्यवसाय के लिए किफायती होनी चाहिए — और आज यह घरों, होटलों, हॉस्पिटलों, रेस्टोरेंट, स्कूलों और ऑफिसों में भरोसेमंद पूरी रेंज बन चुकी है।"
               />
             </p>
             <ul className="mt-6 space-y-3">
@@ -434,8 +434,8 @@ export default function HomePage() {
             title={<T en="From Raw Material to Your Doorstep" hi="कच्चे माल से आपके दरवाज़े तक" />}
             subtitle={
               <T
-                en="Every DPT product follows a rigorous six-step journey engineered for consistent quality and performance."
-                hi="हर DPT प्रोडक्ट छह कड़े चरणों से गुज़रता है — ताकि क्वालिटी और परफॉर्मेंस हर बार एक जैसी मिले।"
+                en="Every DP Shudh Dhulai product follows a rigorous six-step journey engineered for consistent quality and performance."
+                hi="हर DP Shudh Dhulai प्रोडक्ट छह कड़े चरणों से गुज़रता है — ताकि क्वालिटी और परफॉर्मेंस हर बार एक जैसी मिले।"
               />
             }
           />
@@ -518,8 +518,8 @@ export default function HomePage() {
             title={<T en="What Our Customers Say" hi="हमारे ग्राहक क्या कहते हैं" />}
             subtitle={
               <T
-                en="Real feedback from the families, businesses and partners who trust DPT Home Care every day."
-                hi="उन परिवारों, व्यवसायों और पार्टनर्स की सच्ची राय, जो हर दिन DPT Home Care पर भरोसा करते हैं।"
+                en="Real feedback from the families, businesses and partners who trust DP Shudh Dhulai Home Care every day."
+                hi="उन परिवारों, व्यवसायों और पार्टनर्स की सच्ची राय, जो हर दिन DP Shudh Dhulai Home Care पर भरोसा करते हैं।"
               />
             }
           />
@@ -532,7 +532,7 @@ export default function HomePage() {
       {/* ================= DEALER CTA ================= */}
       <CTABand
         eyebrow={<T en="Business Opportunity" hi="बिज़नेस का अवसर" />}
-        title={<T en="Grow With Us — Become a DPT Distributor" hi="हमारे साथ बढ़ें — DPT डिस्ट्रीब्यूटर बनें" />}
+        title={<T en="Grow With Us — Become a DP Shudh Dhulai Distributor" hi="हमारे साथ बढ़ें — DP Shudh Dhulai डिस्ट्रीब्यूटर बनें" />}
         text={
           <T
             en="Join our expanding network of distributors and dealers. Enjoy competitive pricing, reliable supply and a brand your customers will trust."

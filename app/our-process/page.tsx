@@ -13,7 +13,7 @@ import { T } from "@/lib/lang";
 export const metadata = pageMetadata({
   title: "Our Process — How We Manufacture Quality",
   description:
-    "See how DPT Home Care manufactures cleaning products through a rigorous six-step process — from raw material sourcing and formulation to quality control, packaging and dispatch.",
+    "See how DP Shudh Dhulai Home Care manufactures cleaning products through a rigorous six-step process — from raw material sourcing and formulation to quality control, packaging and dispatch.",
   path: "/our-process",
   keywords: ["cleaning products manufacturing process", "quality control", "how cleaning products are made"],
 });
@@ -36,8 +36,8 @@ export default function OurProcessPage() {
         title={<T en="From Raw Material to Your Doorstep" hi="कच्चे माल से आपके दरवाज़े तक" />}
         subtitle={
           <T
-            en="Consistent quality doesn't happen by chance. It's the result of a disciplined, six-step process behind every DPT product."
-            hi="एक जैसी क्वालिटी संयोग से नहीं आती। यह हर DPT प्रोडक्ट के पीछे चलने वाली अनुशासित, छह-चरणों की प्रक्रिया का नतीजा है।"
+            en="Consistent quality doesn't happen by chance. It's the result of a disciplined, six-step process behind every DP Shudh Dhulai product."
+            hi="एक जैसी क्वालिटी संयोग से नहीं आती। यह हर DP Shudh Dhulai प्रोडक्ट के पीछे चलने वाली अनुशासित, छह-चरणों की प्रक्रिया का नतीजा है।"
           />
         }
         image={IMG.warehousePallet}

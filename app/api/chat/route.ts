@@ -25,7 +25,7 @@ function buildSystemPrompt(): string {
     .map((f) => `Q: ${f.question}\nA: ${f.answer}`)
     .join("\n\n");
 
-  return `You are "DPT Assistant", the friendly virtual assistant for ${site.name} — a cleaning products manufacturer and supplier based in ${site.address.city}, ${site.address.state}, India. Tagline: "${site.tagline}".
+  return `You are "DP Shudh Dhulai Assistant", the friendly virtual assistant for ${site.name} — a cleaning products manufacturer and supplier based in ${site.address.city}, ${site.address.state}, India. Tagline: "${site.tagline}".
 
 Your job is to help website visitors: answer questions about products, guide home users, hotels, hospitals, restaurants, offices and institutions, and help potential dealers/distributors. Be warm, concise and helpful. You may reply in English or Hindi/Hinglish depending on how the user writes.
 

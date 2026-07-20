@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 
-// Web app manifest — lets phones "Add to Home Screen" with the DPT logo
+// Web app manifest — lets phones "Add to Home Screen" with the DP Shudh Dhulai logo
 // and brand colors, and improves the mobile browsing experience.
 export default function manifest(): MetadataRoute.Manifest {
   return {
