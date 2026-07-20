@@ -61,9 +61,6 @@ export function Footer() {
               <span className="block font-heading text-xl font-bold">
                 DP Shudh Dhulai <span className="text-brand-green-light">Home Care</span>
               </span>
-              <span className="block text-[9px] font-bold uppercase tracking-[0.12em] text-brand-green-light">
-                {site.subTagline}
-              </span>
               <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">
                 Power of Hygiene
               </span>

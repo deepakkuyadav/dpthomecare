@@ -170,7 +170,7 @@ export async function sendLeadEmails(lead: LeadLike): Promise<void> {
   });
   const logo = {
     filename: "dpt-logo.png",
-    path: path.join(process.cwd(), "public", "logo-v2.png"),
+    path: path.join(process.cwd(), "public", "sd-logo-v2.png"),
     cid: "dptlogo",
   };
   const from = `"${site.name}" <${USER}>`;
