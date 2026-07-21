@@ -8,8 +8,8 @@ export function px(id: number, w = 1260): string {
 export const IMG = {
   // Hero & brand
   heroMopping: px(4440541, 1600),
-  cleaningProducts: "/brand/cleaning-products-v4.jpg", // DP Shudh Dhulai-branded pink set (v2, cache-busted)
-  cleaningProductsTable: "/brand/products-lineup-v4.jpg", // DP Shudh Dhulai-branded product lineup (v2)
+  cleaningProducts: "/brand/cleaning-products-v5.jpg", // DP Shudh Dhulai-branded pink set (v2, cache-busted)
+  cleaningProductsTable: "/brand/products-lineup-v5.jpg", // DP Shudh Dhulai-branded product lineup (v2)
   sparkleKitchen: px(3634739, 1400),
   modernHome: px(6238679, 1400),
   cozyHome: "/brand/home-essentials-v4.jpg", // DP Shudh Dhulai-branded daily essentials tray
@@ -61,9 +61,9 @@ export const IMG = {
   hospitalWaiting: px(8459996, 1200),
 
   // Manufacturing / warehouse
-  warehouse: "/brand/warehouse-v4.jpg", // DP Shudh Dhulai-branded warehouse (v2)
-  warehouseAisle: "/brand/warehouse-aisle-v4.jpg", // DP Shudh Dhulai-branded warehouse aisle (v2)
-  warehousePallet: "/brand/warehouse-pallet-v4.jpg", // DP Shudh Dhulai-branded packed stock (v2)
+  warehouse: "/brand/warehouse-v5.jpg", // DP Shudh Dhulai-branded warehouse (v2)
+  warehouseAisle: "/brand/warehouse-aisle-v5.jpg", // DP Shudh Dhulai-branded warehouse aisle (v2)
+  warehousePallet: "/brand/warehouse-pallet-v5.jpg", // DP Shudh Dhulai-branded packed stock (v2)
 } as const;
 
 export type ImageKey = keyof typeof IMG;
