@@ -112,7 +112,7 @@ export const products: Product[] = [
       "DP Shudh Dhulai Toilet Cleaner is a heavy-duty acid formula that clings to the toilet bowl to dissolve limescale, hard-water stains, rust and yellow deposits. Its thick consistency ensures maximum contact time for a deep, hygienic clean that removes stains and destroys odour-causing bacteria — leaving your washroom sparkling and fresh.",
     descriptionHi:
       "DP Shudh Dhulai टॉयलेट क्लीनर एक हैवी-ड्यूटी एसिड फॉर्मूला है जो टॉयलेट बाउल पर चिपककर लाइमस्केल, हार्ड वॉटर के दाग, जंग और पीली परत को घोल देता है। इसकी गाढ़ी बनावट सतह पर ज़्यादा देर टिकती है, जिससे गहरी और हाइजीनिक सफाई मिलती है — दाग हटते हैं, बदबू फैलाने वाले बैक्टीरिया खत्म होते हैं और आपका वॉशरूम चमकदार व तरोताज़ा रहता है।",
-    image: "/products/toilet-cleaner-v6.png",
+    image: "/products/toilet-cleaner-sd2.png",
     fragrance: "Fresh Pine",
     fragranceHi: "फ्रेश पाइन",
     featured: true,
@@ -331,7 +331,7 @@ export const products: Product[] = [
       "DP Shudh Dhulai Liquid Detergent dissolves instantly to penetrate deep into fabric fibres, lifting away tough stains, sweat, dirt and odour. Unlike powders, it leaves no white residue on clothes or in your machine, and its colour-guard formula keeps whites bright and colours vivid, wash after wash. Suitable for both top-load and front-load machines as well as hand wash.",
     descriptionHi:
       "DP Shudh Dhulai लिक्विड डिटर्जेंट तुरंत घुलकर कपड़ों के रेशों के अंदर तक पहुँचता है और जिद्दी दाग, पसीना, मैल और बदबू को निकाल देता है। पाउडर की तरह यह कपड़ों या मशीन में सफेद अवशेष नहीं छोड़ता, और इसका कलर-गार्ड फॉर्मूला हर धुलाई में सफेद कपड़ों को चमकदार और रंगों को गहरा बनाए रखता है। टॉप-लोड, फ्रंट-लोड मशीन और हाथ धुलाई — तीनों के लिए उपयुक्त।",
-    image: "/products/liquid-detergent-v6.png",
+    image: "/products/liquid-detergent-sd2.png",
     fragrance: "Spring Fresh",
     fragranceHi: "स्प्रिंग फ्रेश",
     featured: false,
@@ -401,8 +401,8 @@ export const products: Product[] = [
       "DP Shudh Dhulai Washing Powder is powered by Daag Proof Technology for a deep, hygienic clean in every wash. Its active stain-fighting granules dissolve quickly in both bucket and machine washes, lifting away tough stains, sweat and everyday dirt while blue speckles brighten whites and protect colours. Gentle on fabrics and hands, it leaves clothes with a long-lasting fresh fragrance — making it the perfect everyday detergent for families, hostels, hotels and laundries.",
     descriptionHi:
       "DP Shudh Dhulai वॉशिंग पाउडर Daag Proof Technology के साथ हर धुलाई में गहरी, हाइजीनिक सफाई देता है। इसके एक्टिव स्टेन-फाइटिंग ग्रेन्यूल्स बाल्टी और मशीन दोनों में जल्दी घुलते हैं और जिद्दी दाग, पसीना और रोज़ का मैल निकाल देते हैं, जबकि नीले स्पेकल्स सफेद कपड़ों को और चमकाते हैं व रंगों की हिफाज़त करते हैं। कपड़ों और हाथों पर सौम्य यह पाउडर कपड़ों में देर तक टिकने वाली ताज़ी खुशबू छोड़ता है — परिवारों, हॉस्टलों, होटलों और लॉन्ड्री के लिए एक बेहतरीन रोज़ाना डिटर्जेंट।",
-    image: "/products/washing-powder-sd.png",
-    images: ["/products/washing-powder-sd.png", "/products/washing-powder-500g-sd.png", "/products/washing-powder-250g-sd.png"],
+    image: "/products/washing-powder-sd2.png",
+    images: ["/products/washing-powder-sd2.png", "/products/washing-powder-500g-sd2.png", "/products/washing-powder-250g-sd2.png"],
     fragrance: "Fresh floral fragrance",
     fragranceHi: "ताज़ी फ्लोरल खुशबू",
     featured: false,
@@ -489,7 +489,7 @@ export const products: Product[] = [
       "DP Shudh Dhulai Hand Wash combines effective germ protection with skin-loving care. The rich, creamy lather cleans away dirt and germs, while added moisturisers and glycerine keep your hands soft, not dry. Perfect for homes, offices, hotels, restaurants and hospitals where frequent hand hygiene matters.",
     descriptionHi:
       "DP Shudh Dhulai हैंड वॉश कीटाणुओं से असरदार सुरक्षा और त्वचा की देखभाल — दोनों साथ देता है। इसका गाढ़ा, क्रीमी झाग मैल और कीटाणुओं को साफ करता है, जबकि मॉइस्चराइज़र और ग्लिसरीन हाथों को नरम रखते हैं, रूखा नहीं होने देते। घरों, दफ्तरों, होटलों, रेस्टोरेंट और अस्पतालों के लिए एकदम सही, जहाँ बार-बार हाथ धोना ज़रूरी है।",
-    image: "/products/hand-wash-v6.png",
+    image: "/products/hand-wash-sd2.png",
     fragrance: "Available in Rose, Lemon, Aloe Vera and Sea Breeze",
     fragranceHi: "रोज़, लेमन, एलोवेरा और सी ब्रीज़ में उपलब्ध",
     featured: true,
@@ -630,7 +630,7 @@ export const products: Product[] = [
       "DP Shudh Dhulai Fabric Conditioner wraps each fibre in a protective layer of softness, making your clothes feel luxurious against the skin. It reduces wrinkles for easier ironing, protects fabric from wear, controls static and infuses garments with a long-lasting freshness that lingers wash after wash.",
     descriptionHi:
       "DP Shudh Dhulai फैब्रिक कंडीशनर हर रेशे को मुलायमियत की सुरक्षा परत में लपेट देता है, जिससे कपड़े त्वचा पर बेहद आरामदायक महसूस होते हैं। यह सिलवटें घटाकर इस्त्री आसान बनाता है, कपड़ों को घिसाव से बचाता है, स्टैटिक पर काबू रखता है और हर धुलाई के बाद कपड़ों में देर तक टिकने वाली ताज़गी भर देता है।",
-    image: "/products/fabric-conditioner-v3.png",
+    image: "/products/fabric-conditioner-sd2.png",
     fragrance: "Available in Blossom, Morning Fresh and Baby Soft",
     fragranceHi: "ब्लॉसम, मॉर्निंग फ्रेश और बेबी सॉफ्ट में उपलब्ध",
     featured: false,
@@ -988,7 +988,7 @@ export const products: Product[] = [
       "DP Shudh Dhulai Hand Sanitizer offers instant, water-free protection wherever you are. Its 70% alcohol formula kills germs and viruses in seconds, while added moisturisers prevent the dryness typical of sanitizers. Compact and quick-drying, it's ideal for homes, offices, hospitals, schools and travel.",
     descriptionHi:
       "DP Shudh Dhulai हैंड सैनिटाइज़र आप जहाँ भी हों, तुरंत, बिना पानी के सुरक्षा देता है। इसका 70% अल्कोहल फॉर्मूला सेकंडों में कीटाणुओं और वायरस को मारता है, जबकि मॉइस्चराइज़र सैनिटाइज़र से होने वाले रूखेपन को रोकते हैं। कॉम्पैक्ट और जल्दी सूखने वाला — घर, ऑफिस, अस्पताल, स्कूल और सफर के लिए आदर्श।",
-    image: "/products/sanitizer-v3.png",
+    image: "/products/sanitizer-sd2.png",
     fragrance: "Neutral / Mild fragrance",
     fragranceHi: "न्यूट्रल / हल्की खुशबू",
     featured: false,

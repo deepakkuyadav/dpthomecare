@@ -12,7 +12,7 @@ export const IMG = {
   cleaningProductsTable: "/brand/products-lineup-v4.jpg", // DP Shudh Dhulai-branded product lineup (v2)
   sparkleKitchen: px(3634739, 1400),
   modernHome: px(6238679, 1400),
-  cozyHome: "/brand/home-essentials-v3.jpg", // DP Shudh Dhulai-branded daily essentials tray
+  cozyHome: "/brand/home-essentials-v4.jpg", // DP Shudh Dhulai-branded daily essentials tray
   homeInterior: px(5179534, 1400),
   homePlants: px(5825380, 1400),
 
@@ -21,7 +21,7 @@ export const IMG = {
   familyTogether: px(7642039, 1400),
 
   // Cleaning actions
-  glassSpray: "/brand/glass-cleaning-v3.jpg", // DP Shudh Dhulai-branded glass cleaner (bottle + in action)
+  glassSpray: "/brand/glass-cleaning-v4.jpg", // DP Shudh Dhulai-branded glass cleaner (bottle + in action)
   kitchenSurface: px(4239037, 1200),
   kitchenSink: px(9462224, 1200),
   kitchenEquipment: px(10568353, 1200),
@@ -37,7 +37,7 @@ export const IMG = {
   dishwash3: px(7641231, 1200),
 
   // Hand & personal care
-  handWash: "/brand/hand-wash-v3.jpg", // DP Shudh Dhulai-branded hand wash (bottle front/back + washing hands)
+  handWash: "/brand/hand-wash-v4.jpg", // DP Shudh Dhulai-branded hand wash (bottle front/back + washing hands)
   handWash2: px(4154169, 1200),
   handWash3: px(3995736, 1200),
 
